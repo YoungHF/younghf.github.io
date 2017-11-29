@@ -1160,3 +1160,7 @@ pre {
     margin-bottom: 10px;
   }
 }
+
+.fa-fw{
+  min-width: 18px;
+}
