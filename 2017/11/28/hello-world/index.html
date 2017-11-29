@@ -35,6 +35,8 @@
     
 
 
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css?rev=9.12.0">
@@ -96,7 +98,7 @@
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
                         
-                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
                             </li>
                         
                             <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
@@ -191,15 +193,20 @@
 
     <div id="comments">
         
-    <div id="SOHUCS"></div>
-    <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
-    <script type="text/javascript">
-    window.changyan.api.config({
-    appid: 'cytl8bw4B',
-    conf: 'prod_ade908c8436bb86884f53447b08a1f2f'
+    <script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+        id: window.location.pathname,
+        owner:"https://github.com/YoungHF",
+        repo:"",
+        oauth: {
+          client_id:"3c8e003c35f4e0526f71",
+          client_secret:"63741c8fa06e9d003b1dae48f2a9a50b4f22f0f3"
+        },
+        perPage:"10",
     });
-    </script>           
-
+    gitment.render('comments');
+    </script>
 
 
 
@@ -220,13 +227,13 @@
         
         
     <div class="widget">    
-        <h3 class="title">Search</h3>
+        <h3 class="title">搜索</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
                 
                 
             </div>
@@ -262,7 +269,7 @@
         
         
     <div class="widget">
-      <h3 class="title">Social</h3> 
+      <h3 class="title">社交</h3> 
         <div class="content social">
             
 	            <a href="//github.com/YoungHF" rel="external nofollow" title="Github" target="_blank">
@@ -299,7 +306,7 @@
         
         
     <div class="widget">
-      <h3 class="title">Archives</h3>
+      <h3 class="title">归档</h3>
         <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/younghf.github.io/archives/2017/11/"><i class="fa" aria-hidden="true">十一月 2017</i></a><span class="archive-list-count">1</span></li></ul>
     </div>
 
@@ -310,7 +317,7 @@
         
         
     <div class="widget">
-        <h3 class="title">Friends</h3>
+        <h3 class="title">友链</h3>
         <div class="content friends-link">
         
             <a href="http://www.young-coder.xin/yhf/canvas-countdown/index.html" class="fa" target="_blank">个人网站</a>
