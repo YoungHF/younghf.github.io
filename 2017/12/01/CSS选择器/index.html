@@ -1,0 +1,703 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com/younghf.github.io">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>CSS选择器 | Hoff&#39;s blog</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hoff&#39;s blog" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css?rev=9.12.0">
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/younghf.github.io/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/younghf.github.io/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 「Stay hungry. Stay foolish.」 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/about/"><i class="fa fa-fw "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="CSS选择器">
+            
+            CSS选择器
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>前端</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            CSS选择器
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/01</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <blockquote>
+<h1 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h1></blockquote>
+<p>选择器，说白了就是用一种方式把你想要的那一个标签选中！把它选中了，你才能操作这个标签的CSS 样式。CSS 有很多把你所需要的标签选中的方式，这些不同的方式就是不同的选择器。</p>
+<p>选择器的不同，在于它选择方式不同，但是他们的目的都是相同的，那就是把你需要的标签选中，然后让你定义该标签的CSS 样式。当然，你也有可能会用某一种选择器代替另一种选择器，这仅仅是由于选择方式不一样罢了，目的还是一样的。</p>
+<blockquote>
+<h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3></blockquote>
+<p>标签选择器其实就是html 代码中的标签。例如下面代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;font-size:12px;line-height:1.6em;&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的css 样式代码的作用：为p 标签设置12px 字号，行间距设置1.6em 的样式。</p>
+<blockquote>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3></blockquote>
+<p>语法：<br>.选择器名称{css 样式代码;}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.selector&#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ol>
+<li>英文圆点开头</li>
+<li>其中类选器名称可以任意起名（但不要起中文噢）</li>
+</ol>
+<blockquote>
+<h3 id="ID-选择器"><a href="#ID-选择器" class="headerlink" title="ID 选择器"></a>ID 选择器</h3></blockquote>
+<p>语法：<br>#选择器名称{css 样式代码;}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#selector&#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h1 id="类和ID-选择器的区别"><a href="#类和ID-选择器的区别" class="headerlink" title="类和ID 选择器的区别"></a>类和ID 选择器的区别</h1></blockquote>
+<p>相同点：可以应用于任何元素</p>
+<p>不同点：</p>
+<ol>
+<li>ID 选择器只能在文档中使用一次。与类选择器不同，在一个HTML 文档中，ID 选择器只能使用一次，而且仅一次。而类选择器可以使用多次。</li>
+<li>可以使用类选择器词列表方法为一个元素同时设置多个样式。我们可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID 选择器是不可以的（不能使用ID 词列表）。</li>
+</ol>
+<blockquote>
+<h1 id="通用选择器（通配符选择器）"><a href="#通用选择器（通配符选择器）" class="headerlink" title="通用选择器（通配符选择器）"></a>通用选择器（通配符选择器）</h1></blockquote>
+<p>通用选择器是功能最强大的选择器，它使用一个（*）号指定，它的作用是匹配html 中所有标签元素，如下使用下面代码使用html 中任意标签元素字体颜色全部设置为红色：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*&#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h1 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h1></blockquote>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[attribute]</td>
+<td>用于选取带有指定属性的元素。</td>
+<td></td>
+</tr>
+<tr>
+<td>[attribute=value]</td>
+<td>用于选取带有指定属性和值的元素。</td>
+<td></td>
+</tr>
+<tr>
+<td>[attribute~=value]</td>
+<td>用于选取属性值中包含指定词汇的元素。</td>
+<td></td>
+</tr>
+<tr>
+<td>[attribute丨=value]</td>
+<td>用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。</td>
+<td></td>
+</tr>
+<tr>
+<td>[attribute^=value]</td>
+<td>匹配属性值以指定值开头的每个元素。</td>
+<td></td>
+</tr>
+<tr>
+<td>[attribute$=value]</td>
+<td>匹配属性值以指定值结尾的每个元素。</td>
+<td></td>
+</tr>
+<tr>
+<td>[attribute*=value]</td>
+<td>匹配属性值中包含指定值的每个元素。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>实例展示：</p>
+<p>html 代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;xxx.pdf&quot;&gt;我链接的是PDF 文件&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;icon&quot;&gt;我类名是icon&lt;/a&gt;&lt;a href=&quot;#&quot; title=&quot;我的title 是more&quot;&gt;我的title 是more&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>css 代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[class^=icon]&#123;	background: green;	color:#fff;&#125;a[href$=pdf]&#123;	background: orange;	color: #fff;&#125;a[title*=more]&#123;	background: blue;	color: #fff;&#125;</span><br></pre></td></tr></table></figure>
+<p>结果显示：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/01/CSS选择器/code.jpg" alt="code.jpg"></p>
+<blockquote>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3></blockquote>
+<p>CSS 伪类用于向某些选择器添加特殊的效果。又叫伪类选择符，它允许给html 不存在的标签（标签<br>的某种状态）设置样式，比如说我们给html 中一个标签元素的鼠标滑过的状态来设置字体颜色：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:hover&#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:focus</td>
+<td>向拥有键盘输入焦点的元素添加样式。</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>当鼠标悬浮在元素上方时，向元素添加样式。</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>:link</td>
+<td>向未被访问的链接添加样式。</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>向已被访问的链接添加样式。</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>向元素的第一个子元素添加样式。</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>:lang</td>
+<td>向带有指定lang 属性的元素添加样式。</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>匹配每个启用的元素（主要用于表单元素）。</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>匹配每个禁用的元素（主要用于表单元素）。</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>匹配每个已被选中的 input 元素（只用于单选按钮和复选框）。</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3></blockquote>
+<p>是针对HTML 层次“结构”的伪类选择器。例如我们想要某一个父元素下面的第n 个子元素。</p>
+<p><table><br>    <tr><th colspan="2">选择器</th><th>说明</th></tr><br>    <tr><td rowspan="4">第一类</td><td>E:first-child</td><td>选择父元素下的第一个子元素</td></tr><br>    <tr><td>E:last-child</td><td>选择父元素下的最后一个子元素</td></tr><br>    <tr><td>E:nth-child(n)</td><td>选择父元素下的第n个元素或者奇偶元素，n的值为：数字 | odd | even</td></tr><br>    <tr><td>E:only-child</td><td>选择父元素中唯一的子元素（该父元素只有一个子元素）</td></tr><br>    <tr><td rowspan="4">第二类</td><td>E:first-of-type</td><td>选择同类型的第一个同级兄弟元素</td></tr><br>    <tr><td>E:last-of-type</td><td>选择同类型的最后一个同级兄弟元素</td></tr><br>    <tr><td>E:nth-of-type(n)</td><td>选择同类型的第n个同级兄弟元素或者奇偶元素，n的值为：数字 | odd | even</td></tr><br>    <tr><td>E:only-of-type</td><td>选择父元素中特定类型的唯一子元素（该父元素有多个子元素）</td></tr></table></p>
+<p><tr><td rowspan="4">第三类</td><td>:root</td><td>选择文档的根元素，即HTML</td></tr><br>    <tr><td>E:not(selector)</td><td>选择选择某个元素之外的所有元素</td></tr><br>    <tr><td>E:empty</td><td>选择一个不包含任何子元素的元素，注意文本节点也可以被看成子元素</td></tr><br>    <tr><td>E:target</td><td>选取页面中的某个target元素</td></tr><br></p>
+<pre><code>总结：“:first-child”是选择父元素下的第1 个子元素（不区分元素类型），
+而“:first-of-type”是选择父元素下某个元素类型的第1 个子元素（区分元素类型）。
+</code></pre><blockquote>
+<h3 id="UI-元素状态伪类选择器"><a href="#UI-元素状态伪类选择器" class="headerlink" title="UI 元素状态伪类选择器"></a>UI 元素状态伪类选择器</h3></blockquote>
+<p>UI，是用户界面（User Interface）的意思。所谓的UI 设计是指对软件的人机交互、操作<br>逻辑、界面美观的综合设计。</p>
+<p>UI 元素状态包括：可用、不可用、选中、未选中、获取焦点、失去焦点等。<br>这些选择器的共同特征是：指定的样式只有当元素处于某种状态下时才起作用，在默认状态<br>下不起作用。UI 元素状态伪类选择器大多数都是针对表单元素来使用的。</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E:focus</td>
+<td>指定元素获得光标焦点时使用的样式</td>
+<td></td>
+</tr>
+<tr>
+<td>E:checked</td>
+<td>选择E 元素中所有被选中的元素</td>
+<td></td>
+</tr>
+<tr>
+<td>E::selection</td>
+<td>改变E 元素中被选择的网页文本的显示效果</td>
+<td></td>
+</tr>
+<tr>
+<td>E:enabled</td>
+<td>选择E 元素中所有“可用”元素</td>
+<td></td>
+</tr>
+<tr>
+<td>E:disabled</td>
+<td>选择E 元素中所有“不可用”元素</td>
+<td></td>
+</tr>
+<tr>
+<td>E:read-write</td>
+<td>选择E 元素中所有“可读写”元素</td>
+<td></td>
+</tr>
+<tr>
+<td>E:read-only</td>
+<td>选择E 元素中所有“只读”元素</td>
+<td></td>
+</tr>
+<tr>
+<td>E::before</td>
+<td>在E 元素之前插入内容</td>
+<td></td>
+</tr>
+<tr>
+<td>E::after</td>
+<td>在E 元素之后插入内容</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="CSS-伪元素选择器"><a href="#CSS-伪元素选择器" class="headerlink" title="CSS 伪元素选择器"></a>CSS 伪元素选择器</h3></blockquote>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>::first-letter</td>
+<td>向文本的第一个字母添加特殊样式</td>
+<td></td>
+</tr>
+<tr>
+<td>::first-line</td>
+<td>向文本的首行添加特殊样式</td>
+<td></td>
+</tr>
+<tr>
+<td>::before</td>
+<td>在元素之前添加内容</td>
+<td></td>
+</tr>
+<tr>
+<td>::after</td>
+<td>在元素之后添加内容</td>
+<td></td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>改变元素中被选择的网页文本的显示效果</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="CSS-组合选择器"><a href="#CSS-组合选择器" class="headerlink" title="CSS 组合选择器"></a>CSS 组合选择器</h3></blockquote>
+<ol>
+<li><p>子选择器:</p>
+<p> 即大于符号(&gt;),用于选择指定标签元素的第一代子元素。如下代码：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.food&gt;li&#123;border:1px solid red;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>这行代码会使class 名为food 下的子元素li 加入红色实线边框。
+</code></pre><ol>
+<li><p>包含(后代)选择器:</p>
+<p> 即加入空格,用于选择指定标签元素下的后辈元素。如下代码：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.first span&#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>请注意这个选择器与子选择器的区别，子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代。而后代选择器是作用于所有子后代元素。后代选择器通过空格来进行选择，而子选择器是通过“&gt;”进行选择。
+
+总结：&gt;作用于元素的第一代后代，空格作用于元素的所有后代。
+</code></pre><ol>
+<li><p>相邻选择器:</p>
+<p> 相邻选择器只会命中符合条件的相邻的兄弟元素，使用“+”号。</p>
+<p> 如：p+p{color:#f00;}<br> 即设置与p 元素相邻的p 元素的颜色。</p>
+</li>
+<li><p>兄弟选择器</p>
+<p> 兄弟选择器会命中所有符合条件的兄弟元素，而不强制是紧邻的元素，使用“~”符号</p>
+<p> 如：p~p{color:#f00;}</p>
+</li>
+<li><p>群组选择器</p>
+<p> 群组选择器，就是同时对几个选择器进行相同的操作。</p>
+<p> 语法：h3,div,p,span{color:red;}</p>
+</li>
+</ol>
+<blockquote>
+<h3 id="CSS-继承"><a href="#CSS-继承" class="headerlink" title="CSS 继承"></a>CSS 继承</h3></blockquote>
+<p>CSS 的某些样式是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应<br>用于某个特定html 标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p 标<br>签，这个颜色设置不仅应用p 标签，还应用于p 标签中的所有子元素文本，这里子元素为<br>span 标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>注意: 有一些css 样式是不具有继承性的。如border:1px solid red;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;border:1px solid red;&#125;&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>在上面例子中它代码的作用只是给p 标签设置了边框为1 像素、红色、实心边框线，而对于子元素span 是没用起到作用的。</p>
+<blockquote>
+<h3 id="CSS-优先级（特殊性）"><a href="#CSS-优先级（特殊性）" class="headerlink" title="CSS 优先级（特殊性）"></a>CSS 优先级（特殊性）</h3></blockquote>
+<p>CSS 的优先级也可以称为CSS 的特殊性(specificity)或权值:对于每个样式表规则,浏览器都会计算选择器的特殊性,从而使元素属性声明在有冲突的情况下能够正确显示.<br>有的时候我们为同一个元素设置了不同的CSS 样式代码，那么元素会启用哪一个CSS 样式呢?</p>
+<p>我们来看一下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;.first&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>p 和.first 都匹配到了p 这个标签上，那么会显示哪种颜色呢？green 是正确的颜色，那么为什么呢？是因为浏览器是根据权值来判断使用哪种css 样式的，权值高的就使用哪种css样式。</p>
+<p><strong>权值的规则：</strong>标签的权值为1，类选择符的权值为10，ID 选择符的权值最高为100。</p>
+<p>例如下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125; /*权值为1*/p span&#123;color:green;&#125; /*权值为1+1=2*/.warning&#123;color:white;&#125; /*权值为10*/p span.warning&#123;color:purple;&#125; /*权值为1+1+10=12*/#footer .note p&#123;color:yellow;&#125; /*权值为100+10+1=111*/</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>还有一个权值比较特殊—继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低。</p>
+<p>如何改变CSS 的优先级？</p>
+<ol>
+<li>改变CSS 的先后顺序；</li>
+<li>提升权重；</li>
+<li>使用!important.</li>
+</ol>
+<blockquote>
+<h3 id="CSS-层叠"><a href="#CSS-层叠" class="headerlink" title="CSS 层叠"></a>CSS 层叠</h3></blockquote>
+<p>层叠就是在html 文件中对于同一个元素可以有多个css 样式存在，当有相同权重的样式存在时，会根据这些css 样式的前后顺序来决定，处于最后面的css 样式会被应用。</p>
+<p>如下面代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;p&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>最后p 中的文本会设置为green，这个层叠很好理解，理解为后面的样式会覆盖前面的样式。</p>
+<p>所以前面的css 样式优先级就不难理解了：</p>
+<p><strong>内联样式表（标签内部）&gt; 嵌入样式表（当前文件中）&gt; 外部样式表（外部文件中）。</strong></p>
+<blockquote>
+<h3 id="重要性-important"><a href="#重要性-important" class="headerlink" title="重要性(!important)"></a>重要性(!important)</h3></blockquote>
+<p>我们在做网页代码的时，有些特殊的情况需要为某些样式设置具有最高权值，怎么办？</p>
+<p>这时候我们可以使用!important 来解决。</p>
+<p>如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red!important;&#125;p&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>这时p 段落中的文本会显示的red 红色。</p>
+<p><strong>注意：</strong>!important 要写在分号的前面这里注意当网页制作者不设置css 样式时，浏览器会按照自己的一套样式来显示网页。并且用户也可以在浏览器中设置自己习惯的样式，比如有的用户习惯把字号设置为大一些，使其查看网页的文本更加清楚。这时注意样式优先级为：</p>
+<p><strong>浏览器默认的样式&lt; 网页制作者样式&lt; 用户自己设置的样式</strong></p>
+<p>但记住!important 优先级样式是个例外，权值高于用户自己设置的样式。</p>
+<p>参考资料：<br><a href="http://www.quirksmode.org/css/selectors/" target="_blank" rel="noopener">http://www.quirksmode.org/css/selectors/</a></p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://blog.young-coder.xin/" target="_blank">Hoff</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/younghf.github.io/2017/12/01/CSS/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+    <script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+        id: window.location.pathname,
+        owner:"YoungHF",
+        repo:"younghf.github.io",
+        oauth: {
+          client_id:"3c8e003c35f4e0526f71",
+          client_secret:"63741c8fa06e9d003b1dae48f2a9a50b4f22f0f3"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+    </script>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>Hello~ 欢迎访问~
+<hr/>
+本站点中的文章仅用于个人学习，如有侵权请联系我删除！
+<hr/>
+如果大家有疑问或者文章中有错误欢迎大家留言~
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/YoungHF" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:929662659@qq.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/younghf.github.io/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/younghf.github.io/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/younghf.github.io/archives/2017/12/"><i class="fa" aria-hidden="true">十二月 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/younghf.github.io/archives/2017/11/"><i class="fa" aria-hidden="true">十一月 2017</i></a><span class="archive-list-count">2</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/younghf.github.io/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/younghf.github.io/tags/CSS选择器/" style="font-size: 10px;">CSS选择器</a> <a href="/younghf.github.io/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/younghf.github.io/tags/Markdown/" style="font-size: 10px;">Markdown</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.young-coder.xin/yhf/canvas-countdown/index.html" class="fa" target="_blank">个人网站</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+	<script src="/younghf.github.io/js/search.js?rev=@@hash"></script>
+
+
+<script src="/younghf.github.io/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
