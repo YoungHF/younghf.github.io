@@ -583,9 +583,9 @@ pre {
   position: relative;
   clear: both;
   outline: 0;
-  margin: 10px 0 30px;
+  margin: 30px 0 30px;
   padding: 0;
-  min-height: 100px;
+  /*min-height: 100px;*/
 }
 .post-content figure img {
   display: block;
@@ -713,7 +713,7 @@ pre {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.5em;
+  /*margin-bottom: 1.5em;*/
   font-size: 0.96em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
