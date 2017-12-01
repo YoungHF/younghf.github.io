@@ -424,80 +424,6 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<h3 id="CSS-组合选择器"><a href="#CSS-组合选择器" class="headerlink" title="CSS 组合选择器"></a>CSS 组合选择器</h3></blockquote>
-<ol>
-<li><p>子选择器:</p>
-<p> 即大于符号(&gt;),用于选择指定标签元素的第一代子元素。如下代码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.food&gt;li&#123;border:1px solid red;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>这行代码会使class 名为food 下的子元素li 加入红色实线边框。
-</code></pre><ol>
-<li><p>包含(后代)选择器:</p>
-<p> 即加入空格,用于选择指定标签元素下的后辈元素。如下代码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.first span&#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>请注意这个选择器与子选择器的区别，子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代。而后代选择器是作用于所有子后代元素。后代选择器通过空格来进行选择，而子选择器是通过“&gt;”进行选择。
-
-总结：&gt;作用于元素的第一代后代，空格作用于元素的所有后代。
-</code></pre><ol>
-<li><p>相邻选择器:</p>
-<p> 相邻选择器只会命中符合条件的相邻的兄弟元素，使用“+”号。</p>
-<p> 如：p+p{color:#f00;}<br> 即设置与p 元素相邻的p 元素的颜色。</p>
-</li>
-<li><p>兄弟选择器</p>
-<p> 兄弟选择器会命中所有符合条件的兄弟元素，而不强制是紧邻的元素，使用“~”符号</p>
-<p> 如：p~p{color:#f00;}</p>
-</li>
-<li><p>群组选择器</p>
-<p> 群组选择器，就是同时对几个选择器进行相同的操作。</p>
-<p> 语法：h3,div,p,span{color:red;}</p>
-</li>
-</ol>
-<blockquote>
-<h3 id="CSS-继承"><a href="#CSS-继承" class="headerlink" title="CSS 继承"></a>CSS 继承</h3></blockquote>
-<p>CSS 的某些样式是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应<br>用于某个特定html 标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p 标<br>签，这个颜色设置不仅应用p 标签，还应用于p 标签中的所有子元素文本，这里子元素为<br>span 标签。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>注意: 有一些css 样式是不具有继承性的。如border:1px solid red;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;border:1px solid red;&#125;&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>在上面例子中它代码的作用只是给p 标签设置了边框为1 像素、红色、实心边框线，而对于子元素span 是没用起到作用的。</p>
-<blockquote>
-<h3 id="CSS-优先级（特殊性）"><a href="#CSS-优先级（特殊性）" class="headerlink" title="CSS 优先级（特殊性）"></a>CSS 优先级（特殊性）</h3></blockquote>
-<p>CSS 的优先级也可以称为CSS 的特殊性(specificity)或权值:对于每个样式表规则,浏览器都会计算选择器的特殊性,从而使元素属性声明在有冲突的情况下能够正确显示.<br>有的时候我们为同一个元素设置了不同的CSS 样式代码，那么元素会启用哪一个CSS 样式呢?</p>
-<p>我们来看一下面的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;.first&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>p 和.first 都匹配到了p 这个标签上，那么会显示哪种颜色呢？green 是正确的颜色，那么为什么呢？是因为浏览器是根据权值来判断使用哪种css 样式的，权值高的就使用哪种css样式。</p>
-<p><strong>权值的规则：</strong>标签的权值为1，类选择符的权值为10，ID 选择符的权值最高为100。</p>
-<p>例如下面的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125; /*权值为1*/p span&#123;color:green;&#125; /*权值为1+1=2*/.warning&#123;color:white;&#125; /*权值为10*/p span.warning&#123;color:purple;&#125; /*权值为1+1+10=12*/#footer .note p&#123;color:yellow;&#125; /*权值为100+10+1=111*/</span><br></pre></td></tr></table></figure>
-<p><strong>注意：</strong>还有一个权值比较特殊—继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低。</p>
-<p>如何改变CSS 的优先级？</p>
-<ol>
-<li>改变CSS 的先后顺序；</li>
-<li>提升权重；</li>
-<li>使用!important.</li>
-</ol>
-<blockquote>
-<h3 id="CSS-层叠"><a href="#CSS-层叠" class="headerlink" title="CSS 层叠"></a>CSS 层叠</h3></blockquote>
-<p>层叠就是在html 文件中对于同一个元素可以有多个css 样式存在，当有相同权重的样式存在时，会根据这些css 样式的前后顺序来决定，处于最后面的css 样式会被应用。</p>
-<p>如下面代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;p&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>最后p 中的文本会设置为green，这个层叠很好理解，理解为后面的样式会覆盖前面的样式。</p>
-<p>所以前面的css 样式优先级就不难理解了：</p>
-<p><strong>内联样式表（标签内部）&gt; 嵌入样式表（当前文件中）&gt; 外部样式表（外部文件中）。</strong></p>
-<blockquote>
-<h3 id="重要性-important"><a href="#重要性-important" class="headerlink" title="重要性(!important)"></a>重要性(!important)</h3></blockquote>
-<p>我们在做网页代码的时，有些特殊的情况需要为某些样式设置具有最高权值，怎么办？</p>
-<p>这时候我们可以使用!important 来解决。</p>
-<p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red!important;&#125;p&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>这时p 段落中的文本会显示的red 红色。</p>
-<p><strong>注意：</strong>!important 要写在分号的前面这里注意当网页制作者不设置css 样式时，浏览器会按照自己的一套样式来显示网页。并且用户也可以在浏览器中设置自己习惯的样式，比如有的用户习惯把字号设置为大一些，使其查看网页的文本更加清楚。这时注意样式优先级为：</p>
-<p><strong>浏览器默认的样式&lt; 网页制作者样式&lt; 用户自己设置的样式</strong></p>
-<p>但记住!important 优先级样式是个例外，权值高于用户自己设置的样式。</p>
-<p>参考资料：<br><a href="http://www.quirksmode.org/css/selectors/" target="_blank" rel="noopener">http://www.quirksmode.org/css/selectors/</a></p>
 
     </div>
 
