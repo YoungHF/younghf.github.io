@@ -332,6 +332,7 @@ var _hmt = _hmt || [];
 	        	console.log("url:",url)
 	            // where field
 	            query.equalTo("words", url);
+	            console.log("url1:",url)
 	            // count 
 	            query.count().then(function (number) {
 	                // There are number instances of MyClass where words equals url.
