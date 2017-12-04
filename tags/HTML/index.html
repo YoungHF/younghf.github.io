@@ -326,7 +326,7 @@ var _hmt = _hmt || [];
         var $leancloud_visitors = $(".leancloud_visitors");
         if($leancloud_visitors.length > 0){
 	        for (var i = 0;i<$leancloud_visitors.length;i++){
-	        	var url = leancloud_visitors.eq(i);
+	        	var url = $leancloud_visitors.eq(i);
 	        	console.log("url:",url)
 	            // where field
 	            query.equalTo("words", url);
