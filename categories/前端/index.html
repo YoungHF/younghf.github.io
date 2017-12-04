@@ -393,6 +393,7 @@ var _hmt = _hmt || [];
 	            query.count().then(function (number) {
 	                // There are number instances of MyClass where words equals url.
 	                $(document.getElementById(url)).text(number?  number : '--');
+	                console.log(i)
 	            }, function (error) {
 	                // error is an instance of AVError.
 	            });
