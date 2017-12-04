@@ -329,6 +329,7 @@ var _hmt = _hmt || [];
     function showTime(Counter) {
         var query = new AV.Query("Counter");
         console.log("query:",query)
+        console.log("leancloud_visitors:",$(".leancloud_visitors").length)
         for (var i = 0;i < $(".leancloud_visitors").length;i++){
             var url = $(".leancloud_visitors").eq(i).attr('id').trim();
             // where field
