@@ -331,6 +331,7 @@ var _hmt = _hmt || [];
         for (var i = 0;i < $(".leancloud_visitors").length;i++){
             var url = $(".leancloud_visitors").eq(i).attr('id').trim();
             // where field
+            console.log("url:",url)
             query.equalTo("words", url);
             console.log("query:",query)
             // count 
