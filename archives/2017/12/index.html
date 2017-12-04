@@ -311,28 +311,24 @@ var _hmt = _hmt || [];
         appKey: APP_KEY
     });
     // 显示次数
-    function showTime(Counter) {
+    function showTime(Counter,url) {
         var query = new AV.Query("Counter");
         
-        console.log("leancloud_visitors:",$(".leancloud_visitors").length)
-        for (var i = 0;i < $(".leancloud_visitors").length;i++){
-            var url = $(".leancloud_visitors").eq(i).attr('id').trim();
-            var $(".leancloud_visitors").index = i;
-            // where field
-            //console.log("url:",url)
-            query.equalTo("words", $(".leancloud_visitors").eq($(".leancloud_visitors").index).attr('id').trim());
-            console.log("query:",query)
-            // count 
-            console.log("i:",i)
-            query.count().then(function (number) {
+        // where field
+        
+        query.equalTo("words", url);
+        console.log("query:",query)
+        // count 
+        
+        query.count().then(function (number) {
 
-            	console.log("result:",number)
-                // There are number instances of MyClass where words equals url.
-                $(document.getElementById(url)).text(number?  number : 0);
-            }, function (error) {
-                // error is an instance of AVError.
-            });
-        }
+        	console.log("result:",number)
+            // There are number instances of MyClass where words equals url.
+            $(document.getElementById(url)).text(number?  number : 0);
+        }, function (error) {
+            // error is an instance of AVError.
+        });
+        
     }
    // 追加pv
     function addCount(Counter) {
@@ -351,7 +347,13 @@ var _hmt = _hmt || [];
     $(function () {
         var Counter = AV.Object.extend("Counter");
         addCount(Counter);
-        showTime(Counter);
+        for (var i = 0;i < $(".leancloud_visitors").length;i++){
+
+        	var url = $(".leancloud_visitors").eq(i).attr('id').trim();
+        	showTime(Counter,url);
+
+        }
+        
     });
 </script>
     <div class="copyright">
