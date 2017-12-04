@@ -399,7 +399,7 @@ var _hmt = _hmt || [];
         var $leancloud_visitors = $(".leancloud_visitors");
         if($leancloud_visitors.length > 0){
 	        for (var i = 0;i<$leancloud_visitors.length;i++){
-	        	var url = $leancloud_visitors.eq(i).attr('id').trim();
+	        	var url = leancloud_visitors.eq(i);
 	        	console.log("url:",url)
 	            // where field
 	            query.equalTo("words", url);
@@ -407,8 +407,8 @@ var _hmt = _hmt || [];
 	            // count 
 	            query.count().then(function (number) {
 	                // There are number instances of MyClass where words equals url.
-	                $("#"+url).text(number?  number : 0);
-	                console.log($("#"+url))
+	                url.text(number?  number : 0);
+	                console.log(url.text())
 	            }, function (error) {
 	                // error is an instance of AVError.
 	            });
