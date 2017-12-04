@@ -326,6 +326,7 @@ var _hmt = _hmt || [];
         var query = new AV.Query("Counter");
         if($(".leancloud_visitors").length > 0){
         	for (var i = 0;i<$(".leancloud_visitors").length;i++){
+        		var j = i;
         		var url = $(".leancloud_visitors").eq(i).attr('id').trim();
 	            // where field
 	            query.equalTo("words", url);
@@ -333,7 +334,7 @@ var _hmt = _hmt || [];
 	            query.count().then(function (number) {
 	                // There are number instances of MyClass where words equals url.
 	                $(document.getElementById(url)).text(number?  number : '--');
-	                console.log(i)
+	                console.log("j:",j)
 	            }, function (error) {
 	                // error is an instance of AVError.
 	            });
