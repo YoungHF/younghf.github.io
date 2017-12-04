@@ -332,9 +332,10 @@ var _hmt = _hmt || [];
         console.log("leancloud_visitors:",$(".leancloud_visitors").length)
         for (var i = 0;i < $(".leancloud_visitors").length;i++){
             var url = $(".leancloud_visitors").eq(i).attr('id').trim();
+            var $(".leancloud_visitors").index = i;
             // where field
             //console.log("url:",url)
-            query.equalTo("words", $(".leancloud_visitors").eq(i).attr('id').trim());
+            query.equalTo("words", $(".leancloud_visitors").eq($(".leancloud_visitors").index).attr('id').trim());
             console.log("query:",query)
             // count 
             console.log("i:",i)
