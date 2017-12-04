@@ -322,11 +322,12 @@ var _hmt = _hmt || [];
     });
     // 显示次数
     function showTime(Counter) {
-        var query = new AV.Query("Counter");
+        
         var $leancloud_visitors = $(".leancloud_visitors");
         if($leancloud_visitors.length > 0){
 	        for (var i = 0;i<$leancloud_visitors.length;i++){
 	        	var url = $leancloud_visitors.eq(i).attr('id').trim();
+	        	var query = new AV.Query("Counter");
 	        	console.log("url:",url)
 	            // where field
 	            query.equalTo("words", url);
