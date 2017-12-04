@@ -622,12 +622,11 @@ var _hmt = _hmt || [];
     });
     // 显示次数
     function showTime(Counter) {
-        
+        var query = new AV.Query("Counter");
         var $leancloud_visitors = $(".leancloud_visitors");
         if($leancloud_visitors.length > 0){
 	        for (var i = 0;i<$leancloud_visitors.length;i++){
 	        	var url = $leancloud_visitors.eq(i).attr('id').trim();
-	        	var query = new AV.Query("Counter");
 	        	console.log("url:",url)
 	            // where field
 	            query.equalTo("words", url);
@@ -635,6 +634,7 @@ var _hmt = _hmt || [];
 	            query.count().then(function (number) {
 	                // There are number instances of MyClass where words equals url.
 	                $(document.getElementById(url)).text(number?  number : 0);
+	                console.log($(document.getElementById(url)))
 	            }, function (error) {
 	                // error is an instance of AVError.
 	            });
