@@ -535,12 +535,13 @@ var _hmt = _hmt || [];
     // 显示次数
     function showTime(Counter) {
         var query = new AV.Query("Counter");
-        console.log("query:",query)
+        
         console.log("leancloud_visitors:",$(".leancloud_visitors").length)
         for (var i = 0;i < $(".leancloud_visitors").length;i++){
             var url = $(".leancloud_visitors").eq(i).attr('id').trim();
             // where field
             query.equalTo("words", url);
+            console.log("query:",query)
             // count 
             console.log("i:",i)
             query.count().then(function (number) {
