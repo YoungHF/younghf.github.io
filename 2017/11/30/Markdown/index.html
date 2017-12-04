@@ -399,7 +399,7 @@ var _hmt = _hmt || [];
         var $leancloud_visitors = $(".leancloud_visitors");
         if($leancloud_visitors.length > 0){
 	        for (var i = 0;i<$leancloud_visitors.length;i++){
-	        	var url = $leancloud_visitors[i].attr('id').trim();
+	        	var url = $leancloud_visitors.eq(i).attr('id').trim();
 	            // where field
 	            query.equalTo("words", url);
 	            // count 
