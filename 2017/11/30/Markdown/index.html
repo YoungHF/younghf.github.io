@@ -400,12 +400,13 @@ var _hmt = _hmt || [];
         if($leancloud_visitors.length > 0){
 	        for (var i = 0;i<$leancloud_visitors.length;i++){
 	        	var url = $leancloud_visitors.eq(i).attr('id').trim();
+	        	console.log("url:",url)
 	            // where field
 	            query.equalTo("words", url);
 	            // count 
 	            query.count().then(function (number) {
 	                // There are number instances of MyClass where words equals url.
-	                $(document.getElementById(url)).text(number?  number : '--');
+	                $(document.getElementById(url)).text(number?  number : 0);
 	            }, function (error) {
 	                // error is an instance of AVError.
 	            });
