@@ -412,7 +412,7 @@ var _hmt = _hmt || [];
     function addCount(Counter) {
         
         if ($(".leancloud_visitors").length == 1){
-        	var url = document.getElementsByClassName("leancloud_visitors").getAttribute("id");
+        	var url = document.getElementsByClassName("leancloud_visitors")[0].getAttribute("id");
         	var Counter = AV.Object.extend("Counter");
 	        var query = new Counter;
 	        query.save({
