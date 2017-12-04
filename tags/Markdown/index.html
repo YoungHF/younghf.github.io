@@ -325,35 +325,35 @@ var _hmt = _hmt || [];
     // 显示次数
     function showTime(Counter) {
         var query = new AV.Query("Counter");
-        var $leancloud_visitors = $(".leancloud_visitors");
-        if($leancloud_visitors.length > 0){
-	        for (var i = 0;i<$leancloud_visitors.length;i++){
-	        	var url = $leancloud_visitors.eq(i);
-	        	console.log("url:",url)
+        if($(".leancloud_visitors").length > 0){
+        	for (var i = 0;i<$(".leancloud_visitors").length;i++){
+        		var url = $(".leancloud_visitors").eq(i).attr('id').trim();
 	            // where field
-	            // query.equalTo("words", url);
-	            console.log("url1:",url)
+	            query.equalTo("words", url);
 	            // count 
 	            query.count().then(function (number) {
 	                // There are number instances of MyClass where words equals url.
-	                url.text(number?  number : 0);
-	                console.log(url.text())
+	                $(document.getElementById(url)).text(number?  number : '--');
 	            }, function (error) {
 	                // error is an instance of AVError.
 	            });
-	        }
+        	}
+	            
         }
-            
     }
    // 追加pv
     function addCount(Counter) {
-        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
-        var Counter = AV.Object.extend("Counter");
-        var query = new Counter;
-        query.save({
-            words: url
-        }).then(function (object) {
-        })
+	    if($(".leancloud_visitors").length > 0){
+	        for (var i = 0;i<$(".leancloud_visitors").length;i++){
+		        var url = $(".leancloud_visitors").eq(i).attr('id').trim();'icafebolger.com';
+		        var Counter = AV.Object.extend("Counter");
+		        var query = new Counter;
+		        query.save({
+		            words: url
+		        }).then(function (object) {
+		        })
+		    }
+        }
     }
     $(function () {
         var Counter = AV.Object.extend("Counter");
