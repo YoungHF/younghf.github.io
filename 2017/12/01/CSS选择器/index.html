@@ -689,7 +689,10 @@ var _hmt = _hmt || [];
             // where field
             query.equalTo("words", url);
             // count 
+            console.log("i:",i)
             query.count().then(function (number) {
+
+            	console.log("result:",number)
                 // There are number instances of MyClass where words equals url.
                 $(document.getElementById(url)).text(number?  number : 0);
             }, function (error) {
