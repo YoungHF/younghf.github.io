@@ -167,6 +167,11 @@
         <i class="fa fa-clock-o"></i>
         <span class="date-meta">2017/12/01</span>
     </span>
+    <span class="fa-wrap">
+        阅读数:
+        <span id="/younghf.github.io/2017/12/01/CSS选择器/" class="leancloud_visitors" data-flag-title="CSS选择器"></span>次
+        
+    </span>
 </div>
 
             
@@ -606,7 +611,7 @@
         
     <div class="widget">
         <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/younghf.github.io/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/younghf.github.io/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">1</span></li></ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/younghf.github.io/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/younghf.github.io/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
@@ -666,6 +671,46 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'Qua3QRJmPgA4tQmnV4Ezfh9b-gzGzoHsz';
+    var APP_KEY = '1fSllBkllCQfN9mNilolPJuK';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count 
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+   // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
     <div class="copyright">
     <div class="container">
         <div class="row">
@@ -683,6 +728,11 @@ var _hmt = _hmt || [];
     </div>
 </div>
 
+
+  <script src="/younghf.github.io/assets/highlight.pack.js?rev=@@hash"></script>
+  <script>
+     hljs.initHighlightingOnLoad(); //初始化代码高亮 
+  </script>
 
 
 
