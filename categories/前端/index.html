@@ -415,17 +415,16 @@ var _hmt = _hmt || [];
         }
         
     }
-    $(function () {
-        var Counter = AV.Object.extend("Counter");
-        var leancloud_visitors = document.getElementsByClassName("leancloud_visitors");
-        addCount(Counter);
-        for (var i = 0;i < leancloud_visitors.length;i++){
-        	var url = leancloud_visitors[i].getAttribute("id");
-        	showTime(Counter,url);
-
-        }
+    
+    var Counter = AV.Object.extend("Counter");
+    var leancloud_visitors = document.getElementsByClassName("leancloud_visitors");
+    addCount(Counter);
+    for (var i = 0;i < leancloud_visitors.length;i++){
+    	var url = leancloud_visitors[i].getAttribute("id");
+    	showTime(Counter,url);
+    }
         
-    });
+    
 </script>
     <div class="copyright">
     <div class="container">
