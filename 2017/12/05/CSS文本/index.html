@@ -502,8 +502,29 @@
 <li>（2）overflow:hidden;（溢出内容为隐藏）；</li>
 </ul>
 <p>下面是实现文字溢出时产生省略号效果的完整语法：</p>
-<p>```<br>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这3个属性是必须一起使用才会有效果。</span><br><span class="line"></span><br><span class="line">&gt;### Cursor 属性</span><br><span class="line">在CSS 中，使用cursor 属性来定义鼠标的样式。</span><br><span class="line">语法：cursor:属性值;</span><br><span class="line">	cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</span><br><span class="line"></span><br><span class="line">![cursor.jpg](cursor.jpg)</span><br><span class="line"></span><br><span class="line">&gt;### Inherit 属性</span><br><span class="line">该值使得属性能够继承祖先设置。</span><br><span class="line">	inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。	</span><br><span class="line">如何让一个不具备继承特性的属性可以继承父元素的定义？	</span><br><span class="line">示例代码：</span><br><span class="line">	</span><br><span class="line">```div &#123;	position: relative;&#125;div a &#123;	position: inherit;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。常用的CSS 属性继承性：</p>
+<pre><code>text-overflow:ellipsis;
+overflow:hidden;
+white-space:nowrap;
+</code></pre><p>这3个属性是必须一起使用才会有效果。</p>
+<blockquote>
+<h3 id="Cursor-属性"><a href="#Cursor-属性" class="headerlink" title="Cursor 属性"></a>Cursor 属性</h3></blockquote>
+<p>在CSS 中，使用cursor 属性来定义鼠标的样式。</p>
+<p>语法：cursor:属性值;</p>
+<p>cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS文本/cursor.jpg" alt="cursor.jpg"></p>
+<blockquote>
+<h3 id="Inherit-属性"><a href="#Inherit-属性" class="headerlink" title="Inherit 属性"></a>Inherit 属性</h3></blockquote>
+<p>该值使得属性能够继承祖先设置。</p>
+<p>inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。</p>
+<p>如何让一个不具备继承特性的属性可以继承父元素的定义？</p>
+<p>示例代码：</p>
+<pre><code>div {
+    position: relative;
+}
+div a {
+    position: inherit;
+}
+</code></pre><p>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。常用的CSS 属性继承性：</p>
 <p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS文本/Inherit.jpg" alt="Inherit.jpg"></p>
 
     </div>
