@@ -226,15 +226,15 @@
 <blockquote>
 <h3 id="Color-颜色"><a href="#Color-颜色" class="headerlink" title="Color 颜色"></a>Color 颜色</h3></blockquote>
 <p>检索或设置对象的文本颜色。无默认值。</p>
-<p>可以使用Color Name(颜色名称), HEX（十六进制颜色）, RGB, RGBA, HSL, HSLA, transparent<br>来指定color。</p>
+<p>可以使用Color Name(颜色名称), HEX（十六进制颜色）, RGB, RGBA, HSL, HSLA, transparent来指定color。</p>
 <p><strong>注意，用颜色名称指定color 可能不被一些浏览器接受。</strong></p>
 <p>color 属性值被间接用来提供一个中间值currentColor 以供其他接受颜色值的属性使用。</p>
 <p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div &#123;	border: 10px solid;	color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如上代码，没有定义边框的颜色，但定义了color 的颜色为red，那么这时red 将会作为一<br>个间接值currentColor 提供给边框颜色属性，所以最终边框色也为red。</p>
+<p>如上代码，没有定义边框的颜色，但定义了color 的颜色为red，那么这时red 将会作为一个间接值currentColor 提供给边框颜色属性，所以最终边框色也为red。</p>
 <blockquote>
 <h3 id="Text-align-文本对齐方式"><a href="#Text-align-文本对齐方式" class="headerlink" title="Text-align 文本对齐方式"></a>Text-align 文本对齐方式</h3></blockquote>
 <p>text-align 属性规定元素中的文本的水平对齐方式。<strong>只能针对文本文字和img 标签，对其他标签无效。</strong></p>
-<p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行<br>内容中字母和字之间的间隔，可以支持值justify；不同用户代理可能会得到不同的结果。</p>
+<p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值justify；不同用户代理可能会得到不同的结果。</p>
 <table>
 <thead>
 <tr>
@@ -271,7 +271,7 @@
 </table>
 <blockquote>
 <h3 id="vertical-align-垂直对齐方式"><a href="#vertical-align-垂直对齐方式" class="headerlink" title="vertical-align 垂直对齐方式"></a>vertical-align 垂直对齐方式</h3></blockquote>
-<p>该属性定义<strong>行内元素</strong>的基线相对于该元素所在行的基线的垂直对齐。允许指定负长度值和百分比值。这会<br>使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。</p>
+<p>该属性定义<strong>行内元素</strong>的基线相对于该元素所在行的基线的垂直对齐。允许指定负长度值和百分比值。这会使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。</p>
 <table>
 <thead>
 <tr>
@@ -429,8 +429,8 @@
 <p> 取值：</p>
 <ul>
 <li>normal：依照亚洲语言和非亚洲语言的文本规则，允许在字内换行。</li>
-<li>keep-all：与所有非亚洲语言的normal 相同。对于中文，韩文，日文，不允许字断开。<br>适合包含少量亚洲文本的非亚洲文本。</li>
-<li>break-all：该行为与亚洲语言的normal 相同。也允许非亚洲语言文本行的任意字内断<br>开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。</li>
+<li>keep-all：与所有非亚洲语言的normal 相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本。</li>
+<li>break-all：该行为与亚洲语言的normal 相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。</li>
 </ul>
 </li>
 <li><p>Text-decoration -文本修饰</p>
@@ -462,8 +462,9 @@
 </tr>
 </tbody>
 </table>
-<p>underline 会对元素加下划线，就像HTML 中的U 元素一样。overline 的作用恰好相反，会在文本的<br>顶端画一个上划线。值line-through 则在文本中间画一个贯穿线，等价于HTML 中的S 和strike 元<br>素。</p>
-<p>none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。<br>例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下CSS 来做到这一点：</p>
+<p>underline 会对元素加下划线，就像HTML 中的U 元素一样。overline 的作用恰好相反，会在文本的顶端画一个上划线。值line-through 则在文本中间画一个贯穿线，等价于HTML 中的S 和strike 元素。</p>
+<p>none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。</p>
+<p>例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下CSS 来做到这一点：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a &#123;text-decoration: none;&#125;</span><br></pre></td></tr></table></figure>
 <ol>
 <li><p>Text-shadow 文字阴影</p>
@@ -474,16 +475,16 @@
 <li>y-offset：（垂直阴影）表示阴影的垂直偏移距离，单位可以是px、em 或者百分比等。<br>如果值为正，则阴影向下偏移；如果值为负，则阴影向上偏移；</li>
 <li>blur：（模糊距离）表示阴影的模糊程度，单位可以是px、em 或者百分比等。blur 值<br>不能为负。如果值越大，则阴影越模糊；如果值越小，则阴影越清晰。当然，如果不需<br>要阴影模糊效果，可以把blur 值设置为0；</li>
 <li><p>color：（阴影的颜色）表示阴影的颜色。</p>
-<p>在CSS3 中，可以使用text-shadow 属性来给文字指定多个阴影，并且针对每个阴影使用不<br>同的颜色。也就是说，text-shadow 属性可以为一个以英文逗号隔开的“值列表”，如：<br>text-shadow:0 0 4px white, 0 -5px 4px #ff3, 2px -10px 6px #fd3;<br>当text-shadow 属性值为“值列表”时，阴影效果会按照给定的值顺序应用到该元素的文本<br>上，因此有可能出现互相覆盖的现象。但是text-shadow 属性永远不会覆盖文本本身，阴影<br>效果也不会改变边框的尺寸。</p>
+<p>在CSS3 中，可以使用text-shadow 属性来给文字指定多个阴影，并且针对每个阴影使用不同的颜色。也就是说，text-shadow 属性可以为一个以英文逗号隔开的“值列表”，如：text-shadow:0 0 4px white, 0 -5px 4px #ff3, 2px -10px 6px #fd3;当text-shadow 属性值为“值列表”时，阴影效果会按照给定的值顺序应用到该元素的文本上，因此有可能出现互相覆盖的现象。但是text-shadow 属性永远不会覆盖文本本身，阴影效果也不会改变边框的尺寸。</p>
 </li>
 </ul>
 </li>
 <li><p>text-stroke 属性</p>
 <p> 语法：text-stroke:宽度值颜色值;</p>
-<p> 在CSS3 中，我们可以使用text-stroke 属性为文字添加描边效果。这个描边效果，<br>说白了就是<strong>给文字添加边框</strong>。</p>
+<p> 在CSS3 中，我们可以使用text-stroke 属性为文字添加描边效果。这个描边效果，说白了就是<strong>给文字添加边框</strong>。</p>
 </li>
 <li><p>text-overflow 属性</p>
-<p> 在CSS3 中，文本溢出text-overflow 用于设置是否使用一个省略标记（…）标示<br>对象内文本的溢出。</p>
+<p> 在CSS3 中，文本溢出text-overflow 用于设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
 </li>
 </ol>
 <table>
@@ -510,11 +511,11 @@
 <li>（2）overflow:hidden;（溢出内容为隐藏）；</li>
 </ul>
 <p>下面是实现文字溢出时产生省略号效果的完整语法：</p>
-<p>```<br>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">这3 个属性是必须一起使用才会有效果。</span><br><span class="line"></span><br><span class="line">8. Cursor 属性</span><br><span class="line">	在CSS 中，使用cursor 属性来定义鼠标的样式。</span><br><span class="line">	语法：cursor:属性值;</span><br><span class="line">		cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</span><br><span class="line"></span><br><span class="line">![cursor.jpg](cursor.jpg)</span><br><span class="line"></span><br><span class="line">9. Inherit 属性	该值使得属性能够继承祖先设置。</span><br><span class="line">		inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。	</span><br><span class="line">	如何让一个不具备继承特性的属性可以继承父元素的定义？	</span><br><span class="line">	示例代码：</span><br><span class="line">	</span><br><span class="line">	```	div &#123;		position: relative;	&#125;	div a &#123;		position: inherit;	&#125;</span><br></pre></td></tr></table></figure></p>
-<pre><code>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。
-</code></pre><p>常用的CSS 属性继承性：</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS文本/Inherit.jpg" alt="Inherit.jpg"></p>
+<p>```<br>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">这3 个属性是必须一起使用才会有效果。</span><br><span class="line"></span><br><span class="line">8. Cursor 属性</span><br><span class="line">	在CSS 中，使用cursor 属性来定义鼠标的样式。</span><br><span class="line">	语法：cursor:属性值;</span><br><span class="line">		cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</span><br><span class="line"></span><br><span class="line">	![cursor.jpg](cursor.jpg)</span><br><span class="line"></span><br><span class="line">9. Inherit 属性	该值使得属性能够继承祖先设置。</span><br><span class="line">		inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。	</span><br><span class="line">	如何让一个不具备继承特性的属性可以继承父元素的定义？	</span><br><span class="line">	示例代码：</span><br><span class="line">	</span><br><span class="line">	```	div &#123;		position: relative;	&#125;	div a &#123;		position: inherit;	&#125;</span><br></pre></td></tr></table></figure></p>
+<pre><code>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。常用的CSS 属性继承性：
 
+![Inherit.jpg](Inherit.jpg)
+</code></pre>
     </div>
 
     <div class="post-footer">   
