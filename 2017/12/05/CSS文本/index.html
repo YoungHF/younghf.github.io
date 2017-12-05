@@ -335,86 +335,10 @@
 <ol>
 <li><p>White-space</p>
 <p> white-space 属性设置如何处理元素内的空白（空白符）。</p>
+<p> |可能值 | 描述 |<br> |——-|——|<br> |normal | 默认。空白会被浏览器忽略。丢掉多余的空白符，换行字符（回车）会转换为空格，一行中多个空格的序列也会转换为一个空格。|<br> |pre | 空白会被浏览器保留。其行为方式类似HTML 中的&lt;pre&gt; 标签。|<br> |nowrap | 文本不会换行，文本会在在同一行上继续，直到遇到&lt;br&gt; 标签为止。|<br> |pre-wrap | 保留空白符序列，但是正常地进行换行。|<br> |pre-line | 合并空白符序列，但是保留换行符。|<br> |inherit | 规定应该从父元素继承white-space 属性的值。|</p>
+<p> white-space 属性的行为：</p>
+<p> |值|空白符|换行符|自动换行|<br> |——-|——|——-|——|<br> |pre-line | 合并|保留|允许|<br> |normal | 合并|忽略|允许|<br> |nowrap | 合并|忽略|不允许|<br> |pre | 保留|保留|不允许|<br> |pre-wrap | 保留|保留|允许|</p>
 </li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>可能值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>normal</td>
-<td>默认。空白会被浏览器忽略。丢掉多余的空白符，换行字符（回车）会转换为空格，一行中多个空格的序列也会转换为一个空格。</td>
-</tr>
-<tr>
-<td>pre</td>
-<td>空白会被浏览器保留。其行为方式类似HTML 中的&lt;pre&gt; 标签。</td>
-</tr>
-<tr>
-<td>nowrap</td>
-<td>文本不会换行，文本会在在同一行上继续，直到遇到&lt;br&gt; 标签为止。</td>
-</tr>
-<tr>
-<td>pre-wrap</td>
-<td>保留空白符序列，但是正常地进行换行。</td>
-</tr>
-<tr>
-<td>pre-line</td>
-<td>合并空白符序列，但是保留换行符。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承white-space 属性的值。</td>
-</tr>
-</tbody>
-</table>
-<p>white-space 属性的行为：</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>空白符</th>
-<th>换行符</th>
-<th>自动换行</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pre-line</td>
-<td>合并</td>
-<td>保留</td>
-<td>允许</td>
-</tr>
-<tr>
-<td>normal</td>
-<td>合并</td>
-<td>忽略</td>
-<td>允许</td>
-</tr>
-<tr>
-<td>nowrap</td>
-<td>合并</td>
-<td>忽略</td>
-<td>不允许</td>
-</tr>
-<tr>
-<td>pre</td>
-<td>保留</td>
-<td>保留</td>
-<td>不允许</td>
-</tr>
-<tr>
-<td>pre-wrap</td>
-<td>保留</td>
-<td>保留</td>
-<td>允许</td>
-</tr>
-</tbody>
-</table>
-<ol>
 <li><p>Word-wrap</p>
 <p> word-wrap 属性允许长单词或 URL 地址换行到下一行。一般情况下，如果你开发的是英文网站，就很有可能用到word-wrap 这个属性了。</p>
 <p> 语法:</p>
@@ -434,39 +358,12 @@
 </ul>
 </li>
 <li><p>Text-decoration -文本修饰</p>
+<p> |属性值|说明|<br> |—|—|<br> |none|默认值，可以用这个属性值也可以去掉已经有下划线或删除线或顶划线的样式|<br> |underline| 下划线|<br> |line-through| 删除线|<br> |overline| 顶划线|</p>
+<p> underline 会对元素加下划线，就像HTML 中的U 元素一样。overline 的作用恰好相反，会在文本的顶端画一个上划线。值line-through 则在文本中间画一个贯穿线，等价于HTML 中的S 和strike 元素。</p>
+<p> none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。</p>
+<p> 例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下CSS 来做到这一点：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a &#123;text-decoration: none;&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>none</td>
-<td>默认值，可以用这个属性值也可以去掉已经有下划线或删除线或顶划线的样式</td>
-</tr>
-<tr>
-<td>underline</td>
-<td>下划线</td>
-</tr>
-<tr>
-<td>line-through</td>
-<td>删除线</td>
-</tr>
-<tr>
-<td>overline</td>
-<td>顶划线</td>
-</tr>
-</tbody>
-</table>
-<p>underline 会对元素加下划线，就像HTML 中的U 元素一样。overline 的作用恰好相反，会在文本的顶端画一个上划线。值line-through 则在文本中间画一个贯穿线，等价于HTML 中的S 和strike 元素。</p>
-<p>none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。</p>
-<p>例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下CSS 来做到这一点：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a &#123;text-decoration: none;&#125;</span><br></pre></td></tr></table></figure>
-<ol>
 <li><p>Text-shadow 文字阴影</p>
 <p> 语法：text-shadow:x-offset y-offset blur color;</p>
 <p> 说明：</p>
@@ -485,33 +382,18 @@
 </li>
 <li><p>text-overflow 属性</p>
 <p> 在CSS3 中，文本溢出text-overflow 用于设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ellipsis</td>
-<td>当对象内文本溢出时显示省略标记（…）</td>
-</tr>
-<tr>
-<td>clip</td>
-<td>当对象内文本溢出时不显示省略标记（…），而是将溢出的部分裁切掉</td>
-</tr>
-</tbody>
-</table>
-<p>单独使用text-overflow 属性是无法得到上面图1 效果的。因为text-overflow 属性只是说<br>明文字溢出时用什么方式显示，要实现溢出时产生省略号效果，还须定义2 个内容：</p>
+<p> |属性值    |说明                                                 |<br> |———|—————————————————-|<br> |ellipsis | 当对象内文本溢出时显示省略标记（…）                      |<br> |clip     | 当对象内文本溢出时不显示省略标记（…），而是将溢出的部分裁切掉|</p>
+<p> 单独使用text-overflow 属性是无法得到上面图1 效果的。因为text-overflow 属性只是说明文字溢出时用什么方式显示，要实现溢出时产生省略号效果，还须定义2 个内容：</p>
 <ul>
 <li>（1）white-space:nowrap;（强制文本在一行内显示）；</li>
-<li>（2）overflow:hidden;（溢出内容为隐藏）；</li>
-</ul>
+<li><p>（2）overflow:hidden;（溢出内容为隐藏）；</p>
 <p>下面是实现文字溢出时产生省略号效果的完整语法：</p>
-<p>```<br>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">这3 个属性是必须一起使用才会有效果。</span><br><span class="line"></span><br><span class="line">8. Cursor 属性</span><br><span class="line">	在CSS 中，使用cursor 属性来定义鼠标的样式。</span><br><span class="line">	语法：cursor:属性值;</span><br><span class="line">		cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</span><br><span class="line"></span><br><span class="line">	![cursor.jpg](cursor.jpg)</span><br><span class="line"></span><br><span class="line">9. Inherit 属性	该值使得属性能够继承祖先设置。</span><br><span class="line">		inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。	</span><br><span class="line">	如何让一个不具备继承特性的属性可以继承父元素的定义？	</span><br><span class="line">	示例代码：</span><br><span class="line">	</span><br><span class="line">	```	div &#123;		position: relative;	&#125;	div a &#123;		position: inherit;	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>```<br>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	这3 个属性是必须一起使用才会有效果。</span><br><span class="line"></span><br><span class="line">8. Cursor 属性</span><br><span class="line">	在CSS 中，使用cursor 属性来定义鼠标的样式。</span><br><span class="line">	语法：cursor:属性值;</span><br><span class="line">		cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</span><br><span class="line"></span><br><span class="line">	![cursor.jpg](cursor.jpg)</span><br><span class="line"></span><br><span class="line">9. Inherit 属性	该值使得属性能够继承祖先设置。</span><br><span class="line">		inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。	</span><br><span class="line">	如何让一个不具备继承特性的属性可以继承父元素的定义？	</span><br><span class="line">	示例代码：</span><br><span class="line">	</span><br><span class="line">	```	div &#123;		position: relative;	&#125;	div a &#123;		position: inherit;	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
 <pre><code>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。常用的CSS 属性继承性：
 
 ![Inherit.jpg](Inherit.jpg)
