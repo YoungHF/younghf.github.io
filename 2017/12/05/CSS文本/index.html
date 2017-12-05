@@ -331,73 +331,181 @@
 <p>中文文字中的段前习惯空两个文字的空白，这个特殊的样式可以用下面代码来实现：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;text-indent:2em;&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<h3 id="文本格式处理"><a href="#文本格式处理" class="headerlink" title="文本格式处理"></a>文本格式处理</h3></blockquote>
-<ol>
-<li><p>White-space</p>
-<p> white-space 属性设置如何处理元素内的空白（空白符）。</p>
-<p> |可能值 | 描述 |<br> |——-|——|<br> |normal | 默认。空白会被浏览器忽略。丢掉多余的空白符，换行字符（回车）会转换为空格，一行中多个空格的序列也会转换为一个空格。|<br> |pre | 空白会被浏览器保留。其行为方式类似HTML 中的&lt;pre&gt; 标签。|<br> |nowrap | 文本不会换行，文本会在在同一行上继续，直到遇到&lt;br&gt; 标签为止。|<br> |pre-wrap | 保留空白符序列，但是正常地进行换行。|<br> |pre-line | 合并空白符序列，但是保留换行符。|<br> |inherit | 规定应该从父元素继承white-space 属性的值。|</p>
-<p> white-space 属性的行为：</p>
-<p> |值|空白符|换行符|自动换行|<br> |——-|——|——-|——|<br> |pre-line | 合并|保留|允许|<br> |normal | 合并|忽略|允许|<br> |nowrap | 合并|忽略|不允许|<br> |pre | 保留|保留|不允许|<br> |pre-wrap | 保留|保留|允许|</p>
-</li>
-<li><p>Word-wrap</p>
-<p> word-wrap 属性允许长单词或 URL 地址换行到下一行。一般情况下，如果你开发的是英文网站，就很有可能用到word-wrap 这个属性了。</p>
-<p> 语法:</p>
-<p> word-wrap: normal | break-word;</p>
-</li>
-<li><p>Word-break</p>
-<p> 设置或检索对象内文本的字内换行行为。</p>
-<p> 对于解决防止页面中出现连续无意义的长字符打破布局，应该使用break-all 属性值；</p>
-<p> 语法：</p>
-<p> word-break：normal | keep-all | break-all</p>
-<p> 默认值：normal</p>
-<p> 取值：</p>
+<h3 id="White-space"><a href="#White-space" class="headerlink" title="White-space"></a>White-space</h3></blockquote>
+<p>white-space 属性设置如何处理元素内的空白（空白符）。</p>
+<table>
+<thead>
+<tr>
+<th>可能值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>默认。空白会被浏览器忽略。丢掉多余的空白符，换行字符（回车）会转换为空格，一行中多个空格的序列也会转换为一个空格。</td>
+</tr>
+<tr>
+<td>pre</td>
+<td>空白会被浏览器保留。其行为方式类似HTML 中的&lt;pre&gt; 标签。</td>
+</tr>
+<tr>
+<td>nowrap</td>
+<td>文本不会换行，文本会在在同一行上继续，直到遇到&lt;br&gt; 标签为止。</td>
+</tr>
+<tr>
+<td>pre-wrap</td>
+<td>保留空白符序列，但是正常地进行换行。</td>
+</tr>
+<tr>
+<td>pre-line</td>
+<td>合并空白符序列，但是保留换行符。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承white-space 属性的值。</td>
+</tr>
+</tbody>
+</table>
+<p>white-space 属性的行为：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>空白符</th>
+<th>换行符</th>
+<th>自动换行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pre-line</td>
+<td>合并</td>
+<td>保留</td>
+<td>允许</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>合并</td>
+<td>忽略</td>
+<td>允许</td>
+</tr>
+<tr>
+<td>nowrap</td>
+<td>合并</td>
+<td>忽略</td>
+<td>不允许</td>
+</tr>
+<tr>
+<td>pre</td>
+<td>保留</td>
+<td>保留</td>
+<td>不允许</td>
+</tr>
+<tr>
+<td>pre-wrap</td>
+<td>保留</td>
+<td>保留</td>
+<td>允许</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="Word-wrap"><a href="#Word-wrap" class="headerlink" title="Word-wrap"></a>Word-wrap</h3></blockquote>
+<p>word-wrap 属性允许长单词或 URL 地址换行到下一行。一般情况下，如果你开发的是英文网站，就很有可能用到word-wrap 这个属性了。</p>
+<p>语法:</p>
+<p>word-wrap: normal | break-word;</p>
+<blockquote>
+<h3 id="Word-break"><a href="#Word-break" class="headerlink" title="Word-break"></a>Word-break</h3></blockquote>
+<p>设置或检索对象内文本的字内换行行为。</p>
+<p>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用break-all 属性值；</p>
+<p>语法：</p>
+<p>word-break：normal | keep-all | break-all</p>
+<p>默认值：normal</p>
+<p>取值：</p>
 <ul>
 <li>normal：依照亚洲语言和非亚洲语言的文本规则，允许在字内换行。</li>
 <li>keep-all：与所有非亚洲语言的normal 相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本。</li>
 <li>break-all：该行为与亚洲语言的normal 相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。</li>
 </ul>
-</li>
-<li><p>Text-decoration -文本修饰</p>
-<p> |属性值|说明|<br> |—|—|<br> |none|默认值，可以用这个属性值也可以去掉已经有下划线或删除线或顶划线的样式|<br> |underline| 下划线|<br> |line-through| 删除线|<br> |overline| 顶划线|</p>
-<p> underline 会对元素加下划线，就像HTML 中的U 元素一样。overline 的作用恰好相反，会在文本的顶端画一个上划线。值line-through 则在文本中间画一个贯穿线，等价于HTML 中的S 和strike 元素。</p>
-<p> none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。</p>
-<p> 例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下CSS 来做到这一点：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a &#123;text-decoration: none;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Text-shadow 文字阴影</p>
-<p> 语法：text-shadow:x-offset y-offset blur color;</p>
-<p> 说明：</p>
+<blockquote>
+<h3 id="Text-decoration-文本修饰"><a href="#Text-decoration-文本修饰" class="headerlink" title="Text-decoration -文本修饰"></a>Text-decoration -文本修饰</h3></blockquote>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>默认值，可以用这个属性值也可以去掉已经有下划线或删除线或顶划线的样式</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>line-through</td>
+<td>删除线</td>
+</tr>
+<tr>
+<td>overline</td>
+<td>顶划线</td>
+</tr>
+</tbody>
+</table>
+<p>underline 会对元素加下划线，就像HTML 中的U 元素一样。overline 的作用恰好相反，会在文本的顶端画一个上划线。值line-through 则在文本中间画一个贯穿线，等价于HTML 中的S 和strike 元素。</p>
+<p>none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。</p>
+<p>例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下CSS 来做到这一点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a &#123;text-decoration: none;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="Text-shadow-文字阴影"><a href="#Text-shadow-文字阴影" class="headerlink" title="Text-shadow 文字阴影"></a>Text-shadow 文字阴影</h3></blockquote>
+<p>语法：text-shadow:x-offset y-offset blur color;</p>
+<p>说明：</p>
 <ul>
-<li>x-offset：（水平阴影）表示阴影的水平偏移距离，单位可以是px、em 或者百分比等。<br>如果值为正，则阴影向右偏移；如果值为负，则阴影向左偏移；</li>
-<li>y-offset：（垂直阴影）表示阴影的垂直偏移距离，单位可以是px、em 或者百分比等。<br>如果值为正，则阴影向下偏移；如果值为负，则阴影向上偏移；</li>
-<li>blur：（模糊距离）表示阴影的模糊程度，单位可以是px、em 或者百分比等。blur 值<br>不能为负。如果值越大，则阴影越模糊；如果值越小，则阴影越清晰。当然，如果不需<br>要阴影模糊效果，可以把blur 值设置为0；</li>
-<li><p>color：（阴影的颜色）表示阴影的颜色。</p>
-<p>在CSS3 中，可以使用text-shadow 属性来给文字指定多个阴影，并且针对每个阴影使用不同的颜色。也就是说，text-shadow 属性可以为一个以英文逗号隔开的“值列表”，如：text-shadow:0 0 4px white, 0 -5px 4px #ff3, 2px -10px 6px #fd3;当text-shadow 属性值为“值列表”时，阴影效果会按照给定的值顺序应用到该元素的文本上，因此有可能出现互相覆盖的现象。但是text-shadow 属性永远不会覆盖文本本身，阴影效果也不会改变边框的尺寸。</p>
-</li>
+<li>x-offset：（水平阴影）表示阴影的水平偏移距离，单位可以是px、em 或者百分比等。如果值为正，则阴影向右偏移；如果值为负，则阴影向左偏移；</li>
+<li>y-offset：（垂直阴影）表示阴影的垂直偏移距离，单位可以是px、em 或者百分比等。如果值为正，则阴影向下偏移；如果值为负，则阴影向上偏移；</li>
+<li>blur：（模糊距离）表示阴影的模糊程度，单位可以是px、em 或者百分比等。blur 值不能为负。如果值越大，则阴影越模糊；如果值越小，则阴影越清晰。当然，如果不需要阴影模糊效果，可以把blur 值设置为0；</li>
+<li>color：（阴影的颜色）表示阴影的颜色。</li>
 </ul>
-</li>
-<li><p>text-stroke 属性</p>
-<p> 语法：text-stroke:宽度值颜色值;</p>
-<p> 在CSS3 中，我们可以使用text-stroke 属性为文字添加描边效果。这个描边效果，说白了就是<strong>给文字添加边框</strong>。</p>
-</li>
-<li><p>text-overflow 属性</p>
-<p> 在CSS3 中，文本溢出text-overflow 用于设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
-<p> |属性值    |说明                                                 |<br> |———|—————————————————-|<br> |ellipsis | 当对象内文本溢出时显示省略标记（…）                      |<br> |clip     | 当对象内文本溢出时不显示省略标记（…），而是将溢出的部分裁切掉|</p>
-<p> 单独使用text-overflow 属性是无法得到上面图1 效果的。因为text-overflow 属性只是说明文字溢出时用什么方式显示，要实现溢出时产生省略号效果，还须定义2 个内容：</p>
+<p>在CSS3 中，可以使用text-shadow 属性来给文字指定多个阴影，并且针对每个阴影使用不同的颜色。也就是说，text-shadow 属性可以为一个以英文逗号隔开的“值列表”，如：text-shadow:0 0 4px white, 0 -5px 4px #ff3, 2px -10px 6px #fd3;当text-shadow 属性值为“值列表”时，阴影效果会按照给定的值顺序应用到该元素的文本上，因此有可能出现互相覆盖的现象。但是text-shadow 属性永远不会覆盖文本本身，阴影效果也不会改变边框的尺寸。</p>
+<blockquote>
+<h3 id="text-stroke-属性"><a href="#text-stroke-属性" class="headerlink" title="text-stroke 属性"></a>text-stroke 属性</h3></blockquote>
+<p>语法：text-stroke:宽度值颜色值;</p>
+<p>在CSS3 中，我们可以使用text-stroke 属性为文字添加描边效果。这个描边效果，说白了就是<strong>给文字添加边框</strong>。</p>
+<blockquote>
+<h3 id="text-overflow-属性"><a href="#text-overflow-属性" class="headerlink" title="text-overflow 属性"></a>text-overflow 属性</h3></blockquote>
+<p>在CSS3 中，文本溢出text-overflow 用于设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ellipsis</td>
+<td>当对象内文本溢出时显示省略标记（…）</td>
+</tr>
+<tr>
+<td>clip</td>
+<td>当对象内文本溢出时不显示省略标记（…），而是将溢出的部分裁切掉</td>
+</tr>
+</tbody>
+</table>
+<p>单独使用text-overflow 属性是无法得到上面图1 效果的。因为text-overflow 属性只是说明文字溢出时用什么方式显示，要实现溢出时产生省略号效果，还须定义2 个内容：</p>
 <ul>
 <li>（1）white-space:nowrap;（强制文本在一行内显示）；</li>
-<li><p>（2）overflow:hidden;（溢出内容为隐藏）；</p>
-<p>下面是实现文字溢出时产生省略号效果的完整语法：</p>
-<p>```<br>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	这3 个属性是必须一起使用才会有效果。</span><br><span class="line"></span><br><span class="line">8. Cursor 属性</span><br><span class="line">	在CSS 中，使用cursor 属性来定义鼠标的样式。</span><br><span class="line">	语法：cursor:属性值;</span><br><span class="line">		cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</span><br><span class="line"></span><br><span class="line">	![cursor.jpg](cursor.jpg)</span><br><span class="line"></span><br><span class="line">9. Inherit 属性	该值使得属性能够继承祖先设置。</span><br><span class="line">		inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。	</span><br><span class="line">	如何让一个不具备继承特性的属性可以继承父元素的定义？	</span><br><span class="line">	示例代码：</span><br><span class="line">	</span><br><span class="line">	```	div &#123;		position: relative;	&#125;	div a &#123;		position: inherit;	&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>（2）overflow:hidden;（溢出内容为隐藏）；</li>
 </ul>
-</li>
-</ol>
-<pre><code>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。常用的CSS 属性继承性：
+<p>下面是实现文字溢出时产生省略号效果的完整语法：</p>
+<p>```<br>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">这3 个属性是必须一起使用才会有效果。</span><br><span class="line"></span><br><span class="line">&gt;### Cursor 属性</span><br><span class="line">在CSS 中，使用cursor 属性来定义鼠标的样式。</span><br><span class="line">语法：cursor:属性值;</span><br><span class="line">	cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</span><br><span class="line"></span><br><span class="line">![cursor.jpg](cursor.jpg)</span><br><span class="line"></span><br><span class="line">&gt;### Inherit 属性</span><br><span class="line">该值使得属性能够继承祖先设置。</span><br><span class="line">	inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。	</span><br><span class="line">如何让一个不具备继承特性的属性可以继承父元素的定义？	</span><br><span class="line">示例代码：</span><br><span class="line">	</span><br><span class="line">```div &#123;	position: relative;&#125;div a &#123;	position: inherit;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。常用的CSS 属性继承性：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS文本/Inherit.jpg" alt="Inherit.jpg"></p>
 
-![Inherit.jpg](Inherit.jpg)
-</code></pre>
     </div>
 
     <div class="post-footer">   
