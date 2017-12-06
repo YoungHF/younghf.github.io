@@ -750,7 +750,7 @@ var _hmt = _hmt || [];
    // 追加pv
     function addCount(Counter) {
         
-        if ($(".leancloud_visitors").length == 1){
+        if (document.getElementsByClassName("leancloud_visitors").length == 1){
         	var url = document.getElementsByClassName("leancloud_visitors")[0].getAttribute("id");
         	var Counter = AV.Object.extend("Counter");
 	        var query = new Counter;
