@@ -427,12 +427,128 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <li>Clearfix</li>
 </ol>
 <p>代码：</p>
-<p>```<br>.clearfix:after{<br>    Content:”.”;display:block;clear:both;height:0;<br>    Overflow:hidden;visibility:hidden;}<br>.clearfix{zoom:1;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;### Flex 伸缩布局:</span><br><span class="line"></span><br><span class="line">Flex Terms-基本概念：</span><br><span class="line">Flex 容器（flex container）：</span><br><span class="line">采用Flex 布局的元素，称为Flex 容器（flex container），简称”容器”。</span><br><span class="line">Flex 项目（flex item）:</span><br><span class="line">Flex 容器的所有子元素自动成为容器成员，称为Flex 项目（flex item），简称”项目”。</span><br><span class="line"></span><br><span class="line">![flex.jpg](flex.jpg)</span><br><span class="line"></span><br><span class="line">容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</span><br><span class="line">项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</span><br><span class="line">创建flex container 容器：</span><br><span class="line">Display:flex</span><br><span class="line">Flex items（flex 项目）</span><br><span class="line">在文档流中的子元素是弹性子元素</span><br><span class="line"></span><br><span class="line">![flex1.jpg](flex1.jpg)</span><br><span class="line"></span><br><span class="line">**弹性布局特性：**</span><br><span class="line"></span><br><span class="line">与方向有关：</span><br><span class="line">* flex-direction* Flex-wrap* Flex-flow* order</span><br><span class="line"></span><br><span class="line">与弹性有关：</span><br><span class="line">* Flex-basis* Flex-grow* Flex-shrink* flex</span><br><span class="line"></span><br><span class="line">与对齐有关：</span><br><span class="line">* Justify-content* Align-items* Align-self* Align-content</span><br><span class="line"></span><br><span class="line">**Flex-direction:**</span><br><span class="line">决定主轴的方向（即项目的排列方向）</span><br><span class="line">Flex-direction:row|row-reverse|column|column-reverse</span><br><span class="line"></span><br><span class="line">![flex2.jpg](flex2.jpg)</span><br><span class="line"></span><br><span class="line">它可能有4 个值。</span><br><span class="line">* row（默认值）：主轴为水平方向，起点在左端。* row-reverse：主轴为水平方向，起点在右端。* column：主轴为垂直方向，起点在上沿。* column-reverse：主轴为垂直方向，起点在下沿。Flex-wrap:默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap 属性定义，如果一条轴线排不下，如何换行。</span><br><span class="line">Flex-wrap:nowrap|wrap|wrap-reverse</span><br><span class="line"></span><br><span class="line">![flex3.jpg](flex3.jpg)</span><br><span class="line"></span><br><span class="line">它可能取三个值。</span><br><span class="line">（1）nowrap（默认）：不换行。</span><br><span class="line"></span><br><span class="line">![flex4.jpg](flex4.jpg)</span><br><span class="line"></span><br><span class="line">（2）wrap：换行，第一行在上方。</span><br><span class="line"></span><br><span class="line">![flex5.jpg](flex5.jpg)</span><br><span class="line"></span><br><span class="line">（3）wrap-reverse：换行，第一行在下方。</span><br><span class="line"></span><br><span class="line">![flex6.jpg](flex6.jpg)</span><br><span class="line"></span><br><span class="line">**Flex-flow:**</span><br><span class="line">flex-flow 属性是flex-direction 属性和flex-wrap 属性的简写形式，默认值为row nowrap。</span><br><span class="line">Flex-flow:：&lt;&apos; flex-direction &apos;&gt; || &lt;&apos; flex-wrap &apos;&gt;</span><br><span class="line"></span><br><span class="line">![flex7.jpg](flex7.jpg)</span><br><span class="line"></span><br><span class="line">**Order:**</span><br><span class="line">order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</span><br><span class="line">Order:&lt;interger&gt;</span><br><span class="line">Initial:0 (初始值为0)</span><br><span class="line"></span><br><span class="line">![flex8.jpg](flex8.jpg)</span><br><span class="line"></span><br><span class="line">**Flex-basis**</span><br><span class="line">flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</span><br><span class="line">* flex-basis: &lt;length&gt; | auto; /* default auto */* 设置flex item 的初始宽/高</span><br><span class="line"></span><br><span class="line">它可以设为跟width 或height 属性一样的值（比如350px），则项目将占据固定空间。</span><br><span class="line"></span><br><span class="line">**Flex-grow:**</span><br><span class="line">flex-grow 属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。设置元素所能分配到的空余空间的比例。* Flex-grow:&lt;number&gt;* Initial:0</span><br><span class="line"></span><br><span class="line">![flex9.jpg](flex9.jpg)</span><br><span class="line"></span><br><span class="line">1. 默认情况下，flex-grow:0,flex-item 项目不占据额外空间。2. 如果只设置一个flex-item 项目的flex-grow 为1，则它将占据剩余空间。</span><br><span class="line">3. 如果一个项目的flex-grow 属性为2，一个项目为1，则前者占据的剩余空间比后者多一倍。4. 计算方法：flex-basis + flow-grow/sum(flow-grow) * remain</span><br><span class="line">示例：b,c 将按照1:3 的比率分配剩余空间</span><br></pre></td></tr></table></figure></p>
-<ul class="flex"><br><li>a</li><br><li>b</li><br><li>c</li><br></ul>
+<pre><code>.clearfix:after{
+    Content:”.”;display:block;clear:both;height:0;
+    Overflow:hidden;visibility:hidden;}
+.clearfix{zoom:1;}
+</code></pre><blockquote>
+<h3 id="Flex-伸缩布局"><a href="#Flex-伸缩布局" class="headerlink" title="Flex 伸缩布局:"></a>Flex 伸缩布局:</h3></blockquote>
+<p>Flex Terms-基本概念：</p>
+<p>Flex 容器（flex container）：</p>
+<p>采用Flex 布局的元素，称为Flex 容器（flex container），简称”容器”。</p>
+<p>Flex 项目（flex item）:</p>
+<p>Flex 容器的所有子元素自动成为容器成员，称为Flex 项目（flex item），简称”项目”。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex.jpg" alt="flex.jpg"></p>
+<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</p>
+<p>创建flex container 容器：</p>
+<p>Display:flex</p>
+<p>Flex items（flex 项目）</p>
+<p>在文档流中的子元素是弹性子元素</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex1.jpg" alt="flex1.jpg"></p>
+<p><strong>弹性布局特性：</strong></p>
+<p>与方向有关：</p>
+<ul>
+<li>flex-direction</li>
+<li>Flex-wrap</li>
+<li>Flex-flow</li>
+<li>order</li>
+</ul>
+<p>与弹性有关：</p>
+<ul>
+<li>Flex-basis</li>
+<li>Flex-grow</li>
+<li>Flex-shrink</li>
+<li>flex</li>
+</ul>
+<p>与对齐有关：</p>
+<ul>
+<li>Justify-content</li>
+<li>Align-items</li>
+<li>Align-self</li>
+<li>Align-content</li>
+</ul>
+<p><strong>Flex-direction:</strong></p>
+<p>决定主轴的方向（即项目的排列方向）</p>
+<p>Flex-direction:row|row-reverse|column|column-reverse</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex2.jpg" alt="flex2.jpg"></p>
+<p>它可能有4 个值。</p>
+<ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+</ul>
+<p>Flex-wrap:</p>
+<p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap 属性定义，如果一条轴线排不下，如何换行。</p>
+<p>Flex-wrap:nowrap|wrap|wrap-reverse</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex3.jpg" alt="flex3.jpg"></p>
+<p>它可能取三个值。</p>
+<p>（1）nowrap（默认）：不换行。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex4.jpg" alt="flex4.jpg"></p>
+<p>（2）wrap：换行，第一行在上方。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex5.jpg" alt="flex5.jpg"></p>
+<p>（3）wrap-reverse：换行，第一行在下方。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex6.jpg" alt="flex6.jpg"></p>
+<p><strong>Flex-flow:</strong></p>
+<p>flex-flow 属性是flex-direction 属性和flex-wrap 属性的简写形式，默认值为row nowrap。</p>
+<p>Flex-flow:：&lt;’ flex-direction ‘&gt; || &lt;’ flex-wrap ‘&gt;</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex7.jpg" alt="flex7.jpg"></p>
+<p><strong>Order:</strong></p>
+<p>order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+<p>Order:<interger></interger></p>
+<p>Initial:0 (初始值为0)</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex8.jpg" alt="flex8.jpg"></p>
+<p><strong>Flex-basis</strong></p>
+<p>flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+<ul>
+<li>flex-basis: <length> | auto; /<em> default auto </em>/</length></li>
+<li>设置flex item 的初始宽/高</li>
+</ul>
+<p>它可以设为跟width 或height 属性一样的值（比如350px），则项目将占据固定空间。</p>
+<p><strong>Flex-grow:</strong></p>
+<p>flex-grow 属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。设置元素所能分配到的空余空间的比例。</p>
+<ul>
+<li>Flex-grow:<number></number></li>
+<li>Initial:0</li>
+</ul>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex9.jpg" alt="flex9.jpg"></p>
+<ol>
+<li>默认情况下，flex-grow:0,flex-item 项目不占据额外空间。</li>
+<li>如果只设置一个flex-item 项目的flex-grow 为1，则它将占据剩余空间。</li>
+<li>如果一个项目的flex-grow 属性为2，一个项目为1，则前者占据的剩余空间比后者多一倍。</li>
+<li>计算方法：flex-basis + flow-grow/sum(flow-grow) * remain</li>
+</ol>
+<p>示例：b,c 将按照1:3 的比率分配剩余空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul class=&quot;flex&quot;&gt;&lt;li&gt;a&lt;/li&gt;&lt;li&gt;b&lt;/li&gt;&lt;li&gt;c&lt;/li&gt;&lt;/ul&gt;</span><br><span class="line">CSS Code:</span><br><span class="line">.flex&#123;display:flex;width:600px;margin:0;padding:0;list-style:none;&#125;.flex li:nth-child(1)&#123;width:200px;&#125;.flex li:nth-child(2)&#123;flex-grow:1;width:50px;&#125;.flex li:nth-child(3)&#123;flex-grow:3;width:50px;&#125;</span><br></pre></td></tr></table></figure>
+<p>flex-grow 的默认值为0，如果没有显示定义该属性，是不会拥有分配剩余空间权利的。</p>
+<p>本例中b,c 两项都显式的定义了flex-grow，flex 容器的剩余空间分成了4 份，其中b 占1份，c 占3 分，即1:3</p>
+<p>flex 容器的剩余空间长度为：600-200-50-50=300px，所以最终a,b,c 的长度分别为：</p>
+<pre><code>a: 200+(300/4*0)=200px
+b: 50+(300/4*1)=125px
+a: 50+(300/4*3)=275px
+</code></pre><p><strong>Flex-shrink:</strong></p>
+<p>flex-shrink 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<ul>
+<li>Flex-shrink:<number></number></li>
+<li>Initial:1</li>
+</ul>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex-shrink.jpg" alt="flex-shrink.jpg"></p>
+<p>如果所有项目的flex-shrink 属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink 属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。</p>
+<p>计算方法：flex-basis + flow-shrink/sum(flow-shrink) * remain</p>
+<p>示例：a,b,c 将按照1:1:3 的比率来收缩空间</p>
+<pre><code>&lt;ul class=&quot;flex&quot;&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;b&lt;/li&gt;
+&lt;li&gt;c&lt;/li&gt;
+&lt;/ul&gt;
 
-<p>CSS Code:</p>
-<p>.flex{display:flex;width:600px;margin:0;padding:0;list-style:none;}<br>.flex li:nth-child(1){width:200px;}<br>.flex li:nth-child(2){flex-grow:1;width:50px;}<br>.flex li:nth-child(3){flex-grow:3;width:50px;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">flex-grow 的默认值为0，如果没有显示定义该属性，是不会拥有分配剩余空间权利的。</span><br><span class="line">本例中b,c 两项都显式的定义了flex-grow，flex 容器的剩余空间分成了4 份，其中b 占1份，c 占3 分，即1:3</span><br><span class="line">flex 容器的剩余空间长度为：600-200-50-50=300px，所以最终a,b,c 的长度分别为：</span><br><span class="line">	a: 200+(300/4*0)=200px	b: 50+(300/4*1)=125px	a: 50+(300/4*3)=275px</span><br><span class="line">	</span><br><span class="line">**Flex-shrink:**</span><br><span class="line">flex-shrink 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。* Flex-shrink:&lt;number&gt;* Initial:1</span><br><span class="line"></span><br><span class="line">![flex-shrink.jpg](flex-shrink.jpg)</span><br><span class="line"></span><br><span class="line">如果所有项目的flex-shrink 属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink 属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。</span><br><span class="line">计算方法：flex-basis + flow-shrink/sum(flow-shrink) * remain</span><br><span class="line">示例：a,b,c 将按照1:1:3 的比率来收缩空间```&lt;ul class=&quot;flex&quot;&gt;&lt;li&gt;a&lt;/li&gt;&lt;li&gt;b&lt;/li&gt;</span><br><span class="line">&lt;li&gt;c&lt;/li&gt;&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">CSS Code:</span><br><span class="line">.flex&#123;display:flex;width:400px;margin:0;padding:0;list-style:none;&#125;.flex li&#123;width:200px;&#125;.flex li:nth-child(3)&#123;flex-shrink:3;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>flex-shrink 的默认值为1，如果没有显示定义该属性，将会自动按照默认值1 在所有因子相加之后计算比率来进行空间收缩。</p>
+CSS Code:
+
+.flex{display:flex;width:400px;margin:0;padding:0;list-style:none;}
+.flex li{width:200px;}
+.flex li:nth-child(3){flex-shrink:3;}
+</code></pre><p>flex-shrink 的默认值为1，如果没有显示定义该属性，将会自动按照默认值1 在所有因子相加之后计算比率来进行空间收缩。</p>
 <p>本例中c 显式的定义了flex-shrink，a,b 没有显式定义，但将根据默认值1 来计算，可以看到总共将剩余空间分成了5 份，其中a 占1 份，b 占1 份，c 占3 分，即1:1:3</p>
 <p>我们可以看到父容器定义为400px，子项被定义为200px，相加之后即为600px，超出父容器200px。那么这么超出的200px 需要被a,b,c 消化</p>
 <p>通过收缩因子，所以加权综合可得200<em>1+200</em>1+200*3=1000px；</p>
