@@ -1,0 +1,795 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com/younghf.github.io">
+    <!--SEO-->
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>CSS布局 | Hoff&#39;s blog</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Hoff&#39;s blog" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css?rev=9.12.0">
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/younghf.github.io/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=1263868967&web_id=1263868967" language="JavaScript"></script>
+    </div>
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?11479697";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/younghf.github.io/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 「Stay hungry. Stay foolish.」 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/about/"><i class="fa fa-fw "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="CSS布局">
+            
+            CSS布局
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>前端</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            CSS布局
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/06</span>
+    </span>
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        阅读数:
+        <span id="/younghf.github.io/2017/12/06/CSS布局/" class="leancloud_visitors" data-flag-title="CSS布局"></span>次
+        
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <blockquote>
+<h1 id="内容包括："><a href="#内容包括：" class="headerlink" title="内容包括："></a>内容包括：</h1></blockquote>
+<p>布局简介、display(水平居中、居中导航)、position(轮播头图、固定顶栏、遮罩、三行自适应布局)、float(两列布局)、flex(三行两列自适应)</p>
+<blockquote>
+<h1 id="布局属性："><a href="#布局属性：" class="headerlink" title="布局属性："></a>布局属性：</h1></blockquote>
+<p>Display:设置元素的显示方式</p>
+<p>语法：display：none | inline | block | list-item | inline-block | table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group | run-in | box | inline-box | flexbox | inline-flexbox | flex | inline-flex</p>
+<p>默认值：inline</p>
+<p>取值：</p>
+<ul>
+<li>none： 隐藏对象。与visibility 属性的hidden 值不同，其不为被隐藏的对象保留其物理空间</li>
+<li>inline： 指定对象为内联元素。</li>
+<li>block： 指定对象为块元素。</li>
+<li>list-item： 指定对象为列表项目。</li>
+<li>inline-block： 指定对象为内联块元素。（CSS2）</li>
+<li>table： 指定对象作为块元素级的表格。类同于html 标签&lt;table&gt;（CSS2）</li>
+<li>inline-table： 指定对象作为内联元素级的表格。类同于html 标签&lt;table&gt;（CSS2）</li>
+<li>table-caption： 指定对象作为表格标题。类同于html 标签&lt;caption&gt;（CSS2）</li>
+<li>table-cell： 指定对象作为表格单元格。类同于html 标签&lt;td&gt;（CSS2）</li>
+<li>table-row： 指定对象作为表格行。类同于html 标签&lt;tr&gt;（CSS2）</li>
+<li>table-row-group： 指定对象作为表格行组。类同于html 标签&lt;tbody&gt;（CSS2）</li>
+<li>table-column： 指定对象作为表格列。类同于html 标签&lt;col&gt;（CSS2）</li>
+<li>table-column-group： 指定对象作为表格列组显示。类同于html 标签&lt;colgroup&gt;（CSS2）</li>
+<li>table-header-group： 指定对象作为表格标题组。类同于html 标签&lt;thead&gt;（CSS2）</li>
+<li>table-footer-group： 指定对象作为表格脚注组。类同于html 标签&lt;tfoot&gt;（CSS2）</li>
+<li>run-in： 根据上下文决定对象是内联对象还是块级对象。（CSS3）</li>
+<li>box： 将对象作为弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</li>
+<li>inline-box： 将对象作为内联块级弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</li>
+<li>flexbox： 将对象作为弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</li>
+<li>inline-flexbox： 将对象作为内联块级弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</li>
+<li>flex： 将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</li>
+<li>inline-flex： 将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</li>
+</ul>
+<blockquote>
+<h3 id="Display-Block（块级元素）"><a href="#Display-Block（块级元素）" class="headerlink" title="Display: Block（块级元素）"></a>Display: Block（块级元素）</h3></blockquote>
+<ul>
+<li>默认宽度为父元素宽度</li>
+<li>可设置宽高</li>
+<li>换行显示</li>
+</ul>
+<p>默认的display:block 元素有：div,h1-h6,p,ul,form,……</p>
+<blockquote>
+<h3 id="Display-inline（行内元素）"><a href="#Display-inline（行内元素）" class="headerlink" title="Display: inline（行内元素）"></a>Display: inline（行内元素）</h3></blockquote>
+<ul>
+<li>默认宽度为内容宽度</li>
+<li>不可设置宽高</li>
+<li>同行显示</li>
+</ul>
+<blockquote>
+<h3 id="Display-block-与display-inline-比较"><a href="#Display-block-与display-inline-比较" class="headerlink" title="Display:block 与display:inline 比较"></a>Display:block 与display:inline 比较</h3></blockquote>
+<table>
+<thead>
+<tr>
+<th>display</th>
+<th>默认宽度</th>
+<th>可设置宽高</th>
+<th>起始位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block</td>
+<td>父元素宽度</td>
+<td>是</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>内容宽度</td>
+<td>否</td>
+<td>同行</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="Display-inline-block（行内元素）"><a href="#Display-inline-block（行内元素）" class="headerlink" title="Display: inline-block（行内元素）"></a>Display: inline-block（行内元素）</h3></blockquote>
+<ul>
+<li>默认宽度为内容宽度</li>
+<li>可设置宽高</li>
+<li>同行显示</li>
+<li>整块换行</li>
+</ul>
+<p>默认display:inline-block 元素有：img,input,textarea,select,button,……</p>
+<blockquote>
+<h3 id="display-none-或visibility-hidden"><a href="#display-none-或visibility-hidden" class="headerlink" title="display:none 或visibility:hidden"></a>display:none 或visibility:hidden</h3></blockquote>
+<p>隐藏一个元素可以通过把display 属性设置为”none”，或把visibility 属性设置为”hidden”。display 属性设置一个元素应如何显示，visibility 属性指定一个元素应可见还是隐藏。这两种方法会产生不同的结果。</p>
+<ul>
+<li>visibility:hidden 可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局.</li>
+<li>display:none 可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失。</li>
+</ul>
+<blockquote>
+<h3 id="与Display-相关布局模式"><a href="#与Display-相关布局模式" class="headerlink" title="与Display 相关布局模式"></a>与Display 相关布局模式</h3></blockquote>
+<p>块级元素水平居中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin:0 auto;</span><br></pre></td></tr></table></figure>
+<p><strong>参考知识：</strong></p>
+<p>在CSS 中，html 中的标签元素大体被分为三种不同的类型：块状元素、内联元素(又叫行内元素)和内联块状元素。</p>
+<pre><code>常用的块状元素有：
+
+    &lt;div&gt;、&lt;p&gt;、&lt;h1&gt;...&lt;h6&gt;、&lt;ol&gt;、&lt;ul&gt;、&lt;dl&gt;、&lt;table&gt;、&lt;address&gt;、&lt;blockquote&gt; 、&lt;form&gt;
+
+常用的内联元素有：
+
+    &lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;
+
+常用的内联块状元素有：
+
+    &lt;img&gt;、&lt;input&gt;
+</code></pre><h3 id="解决内联元素（行内元素）间隙bug-问题"><a href="#解决内联元素（行内元素）间隙bug-问题" class="headerlink" title="解决内联元素（行内元素）间隙bug 问题"></a><strong>解决内联元素（行内元素）间隙bug 问题</strong></h3><p>行内元素之间会产生间隙bug 问题的场景：</p>
+<p>当行内元素之间有“回车”、“tab”、“空格”时就会出现间隙。</p>
+<p>解决方法：</p>
+<ol>
+<li><p>写在一行，之间不要有空格之类的符号。</p>
+<pre><code>&lt;div&gt;
+&lt;a&gt;1&lt;/a&gt;&lt;a&gt;2&lt;/a&gt;&lt;span&gt;33333&lt;/span&gt;&lt;span&gt;44444&lt;/span&gt;&lt;em&gt;555555&lt;/em&gt;
+&lt;/div&gt;
+</code></pre></li>
+<li><p>使用font-size:0，设置内联元素的父元素字体大小为0，然后设置内联元素字体大小。</p>
+<pre><code>div{font-size:0;}
+a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
+</code></pre></li>
+<li><p>标签分开写，例如：</p>
+<pre><code>&lt;div&gt;
+    &lt;a&gt;1&lt;/a
+    &gt; &lt;a&gt;2&lt;/a
+    &gt; &lt;span&gt;33333&lt;/span
+    &gt; &lt;span&gt;44444&lt;/span
+    &gt; &lt;em&gt;555555&lt;/em&gt;
+&lt;/div&gt;
+</code></pre></li>
+</ol>
+<h3 id="如何实现浏览器兼容版的inline-block-显示"><a href="#如何实现浏览器兼容版的inline-block-显示" class="headerlink" title="如何实现浏览器兼容版的inline-block 显示"></a><strong>如何实现浏览器兼容版的inline-block 显示</strong></h3><p>IE6,7 支持inline 元素转换成inline-block，但不支持block 元素转换成inline-block，所以非inline 元素在IE6,7 下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block 类似的效果；你可以这样：</p>
+<p>全兼容的inline-block：</p>
+<pre><code>div {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+</code></pre><p>对应的脚本特性为display。</p>
+<blockquote>
+<h3 id="定位（position）"><a href="#定位（position）" class="headerlink" title="定位（position）:"></a>定位（position）:</h3></blockquote>
+<p>CSS 定位(Positioning) 属性允许你对元素进行定位。</p>
+<p>定位的基本思想:它允许你定义元素框相对于其正常位置应该出现的位置，或者相对于父元素、另一个元素甚至浏览器窗口本身的位置。</p>
+<p><strong>CSS 定位机制</strong></p>
+<p>CSS 有三种基本的定位机制：普通流、浮动和绝对定位。</p>
+<p>除非专门指定，否则所有框都在普通流中定位。也就是说，普通流中的元素的位置由元素在(X)HTML 中的位置决定。块级框从上到下一个接一个地排列，框之间的垂直距离是由框的垂直外边距计算出来。行内框在一行中水平布置。可以使用水平内边距、边框和外边距调整它们的间距。但是，垂直内边距、边框和外边距不影响行内框的高度。由一行形成的水平框称为行框（Line Box），行框的高度总是足以容纳它包含的所有行内框。不过，设置行高可以增加这个框的高度。</p>
+<p><strong>CSS 定位属性</strong></p>
+<ul>
+<li>Position-设置定位方式</li>
+<li>Top,right,bottom,left,z-index-设置元素边缘距离参照物边缘的距离</li>
+</ul>
+<p>CSS 定位属性允许你对元素进行定位。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>position</td>
+<td>把元素放置到一个静态的、相对的、绝对的、或固定的位置中。</td>
+</tr>
+<tr>
+<td>top</td>
+<td>定义了一个定位元素的上外边距边界与其包含块上边界之间的偏移。</td>
+</tr>
+<tr>
+<td>right</td>
+<td>定义了定位元素右外边距边界与其包含块右边界之间的偏移。</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>定义了定位元素下外边距边界与其包含块下边界之间的偏移。</td>
+</tr>
+<tr>
+<td>left</td>
+<td>定义了定位元素左外边距边界与其包含块左边界之间的偏移。</td>
+</tr>
+<tr>
+<td>overflow</td>
+<td>设置当元素的内容溢出其区域时发生的事情。</td>
+</tr>
+<tr>
+<td>clip</td>
+<td>设置元素的形状。元素被剪入这个形状之中，然后显示出来。</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>设置元素的垂直对齐方式。</td>
+</tr>
+<tr>
+<td>z-index</td>
+<td>设置元素的堆叠顺序。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="CSS-position-属性"><a href="#CSS-position-属性" class="headerlink" title="CSS position 属性"></a>CSS position 属性</h3></blockquote>
+<p>通过使用position 属性，我们可以选择4 种不同类型的定位，这会影响元素框生成的方式。</p>
+<h3 id="static"><a href="#static" class="headerlink" title="* static"></a>* static</h3><p>元素框正常生成。块级元素生成一个矩形框，作为文档流的一部分，行内元素则会创建一个或多个行框，置于其父元素中。</p>
+<h3 id="relative"><a href="#relative" class="headerlink" title="* relative"></a>* relative</h3><p>元素框偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍保留。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/relative.jpg" alt="relative.jpg"></p>
+<h3 id="absolute"><a href="#absolute" class="headerlink" title="* absolute"></a>* absolute</h3><p>元素框从文档流完全删除，并相对于其包含块定位。包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/absolute.jpg" alt="absolute.jpg"></p>
+<h3 id="fixed"><a href="#fixed" class="headerlink" title="* fixed"></a>* fixed</h3><p>元素框的表现类似于将position 设置为absolute，不过其包含块是视窗本身。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/fixed.jpg" alt="fixed.jpg"></p>
+<blockquote>
+<h3 id="Z-index-设置元素在z-轴上的排序"><a href="#Z-index-设置元素在z-轴上的排序" class="headerlink" title="Z-index -设置元素在z 轴上的排序"></a>Z-index -设置元素在z 轴上的排序</h3></blockquote>
+<p>z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。</p>
+<ul>
+<li>元素可拥有负的z-index 属性值。</li>
+<li>Z-index 仅能在定位元素上奏效（例如position:absolute;）</li>
+</ul>
+<p><strong>Z-index 栈</strong></p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/z-index.jpg" alt="z-index.jpg"></p>
+<blockquote>
+<h3 id="Float-浮动"><a href="#Float-浮动" class="headerlink" title="Float 浮动:"></a>Float 浮动:</h3></blockquote>
+<p>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。</p>
+<p>float 属性定义元素在哪个方向浮动.</p>
+<p>以往这个属性总应用于图像，使文本围绕在图像周围，不过在CSS 中，任何元素都可以浮动。浮动元素会生成一个块级框，而不论它本身是何种元素。</p>
+<p>语法：<br>float：none | left | right</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/float.jpg" alt="float.jpg"></p>
+<p><strong>Float 浮动基本特征：</strong></p>
+<ol>
+<li>float 的元素在同一文档流</li>
+</ol>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/float1.jpg" alt="float1.jpg"></p>
+<ol>
+<li>float 元素半脱离文档流</li>
+</ol>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/float2.jpg" alt="float2.jpg"></p>
+<p>对元素，脱离文档流；对内容，在文档流。</p>
+<p><strong>Clear-清除浮动：</strong></p>
+<p>元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用clear 属性。clear 属性规定元素的哪一侧不允许其他浮动元素。</p>
+<p>语法：</p>
+<p>clear：none | left | right | both</p>
+<ul>
+<li>应用于(浮动元素)后续元素；</li>
+<li>应用于块级元素；</li>
+</ul>
+<p>使用方式：</p>
+<ol>
+<li>增加空白元素</li>
+<li>Clearfix</li>
+</ol>
+<p>代码：</p>
+<p>```<br>.clearfix:after{<br>    Content:”.”;display:block;clear:both;height:0;<br>    Overflow:hidden;visibility:hidden;}<br>.clearfix{zoom:1;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;### Flex 伸缩布局:</span><br><span class="line"></span><br><span class="line">Flex Terms-基本概念：</span><br><span class="line">Flex 容器（flex container）：</span><br><span class="line">采用Flex 布局的元素，称为Flex 容器（flex container），简称”容器”。</span><br><span class="line">Flex 项目（flex item）:</span><br><span class="line">Flex 容器的所有子元素自动成为容器成员，称为Flex 项目（flex item），简称”项目”。</span><br><span class="line"></span><br><span class="line">![flex.jpg](flex.jpg)</span><br><span class="line"></span><br><span class="line">容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</span><br><span class="line">项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</span><br><span class="line">创建flex container 容器：</span><br><span class="line">Display:flex</span><br><span class="line">Flex items（flex 项目）</span><br><span class="line">在文档流中的子元素是弹性子元素</span><br><span class="line"></span><br><span class="line">![flex1.jpg](flex1.jpg)</span><br><span class="line"></span><br><span class="line">**弹性布局特性：**</span><br><span class="line"></span><br><span class="line">与方向有关：</span><br><span class="line">* flex-direction* Flex-wrap* Flex-flow* order</span><br><span class="line"></span><br><span class="line">与弹性有关：</span><br><span class="line">* Flex-basis* Flex-grow* Flex-shrink* flex</span><br><span class="line"></span><br><span class="line">与对齐有关：</span><br><span class="line">* Justify-content* Align-items* Align-self* Align-content</span><br><span class="line"></span><br><span class="line">**Flex-direction:**</span><br><span class="line">决定主轴的方向（即项目的排列方向）</span><br><span class="line">Flex-direction:row|row-reverse|column|column-reverse</span><br><span class="line"></span><br><span class="line">![flex2.jpg](flex2.jpg)</span><br><span class="line"></span><br><span class="line">它可能有4 个值。</span><br><span class="line">* row（默认值）：主轴为水平方向，起点在左端。* row-reverse：主轴为水平方向，起点在右端。* column：主轴为垂直方向，起点在上沿。* column-reverse：主轴为垂直方向，起点在下沿。Flex-wrap:默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap 属性定义，如果一条轴线排不下，如何换行。</span><br><span class="line">Flex-wrap:nowrap|wrap|wrap-reverse</span><br><span class="line"></span><br><span class="line">![flex3.jpg](flex3.jpg)</span><br><span class="line"></span><br><span class="line">它可能取三个值。</span><br><span class="line">（1）nowrap（默认）：不换行。</span><br><span class="line"></span><br><span class="line">![flex4.jpg](flex4.jpg)</span><br><span class="line"></span><br><span class="line">（2）wrap：换行，第一行在上方。</span><br><span class="line"></span><br><span class="line">![flex5.jpg](flex5.jpg)</span><br><span class="line"></span><br><span class="line">（3）wrap-reverse：换行，第一行在下方。</span><br><span class="line"></span><br><span class="line">![flex6.jpg](flex6.jpg)</span><br><span class="line"></span><br><span class="line">**Flex-flow:**</span><br><span class="line">flex-flow 属性是flex-direction 属性和flex-wrap 属性的简写形式，默认值为row nowrap。</span><br><span class="line">Flex-flow:：&lt;&apos; flex-direction &apos;&gt; || &lt;&apos; flex-wrap &apos;&gt;</span><br><span class="line"></span><br><span class="line">![flex7.jpg](flex7.jpg)</span><br><span class="line"></span><br><span class="line">**Order:**</span><br><span class="line">order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</span><br><span class="line">Order:&lt;interger&gt;</span><br><span class="line">Initial:0 (初始值为0)</span><br><span class="line"></span><br><span class="line">![flex8.jpg](flex8.jpg)</span><br><span class="line"></span><br><span class="line">**Flex-basis**</span><br><span class="line">flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</span><br><span class="line">* flex-basis: &lt;length&gt; | auto; /* default auto */* 设置flex item 的初始宽/高</span><br><span class="line"></span><br><span class="line">它可以设为跟width 或height 属性一样的值（比如350px），则项目将占据固定空间。</span><br><span class="line"></span><br><span class="line">**Flex-grow:**</span><br><span class="line">flex-grow 属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。设置元素所能分配到的空余空间的比例。* Flex-grow:&lt;number&gt;* Initial:0</span><br><span class="line"></span><br><span class="line">![flex9.jpg](flex9.jpg)</span><br><span class="line"></span><br><span class="line">1. 默认情况下，flex-grow:0,flex-item 项目不占据额外空间。2. 如果只设置一个flex-item 项目的flex-grow 为1，则它将占据剩余空间。</span><br><span class="line">3. 如果一个项目的flex-grow 属性为2，一个项目为1，则前者占据的剩余空间比后者多一倍。4. 计算方法：flex-basis + flow-grow/sum(flow-grow) * remain</span><br><span class="line">示例：b,c 将按照1:3 的比率分配剩余空间</span><br></pre></td></tr></table></figure></p>
+<ul class="flex"><br><li>a</li><br><li>b</li><br><li>c</li><br></ul>
+
+<p>CSS Code:</p>
+<p>.flex{display:flex;width:600px;margin:0;padding:0;list-style:none;}<br>.flex li:nth-child(1){width:200px;}<br>.flex li:nth-child(2){flex-grow:1;width:50px;}<br>.flex li:nth-child(3){flex-grow:3;width:50px;}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">flex-grow 的默认值为0，如果没有显示定义该属性，是不会拥有分配剩余空间权利的。</span><br><span class="line">本例中b,c 两项都显式的定义了flex-grow，flex 容器的剩余空间分成了4 份，其中b 占1份，c 占3 分，即1:3</span><br><span class="line">flex 容器的剩余空间长度为：600-200-50-50=300px，所以最终a,b,c 的长度分别为：</span><br><span class="line">	a: 200+(300/4*0)=200px	b: 50+(300/4*1)=125px	a: 50+(300/4*3)=275px</span><br><span class="line">	</span><br><span class="line">**Flex-shrink:**</span><br><span class="line">flex-shrink 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。* Flex-shrink:&lt;number&gt;* Initial:1</span><br><span class="line"></span><br><span class="line">![flex-shrink.jpg](flex-shrink.jpg)</span><br><span class="line"></span><br><span class="line">如果所有项目的flex-shrink 属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink 属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。</span><br><span class="line">计算方法：flex-basis + flow-shrink/sum(flow-shrink) * remain</span><br><span class="line">示例：a,b,c 将按照1:1:3 的比率来收缩空间```&lt;ul class=&quot;flex&quot;&gt;&lt;li&gt;a&lt;/li&gt;&lt;li&gt;b&lt;/li&gt;</span><br><span class="line">&lt;li&gt;c&lt;/li&gt;&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">CSS Code:</span><br><span class="line">.flex&#123;display:flex;width:400px;margin:0;padding:0;list-style:none;&#125;.flex li&#123;width:200px;&#125;.flex li:nth-child(3)&#123;flex-shrink:3;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>flex-shrink 的默认值为1，如果没有显示定义该属性，将会自动按照默认值1 在所有因子相加之后计算比率来进行空间收缩。</p>
+<p>本例中c 显式的定义了flex-shrink，a,b 没有显式定义，但将根据默认值1 来计算，可以看到总共将剩余空间分成了5 份，其中a 占1 份，b 占1 份，c 占3 分，即1:1:3</p>
+<p>我们可以看到父容器定义为400px，子项被定义为200px，相加之后即为600px，超出父容器200px。那么这么超出的200px 需要被a,b,c 消化</p>
+<p>通过收缩因子，所以加权综合可得200<em>1+200</em>1+200*3=1000px；</p>
+<p>于是我们可以计算a,b,c 将被移除的溢出量是多少：</p>
+<pre><code>a 被移除溢出量：(200*1/1000)*200，即约等于40px
+b 被移除溢出量：(200*1/1000)*200，即约等于40px
+c 被移除溢出量：(200*3/1000)*200，即约等于120px
+</code></pre><p>最后a,b,c 的实际宽度分别为：200-40=160px, 200-40=160px, 200-120=80px</p>
+<p><strong>Flex</strong></p>
+<p>flex 属性是flex-grow, flex-shrink 和flex-basis 的简写，默认值为0 1 auto。后两个属性可选。</p>
+<ul>
+<li>Flex: [ &lt;’flex-grow’&gt; &lt;’flex-shrink’&gt;? || &lt;’flex-basis’&gt; ]|none</li>
+<li>Initial:0 1 auto</li>
+</ul>
+<p>该属性有两个快捷值：auto (1 1 auto) 和none (0 0 auto)。</p>
+<p>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<p>取值：</p>
+<ul>
+<li>none： none 关键字的计算值为: 0 0 auto</li>
+<li>&lt;’ flex-grow ‘&gt;： 用来指定扩展比率，即剩余空间是正值时此「flex 子项」相对于「flex 容器」里其他「flex 子项」能分配到空间比例。在「flex」属性中该值如果被省略则默认为「1」</li>
+<li>&lt;’ flex-shrink ‘&gt;： 用来指定收缩比率，即剩余空间是负值时此「flex 子项」相对于「flex 容器」里其他「flex 子项」能收缩的空间比例。在收缩的时候收缩比率会以伸缩基准值加权在「flex」属性中该值如果被省略则默认为「1」</li>
+<li>&lt;’ flex-basis ‘&gt;： 用来指定伸缩基准值，即在根据伸缩比率计算出剩余空间的分布之前，「flex 子项」长度的起始数值。在「flex」属性中该值如果被省略则默认为「0%」在「flex」属性中该值如果被指定为「auto」，则伸缩基准值的计算值是自身的&lt;’ width’&gt; 设置，如果自身的宽度没有定义，则长度取决于内容。</li>
+<li>如果缩写「flex: 1」, 则其计算值为「1 1 0%」</li>
+<li>如果缩写「flex: auto」, 则其计算值为「1 1 auto」</li>
+<li>如果「flex: none」, 则其计算值为「0 0 auto」</li>
+<li>如果「flex: 0 auto」或者「flex: initial」, 则其计算值为「0 1 auto」，即「flex」初始值</li>
+</ul>
+<p><strong>Justify-content</strong></p>
+<ul>
+<li>justify-content: flex-start | flex-end | center | space-between | space-around</li>
+<li>定义了项目在主轴(main-axis)上的对齐方式。</li>
+</ul>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/Justify-content.jpg" alt="Justify-content.jpg"></p>
+<p>它可能取5 个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+<p><strong>Align-items</strong></p>
+<ul>
+<li>align-items: flex-start | flex-end | center | baseline | stretch</li>
+<li>定义项目在交叉轴(辅轴，cross-axis)上如何对齐。</li>
+</ul>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/align-items.jpg" alt="align-items.jpg"></p>
+<p>它可能取5 个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<p><strong>Align-self</strong></p>
+<p>align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items 属性。</p>
+<p>默认值为auto，表示继承父元素的align-items 属性，如果没有父元素，则等同于stretch。</p>
+<ul>
+<li>align-self: auto | flex-start | flex-end | center | baseline | stretch</li>
+<li>设置单个flex item 在cross-axis 方向上对齐方式。</li>
+</ul>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/align-self.jpg" alt="align-self.jpg"></p>
+<p><strong>Align-content</strong></p>
+<p>align-content 属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<ul>
+<li>align-content: flex-start | flex-end | center | space-between | space-around | stretch</li>
+<li>设置cross-axis 方向上行对齐方式</li>
+</ul>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/align-content.jpg" alt="align-content.jpg"></p>
+<p>该属性可能取6 个值。</p>
+<ul>
+<li>flex-start：与交叉轴的起点对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+<p>关于flex 布局，可参看资源：</p>
+<p><a href="http://www.xifengxx.com/seo/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A
+0/1408.html" target="_blank" rel="noopener">http://www.xifengxx.com/seo/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A<br>0/1408.html</a></p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://blog.young-coder.xin/" target="_blank">Hoff</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/younghf.github.io/2017/12/06/CSS背景/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+    <script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+        id: window.location.pathname,
+        owner:"YoungHF",
+        repo:"younghf.github.io",
+        oauth: {
+          client_id:"3c8e003c35f4e0526f71",
+          client_secret:"63741c8fa06e9d003b1dae48f2a9a50b4f22f0f3"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+    </script>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        <div class="widget" style="padding: 12px 15px;">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height="86" width="100%" src="//music.163.com/outchain/player?type=2&amp;id=5308028&amp;auto=0&amp;height=66"></iframe>
+</div>
+<div class="widget">
+    <iframe frameborder="0" width="100%" src="https://v.qq.com/iframe/player.html?vid=f0016poxenq&tiny=0&auto=0" allowfullscreen></iframe>
+</div>
+
+
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>Hello~ 欢迎访问~
+<hr/>
+本站点中的文章仅用于个人学习，如有侵权请联系我删除！
+<hr/>
+如果大家有疑问或者文章中有错误欢迎大家留言~
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/YoungHF" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:929662659@qq.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/younghf.github.io/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/younghf.github.io/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/younghf.github.io/archives/2017/12/"><i class="fa" aria-hidden="true">十二月 2017</i></a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/younghf.github.io/archives/2017/11/"><i class="fa" aria-hidden="true">十一月 2017</i></a><span class="archive-list-count">2</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/younghf.github.io/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/younghf.github.io/tags/CSS布局/" style="font-size: 10px;">CSS布局</a> <a href="/younghf.github.io/tags/CSS文本/" style="font-size: 10px;">CSS文本</a> <a href="/younghf.github.io/tags/CSS盒模型/" style="font-size: 10px;">CSS盒模型</a> <a href="/younghf.github.io/tags/CSS背景/" style="font-size: 10px;">CSS背景</a> <a href="/younghf.github.io/tags/CSS选择器/" style="font-size: 10px;">CSS选择器</a> <a href="/younghf.github.io/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/younghf.github.io/tags/Markdown/" style="font-size: 10px;">Markdown</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.young-coder.xin/yhf/canvas-countdown/index.html" class="fa" target="_blank">个人网站</a>
+        
+        </div>
+    </div>
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fcd1fe0f49104aca021efa886177c931";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+// <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+<script>
+    var APP_ID = 'Qua3QRJmPgA4tQmnV4Ezfh9b-gzGzoHsz';
+    var APP_KEY = '1fSllBkllCQfN9mNilolPJuK';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter,url) {
+        var query = new AV.Query("Counter");
+        
+        // where field
+        
+        query.equalTo("words", url);
+        //console.log("query:",query)
+        // count 
+        
+        query.count().then(function (number) {
+
+        	//console.log("result:",number)
+            // There are number instances of MyClass where words equals url.
+            document.getElementById(url).innerText = number?  number : 0;
+        }, function (error) {
+            // error is an instance of AVError.
+        });
+        
+    }
+   // 追加pv
+    function addCount(Counter) {
+        
+        if ($(".leancloud_visitors").length == 1){
+        	var url = document.getElementsByClassName("leancloud_visitors")[0].getAttribute("id");
+        	var Counter = AV.Object.extend("Counter");
+	        var query = new Counter;
+	        query.save({
+	            words: url
+	        }).then(function (object) {
+	        })
+        }
+        
+    }
+    
+    var Counter = AV.Object.extend("Counter");
+    var leancloud_visitors = document.getElementsByClassName("leancloud_visitors");
+    addCount(Counter);
+    for (var i = 0;i < leancloud_visitors.length;i++){
+    	var url = leancloud_visitors[i].getAttribute("id");
+    	showTime(Counter,url);
+    }
+        
+    
+</script>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <script src="/younghf.github.io/assets/highlight.pack.js?rev=@@hash"></script>
+  <script>
+     hljs.initHighlightingOnLoad(); //初始化代码高亮 
+  </script>
+
+
+
+	<script src="/younghf.github.io/js/search.js?rev=@@hash"></script>
+
+
+<script src="/younghf.github.io/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
