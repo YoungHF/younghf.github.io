@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>CSS文本 | Hoff&#39;s blog</title>
+<title>CSS盒模型 | Hoff&#39;s blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hoff&#39;s blog" type="application/atom+xml">
@@ -139,9 +139,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="CSS文本">
+        <h1 id="CSS盒模型">
             
-            CSS文本
+            CSS盒模型
             
         </h1>
         <div class="post-meta">
@@ -157,7 +157,7 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            CSS文本
+            CSS盒模型
             
         </span>
     </span>
@@ -170,7 +170,7 @@
     <span class="fa-wrap">
         <i class="fa fa-eye"></i>
         阅读数:
-        <span id="/younghf.github.io/2017/12/05/CSS文本/" class="leancloud_visitors" data-flag-title="CSS文本"></span>次
+        <span id="/younghf.github.io/2017/12/05/CSS盒模型/" class="leancloud_visitors" data-flag-title="CSS盒模型"></span>次
         
     </span>
 </div>
@@ -180,352 +180,223 @@
     </div>
     
     <div class="post-body post-content">
-        <blockquote>
-<h1 id="CSS-字体属性"><a href="#CSS-字体属性" class="headerlink" title="CSS 字体属性"></a><a href="http://www.w3school.com.cn/cssref/pr_font_font.asp" target="_blank" rel="noopener">CSS 字体属性</a></h1></blockquote>
+        <p>每个元素都看成一个盒子，盒子模型是由content（内容）、padding（内边距）、margin（外边距）和border（边框）这四个属性组成的。此外，在盒子模型中，还有宽度width和高度height 两大辅助性属性。</p>
+<p>下图为一个CSS 盒子模型的内部结构：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/box.jpg" alt="box.jpg"></p>
 <table>
 <thead>
 <tr>
 <th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>font</td>
-<td>简写属性。作用是把所有针对字体的属性设置在一个声明中。</td>
-</tr>
-<tr>
-<td>font-family</td>
-<td>设置字体系列。</td>
-</tr>
-<tr>
-<td>font-size</td>
-<td>设置字体的尺寸。</td>
-</tr>
-<tr>
-<td>font-style</td>
-<td>设置字体风格。</td>
-</tr>
-<tr>
-<td>font-variant</td>
-<td>以小型大写字体或者正常字体显示文本。</td>
-</tr>
-<tr>
-<td>font-weight</td>
-<td>设置字体的粗细。</td>
-</tr>
-</tbody>
-</table>
-<p>以上具体的属性介绍在此不再赘述。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS文本/font.jpg" alt="font 缩写"></p>
-<p>如上图，灰色的属性表示不常用，其中font-size、font-family为必填项，所以最后两种缩写的方式是不起作用的。</p>
-<blockquote>
-<h3 id="Line-height–行间距（行高）"><a href="#Line-height–行间距（行高）" class="headerlink" title="Line-height–行间距（行高）"></a>Line-height–行间距（行高）</h3></blockquote>
-<p>line-height: normal | &lt;number&gt; | &lt;length&gt; | &lt;percentage&gt;</p>
-<p><strong>注意：&lt;percentage&gt;是先计算后继承，<number>是直接继承</number></strong></p>
-<blockquote>
-<h3 id="Color-颜色"><a href="#Color-颜色" class="headerlink" title="Color 颜色"></a>Color 颜色</h3></blockquote>
-<p>检索或设置对象的文本颜色。无默认值。</p>
-<p>可以使用Color Name(颜色名称), HEX（十六进制颜色）, RGB, RGBA, HSL, HSLA, transparent来指定color。</p>
-<p><strong>注意，用颜色名称指定color 可能不被一些浏览器接受。</strong></p>
-<p>color 属性值被间接用来提供一个中间值currentColor 以供其他接受颜色值的属性使用。</p>
-<p>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div &#123;	border: 10px solid;	color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如上代码，没有定义边框的颜色，但定义了color 的颜色为red，那么这时red 将会作为一个间接值currentColor 提供给边框颜色属性，所以最终边框色也为red。</p>
-<blockquote>
-<h3 id="Text-align-文本对齐方式"><a href="#Text-align-文本对齐方式" class="headerlink" title="Text-align 文本对齐方式"></a>Text-align 文本对齐方式</h3></blockquote>
-<p>text-align 属性规定元素中的文本的水平对齐方式。<strong>只能针对文本文字和img 标签，对其他标签无效。</strong></p>
-<p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值justify；不同用户代理可能会得到不同的结果。</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>默认值</td>
-<td>如果direction 属性是ltr，则默认值是left；如果direction 是rtl，则为right。</td>
-</tr>
-<tr>
-<td>left</td>
-<td>把文本排列到左边。默认值：由浏览器决定。</td>
-</tr>
-<tr>
-<td>right</td>
-<td>把文本排列到右边。</td>
-</tr>
-<tr>
-<td>center</td>
-<td>把文本排列到中间。</td>
-</tr>
-<tr>
-<td>justify</td>
-<td>实现两端对齐文本效果。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承text-align 属性的值。</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<h3 id="vertical-align-垂直对齐方式"><a href="#vertical-align-垂直对齐方式" class="headerlink" title="vertical-align 垂直对齐方式"></a>vertical-align 垂直对齐方式</h3></blockquote>
-<p>该属性定义<strong>行内元素</strong>的基线相对于该元素所在行的基线的垂直对齐。允许指定负长度值和百分比值。这会使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>baseline</td>
-<td>默认。元素放置在父元素的基线上。</td>
-</tr>
-<tr>
-<td>sub</td>
-<td>垂直对齐文本的下标。</td>
-</tr>
-<tr>
-<td>super</td>
-<td>垂直对齐文本的上标</td>
-</tr>
-<tr>
-<td>top</td>
-<td>把元素的顶端与行中最高元素的顶端对齐</td>
-</tr>
-<tr>
-<td>text-top</td>
-<td>把元素的顶端与父元素字体的顶端对齐</td>
-</tr>
-<tr>
-<td>middle</td>
-<td>把此元素放置在父元素的中部。</td>
-</tr>
-<tr>
-<td>bottom</td>
-<td>把元素的顶端与行中最低的元素的顶端对齐。</td>
-</tr>
-<tr>
-<td>text-bottom</td>
-<td>把元素的底端与父元素字体的底端对齐。</td>
-</tr>
-<tr>
-<td>length</td>
-<td></td>
-</tr>
-<tr>
-<td>%</td>
-<td>使用”line-height” 属性的百分比值来排列此元素。允许使用负值。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承vertical-align 属性的值。</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<h3 id="Text-indent-设置首行缩进"><a href="#Text-indent-设置首行缩进" class="headerlink" title="Text-indent  设置首行缩进"></a>Text-indent  设置首行缩进</h3></blockquote>
-<p>中文文字中的段前习惯空两个文字的空白，这个特殊的样式可以用下面代码来实现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;text-indent:2em;&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h3 id="White-space"><a href="#White-space" class="headerlink" title="White-space"></a>White-space</h3></blockquote>
-<p>white-space 属性设置如何处理元素内的空白（空白符）。</p>
-<table>
-<thead>
-<tr>
-<th>可能值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>normal</td>
-<td>默认。空白会被浏览器忽略。丢掉多余的空白符，换行字符（回车）会转换为空格，一行中多个空格的序列也会转换为一个空格。</td>
-</tr>
-<tr>
-<td>pre</td>
-<td>空白会被浏览器保留。其行为方式类似HTML 中的&lt;pre&gt; 标签。</td>
-</tr>
-<tr>
-<td>nowrap</td>
-<td>文本不会换行，文本会在在同一行上继续，直到遇到&lt;br&gt; 标签为止。</td>
-</tr>
-<tr>
-<td>pre-wrap</td>
-<td>保留空白符序列，但是正常地进行换行。</td>
-</tr>
-<tr>
-<td>pre-line</td>
-<td>合并空白符序列，但是保留换行符。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承white-space 属性的值。</td>
-</tr>
-</tbody>
-</table>
-<p>white-space 属性的行为：</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>空白符</th>
-<th>换行符</th>
-<th>自动换行</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pre-line</td>
-<td>合并</td>
-<td>保留</td>
-<td>允许</td>
-</tr>
-<tr>
-<td>normal</td>
-<td>合并</td>
-<td>忽略</td>
-<td>允许</td>
-</tr>
-<tr>
-<td>nowrap</td>
-<td>合并</td>
-<td>忽略</td>
-<td>不允许</td>
-</tr>
-<tr>
-<td>pre</td>
-<td>保留</td>
-<td>保留</td>
-<td>不允许</td>
-</tr>
-<tr>
-<td>pre-wrap</td>
-<td>保留</td>
-<td>保留</td>
-<td>允许</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<h3 id="Word-wrap"><a href="#Word-wrap" class="headerlink" title="Word-wrap"></a>Word-wrap</h3></blockquote>
-<p>word-wrap 属性允许长单词或 URL 地址换行到下一行。一般情况下，如果你开发的是英文网站，就很有可能用到word-wrap 这个属性了。</p>
-<p>语法:</p>
-<p>word-wrap: normal | break-word;</p>
-<blockquote>
-<h3 id="Word-break"><a href="#Word-break" class="headerlink" title="Word-break"></a>Word-break</h3></blockquote>
-<p>设置或检索对象内文本的字内换行行为。</p>
-<p>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用break-all 属性值；</p>
-<p>语法：</p>
-<p>word-break：normal | keep-all | break-all</p>
-<p>默认值：normal</p>
-<p>取值：</p>
-<ul>
-<li>normal：依照亚洲语言和非亚洲语言的文本规则，允许在字内换行。</li>
-<li>keep-all：与所有非亚洲语言的normal 相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本。</li>
-<li>break-all：该行为与亚洲语言的normal 相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。</li>
-</ul>
-<blockquote>
-<h3 id="Text-decoration-文本修饰"><a href="#Text-decoration-文本修饰" class="headerlink" title="Text-decoration -文本修饰"></a>Text-decoration -文本修饰</h3></blockquote>
-<table>
-<thead>
-<tr>
-<th>属性值</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>none</td>
-<td>默认值，可以用这个属性值也可以去掉已经有下划线或删除线或顶划线的样式</td>
+<td>border</td>
+<td>（边框）元素边框</td>
 </tr>
 <tr>
-<td>underline</td>
-<td>下划线</td>
+<td>margin</td>
+<td>（外边距）用于定义页面中元素与元素之间的距离</td>
 </tr>
 <tr>
-<td>line-through</td>
-<td>删除线</td>
+<td>padding</td>
+<td>（内边距）用于定义内容与边框之间的距离</td>
 </tr>
 <tr>
-<td>overline</td>
-<td>顶划线</td>
+<td>content</td>
+<td>（内容）可以是文字或图片</td>
 </tr>
 </tbody>
 </table>
-<p>underline 会对元素加下划线，就像HTML 中的U 元素一样。overline 的作用恰好相反，会在文本的顶端画一个上划线。值line-through 则在文本中间画一个贯穿线，等价于HTML 中的S 和strike 元素。</p>
-<p>none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。</p>
-<p>例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下CSS 来做到这一点：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a &#123;text-decoration: none;&#125;</span><br></pre></td></tr></table></figure>
+<p>以上属性的就不赘述了，请自行查阅相关资料。</p>
 <blockquote>
-<h3 id="Text-shadow-文字阴影"><a href="#Text-shadow-文字阴影" class="headerlink" title="Text-shadow 文字阴影"></a>Text-shadow 文字阴影</h3></blockquote>
-<p>语法：text-shadow:x-offset y-offset blur color;</p>
+<h3 id="CSS-外边距合并"><a href="#CSS-外边距合并" class="headerlink" title="CSS 外边距合并"></a>CSS 外边距合并</h3></blockquote>
+<p>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</p>
+<p>当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并。请看下图：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/margin1.jpg" alt="margin1.jpg"></p>
+<p>当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距也会发生合并。请看下图：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/margin2.jpg" alt="margin2.jpg"></p>
+<p>尽管看上去有些奇怪，但是外边距甚至可以与自身发生合并。</p>
+<p>假设有一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/margin3.jpg" alt="margin3.jpg"></p>
+<p>如果这个外边距遇到另一个元素的外边距，它还会发生合并：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/margin4.jpg" alt="margin4.jpg"></p>
+<p><strong>注释：只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并。</strong></p>
+<p>参考资料：<br>外边距margin 合并（塌陷），请查看以下资料：<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin_collapsing" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin_collapsing</a></p>
+<p><a href="http://www.w3help.org/zh-cn/kb/006/" target="_blank" rel="noopener">http://www.w3help.org/zh-cn/kb/006/</a></p>
+<blockquote>
+<h3 id="Border-radius—圆角边框"><a href="#Border-radius—圆角边框" class="headerlink" title="Border-radius—圆角边框"></a>Border-radius—圆角边框</h3></blockquote>
+<p>常用的CSS3 边框属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-radius</td>
+<td>圆角效果</td>
+</tr>
+<tr>
+<td>border-colors</td>
+<td>多色边框</td>
+</tr>
+<tr>
+<td>border-image</td>
+<td>边框背景</td>
+</tr>
+<tr>
+<td>box-shadow</td>
+<td>边框阴影</td>
+</tr>
+</tbody>
+</table>
+<p>border-radius 属性</p>
+<p>语法：border-radius:长度值;</p>
+<p>说明：长度值可以是px、百分比、em 等。</p>
+<p>Border-radius 属性设置长度值顺序：“左上角、右上角、右下角和左下角”。</p>
+<p>border-radius 画实心半圆和实心圆</p>
+<ol>
+<li><p>实心半圆</p>
+<p> 实心半圆分为：实心上半圆、实心下半圆、实心左半圆、实心右半圆。我们只要掌握<br>制作一个方向的实心半圆的方法，其他方向的实心半圆就可以轻松实现，因为原理都一样。<br>假如我们要制作实现上半圆，实现方法：把高度(height)设为宽度（width）的一半，<br>并且只设置左上角和右上角的圆角半径与元素的高度一致，而右下角和左下角的圆角半径设<br>置为0。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width:200px;height:100px;border:1px solid red;border-radius:100px 100px 0 0;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>实心圆</p>
+<p> 在CSS3 中，使用border-radius 属性实现实心圆方法：把宽度（width）与高度(height)<br>值设置为一致（也就是正方形），并且四个圆角值都设置为它们值的一半。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width:100px;height:100px;border:1px solid red;border-radius:50px;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>**border-radius 属性派生子属性**
+
+border-radius 属性可以分开，分别为四个角设置相应的圆角值，分别是：
+
+* border-top-right-radius：右上角；
+* border-bottom-right-radius：右下角；
+* border-bottom-left-radius：左下角；
+* border-top-left-radius：左上角；
+</code></pre><blockquote>
+<h3 id="box-shadow-边框阴影"><a href="#box-shadow-边框阴影" class="headerlink" title="box-shadow 边框阴影"></a>box-shadow 边框阴影</h3></blockquote>
+<p>语法：box-shadow：x-shadow y-shadow blur spread color inset;</p>
 <p>说明：</p>
-<ul>
-<li>x-offset：（水平阴影）表示阴影的水平偏移距离，单位可以是px、em 或者百分比等。如果值为正，则阴影向右偏移；如果值为负，则阴影向左偏移；</li>
-<li>y-offset：（垂直阴影）表示阴影的垂直偏移距离，单位可以是px、em 或者百分比等。如果值为正，则阴影向下偏移；如果值为负，则阴影向上偏移；</li>
-<li>blur：（模糊距离）表示阴影的模糊程度，单位可以是px、em 或者百分比等。blur 值不能为负。如果值越大，则阴影越模糊；如果值越小，则阴影越清晰。当然，如果不需要阴影模糊效果，可以把blur 值设置为0；</li>
-<li>color：（阴影的颜色）表示阴影的颜色。</li>
-</ul>
-<p>在CSS3 中，可以使用text-shadow 属性来给文字指定多个阴影，并且针对每个阴影使用不同的颜色。也就是说，text-shadow 属性可以为一个以英文逗号隔开的“值列表”，如：text-shadow:0 0 4px white, 0 -5px 4px #ff3, 2px -10px 6px #fd3;当text-shadow 属性值为“值列表”时，阴影效果会按照给定的值顺序应用到该元素的文本上，因此有可能出现互相覆盖的现象。但是text-shadow 属性永远不会覆盖文本本身，阴影效果也不会改变边框的尺寸。</p>
+<ol>
+<li>x-shadow：设置水平阴影的位置（X 轴），可以使用负值；</li>
+<li>y-shadow：设置垂直阴影的位置（y 轴），可以使用负值；</li>
+<li>blur：设置阴影模糊半径；</li>
+<li>spread：阴影扩展半径，设置阴影的尺寸；这个参数可选，缺省时值为0。</li>
+<li>color：设置阴影的颜色；</li>
+<li>inset：这个参数默认不设置。默认情况下为外阴影，inset 表示内阴影。（这个值可以放在开头位置。）</li>
+<li>outset: 默认值</li>
+</ol>
+<p><strong>技巧：当水平阴影位置x-shadow 和垂直阴影位置y-shadow 都为0 时，阴影都向外发散或者都向内发散。</strong></p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/box-shadow.jpg" alt="box-shadow.jpg"></p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/box-shadow1.jpg" alt="box-shadow1.jpg"></p>
+<p><strong>注意：阴影不占空间</strong></p>
 <blockquote>
-<h3 id="text-stroke-属性"><a href="#text-stroke-属性" class="headerlink" title="text-stroke 属性"></a>text-stroke 属性</h3></blockquote>
-<p>语法：text-stroke:宽度值颜色值;</p>
-<p>在CSS3 中，我们可以使用text-stroke 属性为文字添加描边效果。这个描边效果，说白了就是<strong>给文字添加边框</strong>。</p>
-<blockquote>
-<h3 id="text-overflow-属性"><a href="#text-overflow-属性" class="headerlink" title="text-overflow 属性"></a>text-overflow 属性</h3></blockquote>
-<p>在CSS3 中，文本溢出text-overflow 用于设置是否使用一个省略标记（…）标示对象内文本的溢出。</p>
+<h3 id="Overflow-属性"><a href="#Overflow-属性" class="headerlink" title="Overflow 属性"></a>Overflow 属性</h3></blockquote>
+<p>overflow 属性规定当内容溢出元素框时发生的事情.</p>
 <table>
 <thead>
 <tr>
-<th>属性值</th>
-<th>说明</th>
+<th>值</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>ellipsis</td>
-<td>当对象内文本溢出时显示省略标记（…）</td>
+<td>visible</td>
+<td>默认值。内容不会被修剪，会呈现在元素框之外。</td>
 </tr>
 <tr>
-<td>clip</td>
-<td>当对象内文本溢出时不显示省略标记（…），而是将溢出的部分裁切掉</td>
+<td>hidden</td>
+<td>内容会被修剪，并且其余内容是不可见的。</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承overflow 属性的值。</td>
 </tr>
 </tbody>
 </table>
-<p>单独使用text-overflow 属性是无法得到上面图1 效果的。因为text-overflow 属性只是说明文字溢出时用什么方式显示，要实现溢出时产生省略号效果，还须定义2 个内容：</p>
-<ul>
-<li>（1）white-space:nowrap;（强制文本在一行内显示）；</li>
-<li>（2）overflow:hidden;（溢出内容为隐藏）；</li>
-</ul>
-<p>下面是实现文字溢出时产生省略号效果的完整语法：</p>
-<pre><code>text-overflow:ellipsis;
-overflow:hidden;
-white-space:nowrap;
-</code></pre><p>这3个属性是必须一起使用才会有效果。</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/overflow.jpg" alt="overflow.jpg"></p>
 <blockquote>
-<h3 id="Cursor-属性"><a href="#Cursor-属性" class="headerlink" title="Cursor 属性"></a>Cursor 属性</h3></blockquote>
-<p>在CSS 中，使用cursor 属性来定义鼠标的样式。</p>
-<p>语法：cursor:属性值;</p>
-<p>cursor 属性取值如下，默认值为default。在实际开发中，我们一般只用到“default”和“pointer”这两个属性值，其他的一般都很少用得上，无需记忆。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS文本/cursor.jpg" alt="cursor.jpg"></p>
+<h3 id="Box-sizing-属性"><a href="#Box-sizing-属性" class="headerlink" title="Box-sizing 属性"></a>Box-sizing 属性</h3></blockquote>
+<p>语法：</p>
+<p>box-sizing: content-box|border-box|inherit;</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>属性值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content-box</td>
+<td>默认值，其让元素维持W3C 的标准盒模型，也就是说元素的宽度和高度（width/height）等于元素边框宽度（border）加上元素内距（padding）加上元素内容宽度或高度（content width/ height），也就是element width/height = border + padding + content width / height</td>
+</tr>
+<tr>
+<td>border-box</td>
+<td>重新定义CSS2.1 中盒模型组成的模式，让元素维持IE 传统的盒模型（IE6 以下版本和IE6-7 怪异模式），也就是说元素的宽度或高度等于元素内容的宽度或高度。从上面盒模型介绍可知，这里的内容宽度或高度包含了元素的border、padding、内容的宽度或高度（此处的内容宽度或高度＝盒子的宽度或高度—边框—内距）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>使元素继承父元素的盒模型模式</td>
+</tr>
+</tbody>
+</table>
+<p>其中最为关键的是box-sizing 中content-box 和border-box 两者的区别，他们之间的区别可以通过下图来展示，其对盒模型的不同解析：</p>
+<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS盒模型/box-sizing.jpg" alt="box-sizing.jpg"></p>
+<p>参考资料：</p>
+<ol>
+<li>box-sizing 理解： <a href="http://www.w3cplus.com/content/css3-box-sizing" target="_blank" rel="noopener">http://www.w3cplus.com/content/css3-box-sizing</a></li>
+<li>CSS 属性的浏览器兼容性：<a href="http://caniuse.com/" target="_blank" rel="noopener">http://caniuse.com/</a></li>
+</ol>
 <blockquote>
-<h3 id="Inherit-属性"><a href="#Inherit-属性" class="headerlink" title="Inherit 属性"></a>Inherit 属性</h3></blockquote>
-<p>该值使得属性能够继承祖先设置。</p>
-<p>inherit 属于CSS-wide 关键字，这表示所有的属性都可以接受该值。</p>
-<p>如何让一个不具备继承特性的属性可以继承父元素的定义？</p>
-<p>示例代码：</p>
-<pre><code>div {
-    position: relative;
-}
-div a {
-    position: inherit;
-}
-</code></pre><p>上述代码，超链接a 将会继承父元素的position 定义，也会定义为relative。常用的CSS 属性继承性：</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/05/CSS文本/Inherit.jpg" alt="Inherit.jpg"></p>
+<h3 id="outline-轮廓"><a href="#outline-轮廓" class="headerlink" title="outline 轮廓"></a>outline 轮廓</h3></blockquote>
+<p>轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作<br>用。其属性规定元素轮廓的样式、颜色和宽度。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>outline</td>
+<td>在一个声明中设置所有的轮廓属性。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-color</td>
+<td>设置轮廓的颜色。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-style</td>
+<td>设置轮廓的样式。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-width</td>
+<td>设置轮廓的宽度。</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
@@ -543,10 +414,8 @@ div a {
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/younghf.github.io/2017/12/05/CSS盒模型/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
-    
-        <a href="/younghf.github.io/2017/12/01/CSS选择器/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="/younghf.github.io/2017/12/05/CSS文本/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
