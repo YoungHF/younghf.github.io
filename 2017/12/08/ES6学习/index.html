@@ -24,7 +24,7 @@
     <!--Title-->
 
 
-<title>Hello World | Hoff&#39;s blog</title>
+<title>ES6学习 | Hoff&#39;s blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hoff&#39;s blog" type="application/atom+xml">
@@ -139,9 +139,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hello World">
+        <h1 id="ES6学习">
             
-            Hello World
+            ES6学习
             
         </h1>
         <div class="post-meta">
@@ -149,7 +149,7 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <span>无</span>
+        <span>前端</span>
     </span>
     
     
@@ -157,7 +157,7 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            null
+            ES6
             
         </span>
     </span>
@@ -165,12 +165,12 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/11/28</span>
+        <span class="date-meta">2017/12/08</span>
     </span>
     <span class="fa-wrap">
         <i class="fa fa-eye"></i>
         阅读数:
-        <span id="/younghf.github.io/2017/11/28/hello-world/" class="leancloud_visitors" data-flag-title="Hello World"></span>次
+        <span id="/younghf.github.io/2017/12/08/ES6学习/" class="leancloud_visitors" data-flag-title="ES6学习"></span>次
         
     </span>
 </div>
@@ -180,15 +180,65 @@
     </div>
     
     <div class="post-body post-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <blockquote>
+<h3 id="let-与-var"><a href="#let-与-var" class="headerlink" title="let 与 var"></a>let 与 var</h3></blockquote>
+<ol>
+<li><p>作用域只局限于当前代码块</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	var str = &quot;张三&quot;</span><br><span class="line">	let str1 = &quot;李四&quot;</span><br><span class="line">&#125;</span><br><span class="line">console.log(str)   // 张三</span><br><span class="line">console.log(str)   // 会报错not defined</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>声明的变量作用域不会被提升</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	console.log(str)    // undefined</span><br><span class="line">	var str = &quot;张三&quot;</span><br><span class="line"></span><br><span class="line">	console.log(str1)    // 会报错not defined</span><br><span class="line">	let str1 = &quot;李四&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>在相同的作用域下不能声明相同的变量</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	let str1 = &quot;张三&quot;;</span><br><span class="line">	let str1 = &quot;李四&quot;;</span><br><span class="line">	</span><br><span class="line">	console.log(str1)    // 报错</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>for 循环提现let的作用域</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var oLi = document.getElementsByTagName(&apos;li&apos;);</span><br><span class="line">for (var i = 0;i &lt; oLi.length;i++)&#123;</span><br><span class="line">	oLi[i].onclick = function ()&#123;</span><br><span class="line">		alert(i)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 这里alert的结果均为li标签的总个数</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 通常我们会使用闭包解决这个问题</span><br><span class="line"></span><br><span class="line">var oLi = document.getElementsByTagName(&apos;li&apos;);</span><br><span class="line">for (var i = 0;i &lt; oLi.length;i++)&#123;</span><br><span class="line">	(function (i)&#123;</span><br><span class="line">		oLi[i].onclick = function ()&#123;</span><br><span class="line">			alert(i)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)(i)</span><br><span class="line">&#125;</span><br><span class="line">// 这里alert的结果为 0 到 oLi.length-1；</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// ES6的let就不会存在以上的问题</span><br><span class="line"></span><br><span class="line">var oLi = document.getElementsByTagName(&apos;li&apos;);</span><br><span class="line">for (let i = 0;i &lt; oLi.length;i++)&#123;</span><br><span class="line">	oLi[i].onclick = function ()&#123;</span><br><span class="line">		alert(i)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">// 这里alert的结果为 0 到 oLi.length-1；</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (let i = 0;i &lt; 5;i++)&#123;</span><br><span class="line">	let i = 20;</span><br><span class="line">	console.log(i) // 输出了5次 20 ；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3></blockquote>
+<ol>
+<li><p>作用域只局限于当前代码块</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	const str = &quot;张三&quot;</span><br><span class="line">	console.log(str)   // 张三</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(str)   // 会报错not defined</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>声明的变量作用域不会被提升</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	console.log(str1)    // 会报错not defined</span><br><span class="line">	const str1 = &quot;李四&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>不能重复声明</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	const str1 = &quot;张三&quot;;</span><br><span class="line">	const str1 = &quot;李四&quot;;</span><br><span class="line">	</span><br><span class="line">	console.log(str1)    // 报错</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>声明的变量必须赋值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	const str;</span><br><span class="line">	str = &quot;张三&quot;;</span><br><span class="line"></span><br><span class="line">	console.log(str)  // 会报错	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>const声明的变量一般不能修改，引用类型除外</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	const str = “李四”;</span><br><span class="line">	str = &quot;张三&quot;;</span><br><span class="line"></span><br><span class="line">	console.log(str)  // 会报错，const声明的变量一般不能修改，引用类型除外，如下</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">	const obj = &#123;name:&apos;张三&apos;&#125;;</span><br><span class="line">	console.log(obj)  // &#123;name:&apos;张三&apos;&#125;</span><br><span class="line">	</span><br><span class="line">	obj.name = &quot;李四&quot;;</span><br><span class="line">	console.log(obj)  // &#123;name:&apos;李四&apos;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3></blockquote>
+<ol>
+<li><p>基本用法</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let name = &quot;张三&quot;,age = 18,sex = &quot;男&quot;;</span><br><span class="line">let [name,age,sex] = [&quot;张三&quot;,&quot;18&quot;,&quot;男&quot;]</span><br><span class="line"></span><br><span class="line">console.log(name) // 张三</span><br><span class="line">console.log(age) // 18</span><br><span class="line">console.log(sex) // 男</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
     </div>
 
@@ -206,8 +256,8 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/younghf.github.io/2017/11/30/Markdown/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
+        <a href="/younghf.github.io/2017/12/06/CSS布局/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
