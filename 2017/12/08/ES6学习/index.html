@@ -220,280 +220,177 @@
 <blockquote>
 <h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3></blockquote>
 <ol>
-<li>基本用法</li>
-</ol>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	let name = &quot;张三&quot;,age = 18,sex = &quot;男&quot;;</span><br><span class="line">	</span><br><span class="line">	let [name,age,sex] = [&quot;张三&quot;,&quot;18&quot;,&quot;男&quot;]</span><br><span class="line">	</span><br><span class="line">	console.log(name) // 张三</span><br><span class="line">	console.log(age) // 18</span><br><span class="line">	console.log(sex) // 男</span><br><span class="line">	```	</span><br><span class="line">2. 对象解构赋值</span><br></pre></td></tr></table></figure>
+<li><p>基本用法</p>
+<pre><code>let name = &quot;张三&quot;,age = 18,sex = &quot;男&quot;;
 
-let { name , age , sex} = {name : &quot;张三&quot; , age : 55, sex: &quot;男&quot;};
+let [name,age,sex] = [&quot;张三&quot;,&quot;18&quot;,&quot;男&quot;]
+
 console.log(name) // 张三
-console.log(age) // 55
+console.log(age) // 18
 console.log(sex) // 男
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">	</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+<li><p>对象解构赋值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let &#123; name , age , sex&#125; = &#123;name : &quot;张三&quot; , age : 55, sex: &quot;男&quot;&#125;;</span><br><span class="line">console.log(name) // 张三</span><br><span class="line">console.log(age) // 55</span><br><span class="line">console.log(sex) // 男</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let &#123; name , age , sex&#125; = &#123;name : &quot;张三&quot; , age : 55, friends : [&quot;李四&quot; , &quot;王五&quot;] ,sex: &quot;男&quot;&#125;;</span><br><span class="line">console.log(name) // 张三</span><br><span class="line">console.log(age) // 55</span><br><span class="line">console.log(sex) // undefined</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let &#123;name : str&#125; = &#123;name:&quot;张三&quot;&#125;</span><br><span class="line">console.log(name) // 为空，不能打印出信息</span><br><span class="line">console.log(str) // 张三</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的结构赋值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let [name , age , sex] = [&quot;张三&quot;, 22 , &quot;女&quot;]</span><br><span class="line">let [arr,[arr1 , arr2 , [arr3 , arr4]]] = [0 , [1 , 2 , [3 , 4]]]</span><br><span class="line"></span><br><span class="line">let [arr5] = []</span><br><span class="line">console.log(arr5) // undefined</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let [a,,c] = [1,2,3]</span><br><span class="line">console.log(c) // 3</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let [a , , , c] = [1,2,3]</span><br><span class="line">console.log(c) // undefined</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>基本类型的结构赋值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let  [a, b ,c ,d]= &apos;我是小明&apos;;</span><br><span class="line">console.log(a) </span><br><span class="line">console.log(b)</span><br><span class="line">console.log(c)</span><br><span class="line">console.log(d)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let  [a, b ,c ,d , e]= 12306;</span><br><span class="line">console.log(a) // Uncaught TypeError: 12306 is not iterable</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<h3 id="新增的数据类型-Set"><a href="#新增的数据类型-Set" class="headerlink" title="新增的数据类型 - Set"></a>新增的数据类型 - Set</h3></blockquote>
+<p><strong>特点:</strong></p>
+<ul>
+<li>类似数组，没有重复的元素（唯一的） </li>
+<li>开发中用于去重 </li>
+<li>key和value都是相等的</li>
+</ul>
+<ol>
+<li><p>创建一个集合</p>
+<p> <img src="/younghf.github.io/younghf.github.io/2017/12/08/ES6学习/set.jpg" alt="set.jpg"></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let set = new Set([&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;,&apos;王五&apos;]);</span><br><span class="line">console.log(set)   // 会去重</span><br></pre></td></tr></table></figure>
+<p> <img src="/younghf.github.io/younghf.github.io/2017/12/08/ES6学习/set1.jpg" alt="set1.jpg"></p>
+</li>
+<li><p>一个属性 - size</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let set = new Set([&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;,&apos;王五&apos;]);</span><br><span class="line">console.log(set.size) // 3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>四个方法</p>
+<ul>
+<li>add</li>
+</ul>
+</li>
+</ol>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set.add(&quot;刘德华&quot;).add(&quot;小明&quot;)</span><br></pre></td></tr></table></figure>
 
-let { name , age , sex} = {name : &quot;张三&quot; , age : 55, friends : [&quot;李四&quot; , &quot;王五&quot;] ,sex: &quot;男&quot;};
-console.log(name) // 张三
-console.log(age) // 55
-console.log(sex) // undefined
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">	</span><br></pre></td></tr></table></figure>
+* delete
 
-let {name : str} = {name:&quot;张三&quot;}
-console.log(name) // 为空，不能打印出信息
-console.log(str) // 张三
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3. 数组的结构赋值</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set.delete(&quot;刘德华&quot;)</span><br></pre></td></tr></table></figure>
 
-let [name , age , sex] = [&quot;张三&quot;, 22 , &quot;女&quot;]
-let [arr,[arr1 , arr2 , [arr3 , arr4]]] = [0 , [1 , 2 , [3 , 4]]]
+* has
 
-let [arr5] = []
-console.log(arr5) // undefined
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">	</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set.has(&quot;张三&quot;) // true</span><br><span class="line">set.has(&quot;刘德华&quot;) // false</span><br></pre></td></tr></table></figure>
 
-let [a,,c] = [1,2,3]
-console.log(c) // 3
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">	</span><br></pre></td></tr></table></figure>
+* clear
 
-let [a , , , c] = [1,2,3]
-console.log(c) // undefined
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. 基本类型的结构赋值</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(set.clear())  // undefined 没有返回值</span><br></pre></td></tr></table></figure>
+</code></pre><ol>
+<li><p>keys values</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(set.keys())</span><br><span class="line">console.log(set.values())</span><br></pre></td></tr></table></figure>
+<p> <img src="/younghf.github.io/younghf.github.io/2017/12/08/ES6学习/key_value.jpg" alt="key_value.jpg"></p>
+</li>
+</ol>
+<blockquote>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3></blockquote>
+<p><strong>特点</strong></p>
+<ul>
+<li>类似于对象，本质上是键值对的集合</li>
+<li>“键”不局限于字符串，各种类型的值（包括对象）都可以当做键</li>
+<li>对象：“字符串 - 值”，Map：“值 - 值”，是一种更加完善的Hash结构的实现</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;,obj1 = &#123;a:1&#125;,obj2 = &#123;b:2&#125;;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>创建一个Map</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let obj1 = &#123;a:1&#125;,obj2 = &#123;b:2&#125;;</span><br><span class="line">const map = new Map([</span><br><span class="line">	[&apos;name&apos;,&apos;张三&apos;],</span><br><span class="line">	[&apos;age&apos;,18],</span><br><span class="line">	[&apos;sex&apos;,&apos;男&apos;],</span><br><span class="line">	[obj1,&apos;天气很好&apos;],</span><br><span class="line">	[obj2,&apos;适合敲代码&apos;],</span><br><span class="line">	[[1,2],&apos;牛逼啊&apos;]</span><br><span class="line">])</span><br><span class="line">console.log(map)</span><br></pre></td></tr></table></figure>
+<p> <img src="/younghf.github.io/younghf.github.io/2017/12/08/ES6学习/map.jpg" alt="map.jpg"></p>
+</li>
+<li><p>常用属性 - size</p>
+<p> console.log(map.size)</p>
+<p> <img src="/younghf.github.io/younghf.github.io/2017/12/08/ES6学习/map1.jpg" alt="map1.jpg"></p>
+</li>
+<li><p>方法</p>
+<p> <img src="/younghf.github.io/younghf.github.io/2017/12/08/ES6学习/map2.jpg" alt="map2.jpg"></p>
+</li>
+<li><p>set get delete has clear keys(获取键) values(获取值) entries(获取键值)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map.set(&apos;friends&apos;,[&apos;赵六&apos;,&apos;李七&apos;]).set([&apos;dog&apos;,&apos;小花&apos;]);</span><br><span class="line">map.get(&apos;obj1&apos;)</span><br><span class="line">map.delete(&apos;obj1&apos;)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>遍历</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">map.forEach(function(value,index)&#123;</span><br><span class="line">	console.log(index + &quot;:&quot; +value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意事项</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map.set(&#123;&#125;,&quot;哈哈&quot;)</span><br><span class="line">map.set(&#123;&#125;,&quot;呵呵&quot;)</span><br><span class="line"></span><br><span class="line">// 会添加两条数据</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3></blockquote>
+<p><strong>特点</strong></p>
+<ul>
+<li>ES5的对象属性都是字符串，容易造成属性名冲突</li>
+<li>ES6引入新的原始数据类型Symbol，表示独一无二的值</li>
+</ul>
+<ol>
+<li><p>定义</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let smb1 = Symbol();</span><br><span class="line">let smb2 = Symbol();</span><br><span class="line"></span><br><span class="line">console.log(smb1 === smb2)   // false</span><br><span class="line">console.log(typeof smb1) // symbol</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>描述</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let str1 = Symbol(&apos;name&apos;);</span><br><span class="line">let str2 = Symbol(&apos;name&apos;);</span><br><span class="line"></span><br><span class="line">console.log(str1)  // Symbol(name)</span><br><span class="line">console.log(str2)  // Symbol(name)</span><br><span class="line"></span><br><span class="line">console.log(str1 === str2)  // false</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象的属性名</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;&#125;;</span><br><span class="line">// obj.name = &apos;张三&apos;;</span><br><span class="line">// obj.name = &apos;李四&apos;;</span><br><span class="line"></span><br><span class="line">obj[Symbol(&apos;name&apos;)] = &apos;张三&apos;;</span><br><span class="line">obj[Symbol(&apos;name&apos;)] = &apos;李四&apos;;</span><br><span class="line"></span><br><span class="line">console.log(obj);</span><br></pre></td></tr></table></figure>
+<p> <img src="/younghf.github.io/younghf.github.io/2017/12/08/ES6学习/symbol.jpg" alt="symbol.jpg"></p>
+</li>
+</ol>
+<blockquote>
+<h3 id="Class-语法糖"><a href="#Class-语法糖" class="headerlink" title="Class 语法糖"></a>Class 语法糖</h3></blockquote>
+<ol>
+<li><p>构造函数</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,age)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	constructor: Person,</span><br><span class="line">	Say:function()&#123;</span><br><span class="line">		console.log(&quot;我的名字叫&quot; + this.name + &quot;，今年&quot; + this.age + &quot;岁&quot;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">let person = new Person(&apos;小明&apos;,18);</span><br><span class="line">console.log(person)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过class面向对象</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">	constructor(name,age)&#123;</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	Say:function()&#123;</span><br><span class="line">		console.log(&quot;我的名字叫&quot; + this.name + &quot;，今年&quot; + this.age + &quot;岁&quot;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<h3 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h3></blockquote>
+<ol>
+<li><p>模板字符串 ``</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">	.test&#123;color:red&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">let str = &apos;今天天气很好&apos;;</span><br><span class="line">let className = &apos;test&apos;;</span><br><span class="line">let html = `</span><br><span class="line">	&lt;html&gt;</span><br><span class="line">		&lt;head&gt;</span><br><span class="line">		&lt;/head&gt;</span><br><span class="line">		&lt;body&gt;</span><br><span class="line">			&lt;p class=&apos;$(className)&apos;&gt;$&#123;str&#125;&lt;/p&gt;</span><br><span class="line">		&lt;/body&gt;</span><br><span class="line">	&lt;/html&gt;`;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的拓展</p>
+<ul>
+<li><p>Array.form    // 把伪数组等转换成正式的数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let allList = document.getElementsByTagName(&quot;li&quot;);  //这是一个伪数组</span><br><span class="line">console.log(allList);</span><br><span class="line">console.log(Array.isArray(allList)) // false</span><br><span class="line"></span><br><span class="line">console.log(Array.from(allList))</span><br><span class="line">console.log(Array.isArray(allList)) // true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.of</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(Array.of(1,2,3,4))    // [1,2,3,4]</span><br><span class="line">console.log(Array.of(&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;))   // [&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>对象的拓展</p>
+<ul>
+<li><p>key和value是一样的时候，写一个就够了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let name = &quot;张三&quot;;</span><br><span class="line">let age = &quot;18&quot;;</span><br><span class="line"></span><br><span class="line">/*let obj = &#123;</span><br><span class="line">	name: name,</span><br><span class="line">	age:age</span><br><span class="line">&#125;*/</span><br><span class="line"></span><br><span class="line">let obj = &#123;</span><br><span class="line">	name,</span><br><span class="line">	age</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Object.assign()  //多个对象合成一个对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;name:&apos;张三&apos;&#125;;</span><br><span class="line">let obj1 = &#123;age:18&#125;;</span><br><span class="line">let obj2 = &#123;sex:&apos;男&apos;&#125;;</span><br><span class="line"></span><br><span class="line">Object.assign(obj, obj1, obj2)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<h3 id="延展操作符"><a href="#延展操作符" class="headerlink" title="延展操作符"></a>延展操作符</h3></blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str = &apos;天气很好&apos;;</span><br><span class="line">let strArr = [...str]</span><br><span class="line">console.log(strArr) // [&apos;天&apos;,&apos;气&apos;,&apos;很&apos;,&apos;好&apos;]</span><br></pre></td></tr></table></figure>
 
-let  [a, b ,c ,d]= &apos;我是小明&apos;;
-console.log(a) 
-console.log(b)
-console.log(c)
-console.log(d)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">	</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 数组去重</span><br><span class="line"></span><br><span class="line">let myArr = [1,2,3,4,5,2,3];</span><br><span class="line">console.log([...new Set(myArr)]) // [1,2,3,4,5]</span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<h3 id="函数的拓展"><a href="#函数的拓展" class="headerlink" title="函数的拓展"></a>函数的拓展</h3></blockquote>
+<ol>
+<li><p>形参设置默认值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/*function sum(num1,num2)&#123;</span><br><span class="line">	num1 = num1 || 10;</span><br><span class="line">	num2 = num2 || 20</span><br><span class="line">	console.log(num1 + num2)</span><br><span class="line">&#125;*/</span><br><span class="line"></span><br><span class="line">function sum(num1 = 10,num2 = 20)&#123;</span><br><span class="line">	console.log(num1 + num2)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参数形式：延展操作符</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">/*function sum()&#123;</span><br><span class="line">	let result = 0;</span><br><span class="line">	for (let value of arguments)&#123;</span><br><span class="line">		result += value;</span><br><span class="line">	&#125;</span><br><span class="line">	return result;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sum(10,20,30,40))</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">function sum(name,sex,...nums)&#123;</span><br><span class="line">	let result = 0;</span><br><span class="line">	console.log(name);</span><br><span class="line">	console.log(sex);</span><br><span class="line">	for (let value of nums)&#123;</span><br><span class="line">		result += value;</span><br><span class="line">	&#125;</span><br><span class="line">	return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(sum(&apos;张三&apos;,&apos;男&apos;,10,20,30,40))   //参数多样化的传递</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数 ()=&gt;{}  解决了this指向的问题</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">function ()&#123;&#125;</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">let sum = (num1,num2)=&gt;&#123;return num1 + num2;&#125;;</span><br><span class="line"></span><br><span class="line">let arr = [&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;];</span><br><span class="line">arr.forEach((value,index)=&gt;&#123;</span><br><span class="line">	console.log(index + &quot;;&quot; +value);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">function demo()&#123;</span><br><span class="line">	setTimeout(function ()&#123;</span><br><span class="line">		console.log(this);    // 这里指向的是window</span><br><span class="line">	&#125;,1000);</span><br><span class="line">	</span><br><span class="line">	setTimeout(()=&gt;&#123;</span><br><span class="line">		console.log(this);   // 这里指向的obj</span><br><span class="line">	&#125;,1000)</span><br><span class="line">&#125;</span><br><span class="line">let obj = &#123;&#125;;</span><br><span class="line">demo.call(obj)</span><br></pre></td></tr></table></figure></li>
+</ol>
 
-let  [a, b ,c ,d , e]= 12306;
-console.log(a) // Uncaught TypeError: 12306 is not iterable
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">&gt;### 新增的数据类型 - Set</span><br><span class="line"></span><br><span class="line">**特点:**</span><br><span class="line"></span><br><span class="line">* 类似数组，没有重复的元素（唯一的） </span><br><span class="line">* 开发中用于去重 </span><br><span class="line">* key和value都是相等的</span><br><span class="line"></span><br><span class="line">1. 创建一个集合</span><br><span class="line"></span><br><span class="line">	![set.jpg](set.jpg)</span><br></pre></td></tr></table></figure>
-
-let set = new Set([&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;,&apos;王五&apos;]);
-console.log(set)   // 会去重
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	![set1.jpg](set1.jpg)</span><br><span class="line">	</span><br><span class="line">2. 一个属性 - size</span><br></pre></td></tr></table></figure>
-
-let set = new Set([&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;,&apos;王五&apos;]);
-console.log(set.size) // 3
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3. 四个方法</span><br><span class="line"></span><br><span class="line">	* add</span><br></pre></td></tr></table></figure>
-
-set.add(&quot;刘德华&quot;).add(&quot;小明&quot;)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* delete</span><br></pre></td></tr></table></figure>
-
-set.delete(&quot;刘德华&quot;)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* has</span><br></pre></td></tr></table></figure>
-
-set.has(&quot;张三&quot;) // true
-set.has(&quot;刘德华&quot;) // false
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* clear</span><br></pre></td></tr></table></figure>
-
-console.log(set.clear())  // undefined 没有返回值
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. keys values</span><br></pre></td></tr></table></figure>
-
-console.log(set.keys())
-console.log(set.values())
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	![key_value.jpg](key_value.jpg)</span><br><span class="line">	</span><br><span class="line">&gt;### Map</span><br><span class="line"></span><br><span class="line">**特点**</span><br><span class="line"></span><br><span class="line">* 类似于对象，本质上是键值对的集合</span><br><span class="line">* “键”不局限于字符串，各种类型的值（包括对象）都可以当做键</span><br><span class="line">* 对象：“字符串 - 值”，Map：“值 - 值”，是一种更加完善的Hash结构的实现</span><br></pre></td></tr></table></figure>
-</code></pre><p>let obj = {},obj1 = {a:1},obj2 = {b:2};<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 创建一个Map</span><br></pre></td></tr></table></figure></p>
-<pre><code>let obj1 = {a:1},obj2 = {b:2};
-const map = new Map([
-    [&apos;name&apos;,&apos;张三&apos;],
-    [&apos;age&apos;,18],
-    [&apos;sex&apos;,&apos;男&apos;],
-    [obj1,&apos;天气很好&apos;],
-    [obj2,&apos;适合敲代码&apos;],
-    [[1,2],&apos;牛逼啊&apos;]
-])
-console.log(map)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">	![map.jpg](map.jpg)</span><br><span class="line">	</span><br><span class="line">2. 常用属性 - size</span><br><span class="line"></span><br><span class="line">	console.log(map.size)</span><br><span class="line">	</span><br><span class="line">	![map1.jpg](map1.jpg)</span><br><span class="line"></span><br><span class="line">3. 方法</span><br><span class="line"></span><br><span class="line">	![map2.jpg](map2.jpg)</span><br><span class="line"></span><br><span class="line">4. set get delete has clear keys(获取键) values(获取值) entries(获取键值)</span><br></pre></td></tr></table></figure>
-
-map.set(&apos;friends&apos;,[&apos;赵六&apos;,&apos;李七&apos;]).set([&apos;dog&apos;,&apos;小花&apos;]);
-map.get(&apos;obj1&apos;)
-map.delete(&apos;obj1&apos;)
-...
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5. 遍历</span><br></pre></td></tr></table></figure>
-
-map.forEach(function(value,index){
-    console.log(index + &quot;:&quot; +value)
-})
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6. 注意事项</span><br></pre></td></tr></table></figure>
-
-map.set({},&quot;哈哈&quot;)
-map.set({},&quot;呵呵&quot;)
-
-// 会添加两条数据
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">&gt;### Symbol</span><br><span class="line"></span><br><span class="line">**特点**</span><br><span class="line"></span><br><span class="line">* ES5的对象属性都是字符串，容易造成属性名冲突</span><br><span class="line">* ES6引入新的原始数据类型Symbol，表示独一无二的值</span><br><span class="line"></span><br><span class="line">1. 定义</span><br></pre></td></tr></table></figure>
-
-let smb1 = Symbol();
-let smb2 = Symbol();
-
-console.log(smb1 === smb2)   // false
-console.log(typeof smb1) // symbol
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 描述</span><br></pre></td></tr></table></figure>
-
-let str1 = Symbol(&apos;name&apos;);
-let str2 = Symbol(&apos;name&apos;);
-
-console.log(str1)  // Symbol(name)
-console.log(str2)  // Symbol(name)
-
-console.log(str1 === str2)  // false
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3. 对象的属性名</span><br></pre></td></tr></table></figure>
-
-const obj = {};
-// obj.name = &apos;张三&apos;;
-// obj.name = &apos;李四&apos;;
-
-obj[Symbol(&apos;name&apos;)] = &apos;张三&apos;;
-obj[Symbol(&apos;name&apos;)] = &apos;李四&apos;;
-
-console.log(obj);
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	![symbol.jpg](symbol.jpg)</span><br><span class="line">	</span><br><span class="line">&gt;### Class 语法糖</span><br><span class="line"></span><br><span class="line">1. 构造函数</span><br></pre></td></tr></table></figure>
-
-function Person(name,age){
-    this.name = name;
-    this.age = age;
-}
-
-Person.prototype = {
-    constructor: Person,
-    Say:function(){
-        console.log(&quot;我的名字叫&quot; + this.name + &quot;，今年&quot; + this.age + &quot;岁&quot;)
-    }
-}
-let person = new Person(&apos;小明&apos;,18);
-console.log(person)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 通过class面向对象</span><br></pre></td></tr></table></figure>
-
-class Person{
-    constructor(name,age){
-        this.name = name;
-        this.age = age;
-    }
-
-    Say:function(){
-        console.log(&quot;我的名字叫&quot; + this.name + &quot;，今年&quot; + this.age + &quot;岁&quot;)
-    }
-}
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">&gt;### 内置对象</span><br><span class="line"></span><br><span class="line">1. 模板字符串 ``</span><br></pre></td></tr></table></figure>
-
-&lt;style&gt;
-    .test{color:red}
-&lt;/style&gt;
-
-let str = &apos;今天天气很好&apos;;
-let className = &apos;test&apos;;
-let html = `
-    &lt;html&gt;
-        &lt;head&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-            &lt;p class=&apos;$(className)&apos;&gt;${str}&lt;/p&gt;
-        &lt;/body&gt;
-    &lt;/html&gt;`;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2. 数组的拓展</span><br><span class="line"></span><br><span class="line">	* Array.form	// 把伪数组等转换成正式的数组</span><br></pre></td></tr></table></figure>
-
-let allList = document.getElementsByTagName(&quot;li&quot;);  //这是一个伪数组
-console.log(allList);
-console.log(Array.isArray(allList)) // false
-
-console.log(Array.from(allList))
-console.log(Array.isArray(allList)) // true
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* Array.of</span><br></pre></td></tr></table></figure>
-
-console.log(Array.of(1,2,3,4))    // [1,2,3,4]
-console.log(Array.of(&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;))   // [&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;]
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 对象的拓展</span><br><span class="line"></span><br><span class="line">	* key和value是一样的时候，写一个就够了</span><br></pre></td></tr></table></figure>
-
-let name = &quot;张三&quot;;
-let age = &quot;18&quot;;
-
-/*let obj = {
-    name: name,
-    age:age
-}*/
-
-let obj = {
-    name,
-    age
-}
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* Object.assign()  //多个对象合成一个对象</span><br></pre></td></tr></table></figure>
-
-let obj = {name:&apos;张三&apos;};
-let obj1 = {age:18};
-let obj2 = {sex:&apos;男&apos;};
-
-Object.assign(obj, obj1, obj2)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">&gt;### 延展操作符</span><br></pre></td></tr></table></figure>
-
-let str = &apos;天气很好&apos;;
-let strArr = [...str]
-console.log(strArr) // [&apos;天&apos;,&apos;气&apos;,&apos;很&apos;,&apos;好&apos;]
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">	</span><br></pre></td></tr></table></figure>
-
-// 数组去重
-
-let myArr = [1,2,3,4,5,2,3];
-console.log([...new Set(myArr)]) // [1,2,3,4,5]
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">&gt;### 函数的拓展</span><br><span class="line"></span><br><span class="line">1. 形参设置默认值</span><br></pre></td></tr></table></figure>
-
-/*function sum(num1,num2){
-    num1 = num1 || 10;
-    num2 = num2 || 20
-    console.log(num1 + num2)
-}*/
-
-function sum(num1 = 10,num2 = 20){
-    console.log(num1 + num2)
-}
-
-sum();
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 参数形式：延展操作符</span><br></pre></td></tr></table></figure>
-
-/*function sum(){
-    let result = 0;
-    for (let value of arguments){
-        result += value;
-    }
-    return result;
-}
-console.log(sum(10,20,30,40))
-*/
-
-function sum(name,sex,...nums){
-    let result = 0;
-    console.log(name);
-    console.log(sex);
-    for (let value of nums){
-        result += value;
-    }
-    return result;
-}
-
-console.log(sum(&apos;张三&apos;,&apos;男&apos;,10,20,30,40))   //参数多样化的传递
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3. 箭头函数 ()=&gt;&#123;&#125;  解决了this指向的问题</span><br></pre></td></tr></table></figure>
-
-/*
-function (){}
-*/
-
-let sum = (num1,num2)=&gt;{return num1 + num2;};
-
-let arr = [&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;];
-arr.forEach((value,index)=&gt;{
-    console.log(index + &quot;;&quot; +value);
-});
-
-function demo(){
-    setTimeout(function (){
-        console.log(this);    // 这里指向的是window
-    },1000);
-
-    setTimeout(()=&gt;{
-        console.log(this);   // 这里指向的obj
-    },1000)
-}
-let obj = {};
-demo.call(obj)
-```
-</code></pre>
     </div>
 
     <div class="post-footer">   
