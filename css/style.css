@@ -292,6 +292,9 @@ pre {
     line-height: 1.5em;
     font-size: 1.5em;
   }
+  .post-content{
+    min-height: 166px;
+  }
 }
 .main-header .main-header-box .branding h2:hover {
   animation: masked-animation 1s infinite linear !important;
