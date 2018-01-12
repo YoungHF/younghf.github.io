@@ -10,7 +10,16 @@ window.onload = function() {
         $commentsCounter = document.getElementById('comments-count'),
         $gitcomment = document.getElementById("gitcomment"),
         $backToTop = document.getElementById("back-to-top"),
+        $widgetVideo = document.getElementById("widget-video"),
         timer = null;
+
+    // 视频controls的显示隐藏
+    $widgetVideo.onmouseover = function(){
+        this.controls = true
+    }
+    $widgetVideo.onmouseout = function(){
+        this.controls = false
+    }
 
     //手机菜单导航
     $mnav.onclick = function(){  
