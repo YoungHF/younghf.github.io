@@ -6,7 +6,7 @@
   <link href="/younghf.github.io/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/younghf.github.io/"/>
-  <updated>2018-01-03T09:30:41.302Z</updated>
+  <updated>2018-03-20T18:28:45.621Z</updated>
   <id>http://yoursite.com/younghf.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试小计——不重复随机输出[1-10000]区间数字</title>
+    <link href="http://yoursite.com/younghf.github.io/2018/03/21/%E9%9D%A2%E8%AF%95%E5%B0%8F%E8%AE%A1%E2%80%94%E2%80%94%E4%B8%8D%E9%87%8D%E5%A4%8D%E9%9A%8F%E6%9C%BA%E8%BE%93%E5%87%BA-1-10000-%E5%8C%BA%E9%97%B4%E6%95%B0%E5%AD%97/"/>
+    <id>http://yoursite.com/younghf.github.io/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/</id>
+    <published>2018-03-20T18:19:28.000Z</published>
+    <updated>2018-03-20T18:28:45.621Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="昨天去面试，面试官出了一道题，随机得到1-10000中的全部整数，且不能重复，当时就想到以下方法："><a href="#昨天去面试，面试官出了一道题，随机得到1-10000中的全部整数，且不能重复，当时就想到以下方法：" class="headerlink" title="昨天去面试，面试官出了一道题，随机得到1~10000中的全部整数，且不能重复，当时就想到以下方法："></a>昨天去面试，面试官出了一道题，随机得到1~10000中的全部整数，且不能重复，当时就想到以下方法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var old = new Date().getTime();</span><br><span class="line">console.log(old);</span><br><span class="line">var arr = [];</span><br><span class="line">while (arr.length&lt;10000)&#123;</span><br><span class="line">var randomNum = Math.floor(Math.random()*10000+1);</span><br><span class="line">if (arr.indexOf(randomNum) == -1)&#123;</span><br><span class="line">arr.push(randomNum)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">document.write(arr)</span><br><span class="line">var cur = new Date().getTime();</span><br><span class="line">console.log(cur);</span><br><span class="line">console.log(cur-old);</span><br></pre></td></tr></table></figure><p><img src="/younghf.github.io/younghf.github.io/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/1.jpg" alt="1.jpg"></p><h3 id="当时面试官问我还有没有更高效的方法，一时我真没想出来，现在现在突然想起来之前关于数组去重的博客，对象键值法不是正适用吗？"><a href="#当时面试官问我还有没有更高效的方法，一时我真没想出来，现在现在突然想起来之前关于数组去重的博客，对象键值法不是正适用吗？" class="headerlink" title="当时面试官问我还有没有更高效的方法，一时我真没想出来，现在现在突然想起来之前关于数组去重的博客，对象键值法不是正适用吗？"></a>当时面试官问我还有没有更高效的方法，一时我真没想出来，现在现在突然想起来之前关于数组去重的博客，对象键值法不是正适用吗？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var old = new Date().getTime();</span><br><span class="line">console.log(old);</span><br><span class="line">var arr = [];</span><br><span class="line">var obj = &#123;&#125;;</span><br><span class="line">while (arr.length&lt;10000)&#123;</span><br><span class="line">var randomNum = Math.floor(Math.random()*10000+1);</span><br><span class="line">if(!obj[randomNum])&#123;</span><br><span class="line">arr.push(randomNum);</span><br><span class="line">obj[randomNum] = 1;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">document.write(arr)</span><br><span class="line">var cur = new Date().getTime();</span><br><span class="line">console.log(cur);</span><br><span class="line">console.log(cur-old);</span><br></pre></td></tr></table></figure><p><img src="/younghf.github.io/younghf.github.io/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/2.jpg" alt="2.jpg"></p><h3 id="对比以上两种方法，对象键值法大约快了好几十倍啊-博主不才，大家还有好的想法，希望能留言分享一下哈"><a href="#对比以上两种方法，对象键值法大约快了好几十倍啊-博主不才，大家还有好的想法，希望能留言分享一下哈" class="headerlink" title="对比以上两种方法，对象键值法大约快了好几十倍啊!博主不才，大家还有好的想法，希望能留言分享一下哈~"></a>对比以上两种方法，对象键值法大约快了好几十倍啊!博主不才，大家还有好的想法，希望能留言分享一下哈~</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;昨天去面试，面试官出了一道题，随机得到1-10000中的全部整数，且不能重复，当时就想到以下方法：&quot;&gt;&lt;a href=&quot;#昨天去面试，面试官出了一道题，随机得到1-10000中的全部整数，且不能重复，当时就想到以下方法：&quot; class=&quot;headerlink&quot; t
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/younghf.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/younghf.github.io/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>页面架构</title>
