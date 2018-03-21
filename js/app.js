@@ -98,10 +98,10 @@ window.onload = function() {
 
     //监听滚动事件
     window.addEventListener('scroll', function() {
-        clearTimeout(timer);
-        timer = setTimeout(function fn() {
+        // clearTimeout(timer);
+        // timer = setTimeout(function fn() {
             scrollCallback();
-        }, 200);
+        // }, 200);
     });
 
     //返回顶部
