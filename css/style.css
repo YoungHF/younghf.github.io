@@ -222,8 +222,8 @@ pre {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transition: width 1s ease;
-  transition: width 1s ease;
+  /*-webkit-transition: width 1s ease;
+  transition: width 1s ease;*/
   z-index: 99;
 }
 .carousel {

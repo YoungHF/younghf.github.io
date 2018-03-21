@@ -91,8 +91,8 @@ window.onload = function() {
         if ($process) {
             $process.style.width = (getScrollTop() / ($body.scrollHeight - window.innerHeight)) * 100 + "%";
         }
-        // (isPC && getScrollTop() >= 300) ? $backToTop.removeAttribute("class","hide") : $backToTop.setAttribute("class","hide");
-        // imgsAjax($ajaxImgs);
+        (isPC && getScrollTop() >= 300) ? $backToTop.removeAttribute("class","hide") : $backToTop.setAttribute("class","hide");
+        imgsAjax($ajaxImgs);
     };
     scrollCallback();
 
@@ -100,12 +100,12 @@ window.onload = function() {
     window.addEventListener('scroll', function() {
         // clearTimeout(timer);
         // timer = setTimeout(function fn() {
-        //      scrollCallback();
+             scrollCallback();
         // }, 200);
 
-        window.requestAnimationFrame(function(){
-            scrollCallback();
-        });
+        // window.requestAnimationFrame(function(){
+        //     scrollCallback();
+        // });
     });
 
     //返回顶部
