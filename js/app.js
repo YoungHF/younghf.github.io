@@ -87,30 +87,25 @@ window.onload = function() {
         return ($body.scrollTop || document.documentElement.scrollTop);
     }
     //滚动回调
-    // var scrollCallback = function() {
-    //     if ($process) {
-    //         $process.style.width = (getScrollTop() / ($body.scrollHeight - window.innerHeight)) * 100 + "%";
-    //     }
-    //     (isPC && getScrollTop() >= 300) ? $backToTop.removeAttribute("class","hide") : $backToTop.setAttribute("class","hide");
-    //     imgsAjax($ajaxImgs);
-    // };
-
-    var scrollCallback = window.requestAnimationFrame(function(){
-          if ($process) {
+    var scrollCallback = function() {
+        if ($process) {
             $process.style.width = (getScrollTop() / ($body.scrollHeight - window.innerHeight)) * 100 + "%";
         }
         (isPC && getScrollTop() >= 300) ? $backToTop.removeAttribute("class","hide") : $backToTop.setAttribute("class","hide");
         imgsAjax($ajaxImgs);
-    });
-
+    };
     scrollCallback();
 
     //监听滚动事件
     window.addEventListener('scroll', function() {
         // clearTimeout(timer);
         // timer = setTimeout(function fn() {
-            scrollCallback();
+        //      scrollCallback();
         // }, 200);
+
+        window.requestAnimationFrame(function(){
+            scrollCallback();
+        });
     });
 
     //返回顶部
