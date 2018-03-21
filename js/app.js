@@ -91,8 +91,8 @@ window.onload = function() {
         if ($process) {
             $process.style.width = (getScrollTop() / ($body.scrollHeight - window.innerHeight)) * 100 + "%";
         }
-        (isPC && getScrollTop() >= 300) ? $backToTop.removeAttribute("class","hide") : $backToTop.setAttribute("class","hide");
-        imgsAjax($ajaxImgs);
+        // (isPC && getScrollTop() >= 300) ? $backToTop.removeAttribute("class","hide") : $backToTop.setAttribute("class","hide");
+        // imgsAjax($ajaxImgs);
     };
     scrollCallback();
 
