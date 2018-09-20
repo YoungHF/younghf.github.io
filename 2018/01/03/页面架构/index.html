@@ -190,65 +190,65 @@
 <h2 id="布局解决方案"><a href="#布局解决方案" class="headerlink" title="布局解决方案"></a>布局解决方案</h2><blockquote>
 <h3 id="居中布局"><a href="#居中布局" class="headerlink" title="居中布局"></a>居中布局</h3></blockquote>
 <p><strong>一、水平居中布局（子容器和父容器宽度不定情况）</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center.jpg" alt="center.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center.jpg" alt="center.jpg"></p>
 <p><strong>inline-block + text-align</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center1.jpg" alt="center1.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center1.jpg" alt="center1.jpg"></p>
 <ul>
 <li>兼容性好，兼容IE6-7;</li>
 <li>需要额外代码来修复text-align 造成问题。</li>
 </ul>
 <p><strong>table + margin</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center2.jpg" alt="center2.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center2.jpg" alt="center2.jpg"></p>
 <p><strong>absolute + transform</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center3.jpg" alt="center3.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center3.jpg" alt="center3.jpg"></p>
 <ul>
 <li>居中元素不会对其他元素产生影响</li>
 <li>兼容性较差</li>
 </ul>
 <p><strong>flex + justify-content</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center4.jpg" alt="center4.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center5.jpg" alt="center5.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center4.jpg" alt="center4.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center5.jpg" alt="center5.jpg"></p>
 <ul>
 <li>只需设置父元素即可实现居中布局</li>
 <li>低版本不支持</li>
 </ul>
 <p><strong>二、垂直居中（子容器和父容器高度不定情况）</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center6.jpg" alt="center6.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center6.jpg" alt="center6.jpg"></p>
 <p><strong>table-cell + vertical-align</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center7.jpg" alt="center7.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center7.jpg" alt="center7.jpg"></p>
 <ul>
 <li>兼容性较好（IE6-7，需要将结构改为表格结构）</li>
 </ul>
 <p><strong>absolute + transform</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center8.jpg" alt="center8.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center8.jpg" alt="center8.jpg"></p>
 <p><strong>flex + align-items</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center9.jpg" alt="center9.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center9.jpg" alt="center9.jpg"></p>
 <p><strong>三、水平-垂直居中</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center10.jpg" alt="center10.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center10.jpg" alt="center10.jpg"></p>
 <p><strong>inline-block + text-align + table-cell + vertical-align</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center11.jpg" alt="center11.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center11.jpg" alt="center11.jpg"></p>
 <p><strong>absolute + transform</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center12.jpg" alt="center12.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center12.jpg" alt="center12.jpg"></p>
 <p><strong>flex + justify-content + align-items</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center13.jpg" alt="center13.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center13.jpg" alt="center13.jpg"></p>
 <blockquote>
 <h3 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h3></blockquote>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center14.jpg" alt="center14.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center14.jpg" alt="center14.jpg"></p>
 <p><strong>float + margin</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center15.jpg" alt="center15.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center15.jpg" alt="center15.jpg"></p>
 <ul>
 <li>IE6 不兼容，会产生3px 的bug.</li>
 <li>清除浮动时也会出现某些问题</li>
 </ul>
 <p><strong>float + margin + (fix)</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center16.jpg" alt="center16.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center16.jpg" alt="center16.jpg"></p>
 <ul>
 <li>兼容性好，兼容IE6</li>
 </ul>
 <p><strong>float + overflow</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center17.jpg" alt="center17.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center17.jpg" alt="center17.jpg"></p>
 <p><strong>table</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center18.jpg" alt="center18.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center18.jpg" alt="center18.jpg"></p>
 <p>table-layout：auto | fixed</p>
 <p>设置或检索表格的布局算法。</p>
 <ul>
@@ -257,47 +257,47 @@
 <li>通常fixed 算法会比auto 算法高效，尤其是对于那些长表格来说。fixed 算法使得表格可以像其它元素一样一行一行的渲染。</li>
 </ul>
 <p><strong>flex</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center19.jpg" alt="center19.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center19.jpg" alt="center19.jpg"></p>
 <p><strong>适用于小范围的布局使用，复杂布局不建议使用。</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center20.jpg" alt="center20.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center21.jpg" alt="center21.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center22.jpg" alt="center22.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center20.jpg" alt="center20.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center21.jpg" alt="center21.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center22.jpg" alt="center22.jpg"></p>
 <p><strong>float + overflow</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center23.jpg" alt="center23.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center24.jpg" alt="center24.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center23.jpg" alt="center23.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center24.jpg" alt="center24.jpg"></p>
 <p><strong>table</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center25.jpg" alt="center25.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center25.jpg" alt="center25.jpg"></p>
 <p>设置宽度由内容决定时，代码如下：</p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center26.jpg" alt="center26.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center26.jpg" alt="center26.jpg"></p>
 <p><strong>flex</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center27.jpg" alt="center27.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center28.jpg" alt="center28.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center29.jpg" alt="center29.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center30.jpg" alt="center30.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center31.jpg" alt="center31.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center27.jpg" alt="center27.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center28.jpg" alt="center28.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center29.jpg" alt="center29.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center30.jpg" alt="center30.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center31.jpg" alt="center31.jpg"></p>
 <p><strong>float</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center32.jpg" alt="center32.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center32.jpg" alt="center32.jpg"></p>
 <p>C = W<em>N + G</em>(N-1) → C + G =(W+G)*N</p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center33.jpg" alt="center33.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center33.jpg" alt="center33.jpg"></p>
 <p>解决方案：</p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center34.jpg" alt="center34.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center34.jpg" alt="center34.jpg"></p>
 <p><strong>table</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center35.jpg" alt="center35.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center36.jpg" alt="center36.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center35.jpg" alt="center35.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center36.jpg" alt="center36.jpg"></p>
 <p><strong>flex</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center37.jpg" alt="center37.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center38.jpg" alt="center38.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center37.jpg" alt="center37.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center38.jpg" alt="center38.jpg"></p>
 <blockquote>
 <h3 id="等高布局"><a href="#等高布局" class="headerlink" title="等高布局"></a>等高布局</h3></blockquote>
 <p><strong>table</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center39.jpg" alt="center39.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center39.jpg" alt="center39.jpg"></p>
 <p><strong>flex</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center40.jpg" alt="center40.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center40.jpg" alt="center40.jpg"></p>
 <p><strong>float</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center41.jpg" alt="center41.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center41.jpg" alt="center41.jpg"></p>
 <blockquote>
 <h3 id="全屏布局"><a href="#全屏布局" class="headerlink" title="全屏布局"></a>全屏布局</h3></blockquote>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center42.jpg" alt="center42.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center42.jpg" alt="center42.jpg"></p>
 <p><strong>特点：</strong></p>
 <ul>
 <li>页面撑满浏览器窗口，当浏览器窗口变大时，页面也随着变大。</li>
@@ -309,30 +309,30 @@
 <li>Flex</li>
 </ul>
 <p><strong>Position</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center43.jpg" alt="center43.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center43.jpg" alt="center43.jpg"></p>
 <p>Position(兼容)</p>
 <ul>
 <li>IE6 不支持</li>
 <li>Hack 方案：<a href="http://nec.netease.com/library/141027" target="_blank" rel="noopener">http://nec.netease.com/library/141027</a></li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center44.jpg" alt="center44.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center44.jpg" alt="center44.jpg"></p>
 <p><strong>Flex</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center45.jpg" alt="center45.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center45.jpg" alt="center45.jpg"></p>
 <p>Flex(兼容)</p>
 <ul>
 <li>IE9 及以下不兼容</li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center46.jpg" alt="center46.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center46.jpg" alt="center46.jpg"></p>
 <p>实现方案：</p>
 <ul>
 <li>position</li>
 <li>Flex</li>
 </ul>
 <p><strong>Position</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center47.jpg" alt="center47.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center47.jpg" alt="center47.jpg"></p>
 <p><strong>Flex</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center48.jpg" alt="center48.jpg"></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center49.jpg" alt="center49.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center48.jpg" alt="center48.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center49.jpg" alt="center49.jpg"></p>
 <p><strong>实现方案</strong></p>
 <ul>
 <li>Position ×</li>
@@ -340,13 +340,13 @@
 <li>Grid √</li>
 </ul>
 <p><strong>Flex（自适应）</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center50.jpg" alt="center50.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center50.jpg" alt="center50.jpg"></p>
 <p><strong>Grid（自适应）</strong></p>
 <p>参考：</p>
 <p><a href="http://www.w3cplus.com/css3/grid.html" target="_blank" rel="noopener">http://www.w3cplus.com/css3/grid.html</a></p>
 <p><a href="https://www.w3.org/TR/2012/WD-css3-grid-layout-20120322/" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-grid-layout-20120322/</a></p>
 <p><strong>总结：</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2018/01/03/页面架构/center51.jpg" alt="center51.jpg"></p>
+<p><img src="/2018/01/03/页面架构/center51.jpg" alt="center51.jpg"></p>
 
     </div>
 

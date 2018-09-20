@@ -256,11 +256,24 @@
 </table>
 <p>实例展示：</p>
 <p>html 代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;xxx.pdf&quot;&gt;我链接的是PDF 文件&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;icon&quot;&gt;我类名是icon&lt;/a&gt;&lt;a href=&quot;#&quot; title=&quot;我的title 是more&quot;&gt;我的title 是more&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;xxx.pdf&quot;&gt;我链接的是PDF 文件&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;icon&quot;&gt;我类名是icon&lt;/a&gt;
+&lt;a href=&quot;#&quot; title=&quot;我的title 是more&quot;&gt;我的title 是more&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 <p>css 代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[class^=icon]&#123;	background: green;	color:#fff;&#125;a[href$=pdf]&#123;	background: orange;	color: #fff;&#125;a[title*=more]&#123;	background: blue;	color: #fff;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[class^=icon]&#123;
+	background: green;
+	color:#fff;
+&#125;
+a[href$=pdf]&#123;
+	background: orange;
+	color: #fff;
+&#125;
+a[title*=more]&#123;
+	background: blue;
+	color: #fff;
+&#125;</span><br></pre></td></tr></table></figure>
 <p>结果显示：</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/01/CSS选择器/code.jpg" alt="code.jpg"></p>
+<p><img src="/2017/12/01/CSS选择器/code.jpg" alt="code.jpg"></p>
 <blockquote>
 <h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3></blockquote>
 <p>CSS 伪类用于向某些选择器添加特殊的效果。又叫伪类选择符，它允许给html 不存在的标签（标签<br>的某种状态）设置样式，比如说我们给html 中一个标签元素的鼠标滑过的状态来设置字体颜色：</p>
@@ -324,7 +337,7 @@
 <blockquote>
 <h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3></blockquote>
 <p>是针对HTML 层次“结构”的伪类选择器。例如我们想要某一个父元素下面的第n 个子元素。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/01/CSS选择器/table.jpg" alt="table.jpg"></p>
+<p><img src="/2017/12/01/CSS选择器/table.jpg" alt="table.jpg"></p>
 <p><strong>总结：</strong> “:first-child”是选择父元素下的第1 个子元素（不区分元素类型），而“:first-of-type”是选择父元素下某个元素类型的第1 个子元素（区分元素类型）。</p>
 <blockquote>
 <h3 id="UI-元素状态伪类选择器"><a href="#UI-元素状态伪类选择器" class="headerlink" title="UI 元素状态伪类选择器"></a>UI 元素状态伪类选择器</h3></blockquote>
@@ -441,19 +454,27 @@
 <blockquote>
 <h3 id="CSS-继承"><a href="#CSS-继承" class="headerlink" title="CSS 继承"></a>CSS 继承</h3></blockquote>
 <p>CSS 的某些样式是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应<br>用于某个特定html 标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p 标<br>签，这个颜色设置不仅应用p 标签，还应用于p 标签中的所有子元素文本，这里子元素为<br>span 标签。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;
+&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <p>注意: 有一些css 样式是不具有继承性的。如border:1px solid red;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;border:1px solid red;&#125;&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;border:1px solid red;&#125;
+&lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <p>在上面例子中它代码的作用只是给p 标签设置了边框为1 像素、红色、实心边框线，而对于子元素span 是没用起到作用的。</p>
 <blockquote>
 <h3 id="CSS-优先级（特殊性）"><a href="#CSS-优先级（特殊性）" class="headerlink" title="CSS 优先级（特殊性）"></a>CSS 优先级（特殊性）</h3></blockquote>
 <p>CSS 的优先级也可以称为CSS 的特殊性(specificity)或权值:对于每个样式表规则,浏览器都会计算选择器的特殊性,从而使元素属性声明在有冲突的情况下能够正确显示.<br>有的时候我们为同一个元素设置了不同的CSS 样式代码，那么元素会启用哪一个CSS 样式呢?</p>
 <p>我们来看一下面的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;.first&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;
+.first&#123;color:green;&#125;
+&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <p>p 和.first 都匹配到了p 这个标签上，那么会显示哪种颜色呢？green 是正确的颜色，那么为什么呢？是因为浏览器是根据权值来判断使用哪种css 样式的，权值高的就使用哪种css样式。</p>
 <p><strong>权值的规则：</strong>标签的权值为1，类选择符的权值为10，ID 选择符的权值最高为100。</p>
 <p>例如下面的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125; /*权值为1*/p span&#123;color:green;&#125; /*权值为1+1=2*/.warning&#123;color:white;&#125; /*权值为10*/p span.warning&#123;color:purple;&#125; /*权值为1+1+10=12*/\#footer .note p&#123;color:yellow;&#125; /*权值为100+10+1=111*/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125; /*权值为1*/
+p span&#123;color:green;&#125; /*权值为1+1=2*/
+.warning&#123;color:white;&#125; /*权值为10*/
+p span.warning&#123;color:purple;&#125; /*权值为1+1+10=12*/
+\#footer .note p&#123;color:yellow;&#125; /*权值为100+10+1=111*/</span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong>还有一个权值比较特殊—继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低。</p>
 <p>如何改变CSS 的优先级？</p>
 <ol>
@@ -465,7 +486,9 @@
 <h3 id="CSS-层叠"><a href="#CSS-层叠" class="headerlink" title="CSS 层叠"></a>CSS 层叠</h3></blockquote>
 <p>层叠就是在html 文件中对于同一个元素可以有多个css 样式存在，当有相同权重的样式存在时，会根据这些css 样式的前后顺序来决定，处于最后面的css 样式会被应用。</p>
 <p>如下面代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;p&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red;&#125;
+p&#123;color:green;&#125;
+&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <p>最后p 中的文本会设置为green，这个层叠很好理解，理解为后面的样式会覆盖前面的样式。</p>
 <p>所以前面的css 样式优先级就不难理解了：</p>
 <p><strong>内联样式表（标签内部）&gt; 嵌入样式表（当前文件中）&gt; 外部样式表（外部文件中）。</strong></p>
@@ -474,7 +497,9 @@
 <p>我们在做网页代码的时，有些特殊的情况需要为某些样式设置具有最高权值，怎么办？</p>
 <p>这时候我们可以使用!important 来解决。</p>
 <p>如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red!important;&#125;p&#123;color:green;&#125;&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:red!important;&#125;
+p&#123;color:green;&#125;
+&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <p>这时p 段落中的文本会显示的red 红色。</p>
 <p><strong>注意：</strong>!important 要写在分号的前面这里注意当网页制作者不设置css 样式时，浏览器会按照自己的一套样式来显示网页。并且用户也可以在浏览器中设置自己习惯的样式，比如有的用户习惯把字号设置为大一些，使其查看网页的文本更加清楚。这时注意样式优先级为：</p>
 <p><strong>浏览器默认的样式&lt; 网页制作者样式&lt; 用户自己设置的样式</strong></p>

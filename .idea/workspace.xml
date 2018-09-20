@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e782031-c52e-4232-9bba-ed7d88b99ae4" name="默认" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/11/30/Markdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/11/30/Markdown/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/01/CSS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/01/CSS/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/01/CSS选择器/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/01/CSS选择器/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/01/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/01/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/05/CSS文本/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/05/CSS文本/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/05/CSS盒模型/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/05/CSS盒模型/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/06/CSS布局/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/06/CSS布局/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/06/CSS背景/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/06/CSS背景/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/12/08/ES6学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/12/08/ES6学习/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018/01/03/页面架构/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/01/03/页面架构/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/前端/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/前端/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/前端/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/前端/page/2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/CSS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/CSS/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/CSS布局/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/CSS布局/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/CSS文本/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/CSS文本/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/CSS盒模型/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/CSS盒模型/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/CSS背景/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/CSS背景/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/CSS选择器/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/CSS选择器/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/ES6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/ES6/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/HTML/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/HTML/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/JS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/JS/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/页面架构/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/页面架构/index.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="185" column="13" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1433">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1365" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/2/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8711" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/categories/前端/page/2/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="144" column="89" selection-start-line="144" selection-start-column="89" selection-end-line="144" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/younghf.github.io/younghf.github.io/2017/12/08/ES6%E5%AD%A6%E4%B9%A0/es6.png</find>
+      <find>1.png</find>
+      <find>src=&quot;/younghf.github.io/younghf.github.io</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>src=&quot;/younghf.github.io/younghf.github.io</replace>
+      <replace>src=&quot;</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/index.html" />
+        <option value="$PROJECT_DIR$/categories/前端/page/2/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="2018" type="462c0819:PsiDirectoryNode" />
+              <item name="03" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="2018" type="462c0819:PsiDirectoryNode" />
+              <item name="03" type="462c0819:PsiDirectoryNode" />
+              <item name="21" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="2018" type="462c0819:PsiDirectoryNode" />
+              <item name="03" type="462c0819:PsiDirectoryNode" />
+              <item name="21" type="462c0819:PsiDirectoryNode" />
+              <item name="面试小计——不重复随机输出-1-10000-区间数字" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+              <item name="前端" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+              <item name="前端" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+              <item name="前端" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="younghf.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="younghf.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="options.lastSelected" value="configurable.group.appearance" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e782031-c52e-4232-9bba-ed7d88b99ae4" name="默认" comment="" />
+      <created>1537432884913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537432884913</updated>
+      <workItem from="1537432886492" duration="727000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="727000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="调试" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1433">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1365" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8711" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2018/03/21/面试小计——不重复随机输出-1-10000-区间数字/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="185" column="13" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categories/前端/page/2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="144" column="89" selection-start-line="144" selection-start-column="89" selection-end-line="144" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

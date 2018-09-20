@@ -382,11 +382,11 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <p>通过使用position 属性，我们可以选择4 种不同类型的定位，这会影响元素框生成的方式。</p>
 <h3 id="static"><a href="#static" class="headerlink" title="* static"></a>* static</h3><p>元素框正常生成。块级元素生成一个矩形框，作为文档流的一部分，行内元素则会创建一个或多个行框，置于其父元素中。</p>
 <h3 id="relative"><a href="#relative" class="headerlink" title="* relative"></a>* relative</h3><p>元素框偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍保留。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/relative.jpg" alt="relative.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/relative.jpg" alt="relative.jpg"></p>
 <h3 id="absolute"><a href="#absolute" class="headerlink" title="* absolute"></a>* absolute</h3><p>元素框从文档流完全删除，并相对于其包含块定位。包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/absolute.jpg" alt="absolute.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/absolute.jpg" alt="absolute.jpg"></p>
 <h3 id="fixed"><a href="#fixed" class="headerlink" title="* fixed"></a>* fixed</h3><p>元素框的表现类似于将position 设置为absolute，不过其包含块是视窗本身。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/fixed.jpg" alt="fixed.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/fixed.jpg" alt="fixed.jpg"></p>
 <blockquote>
 <h3 id="Z-index-设置元素在z-轴上的排序"><a href="#Z-index-设置元素在z-轴上的排序" class="headerlink" title="Z-index -设置元素在z 轴上的排序"></a>Z-index -设置元素在z 轴上的排序</h3></blockquote>
 <p>z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。</p>
@@ -395,23 +395,23 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <li>Z-index 仅能在定位元素上奏效（例如position:absolute;）</li>
 </ul>
 <p><strong>Z-index 栈</strong></p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/z-index.jpg" alt="z-index.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/z-index.jpg" alt="z-index.jpg"></p>
 <blockquote>
 <h3 id="Float-浮动"><a href="#Float-浮动" class="headerlink" title="Float 浮动:"></a>Float 浮动:</h3></blockquote>
 <p>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。</p>
 <p>float 属性定义元素在哪个方向浮动.</p>
 <p>以往这个属性总应用于图像，使文本围绕在图像周围，不过在CSS 中，任何元素都可以浮动。浮动元素会生成一个块级框，而不论它本身是何种元素。</p>
 <p>语法：<br>float：none | left | right</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/float.jpg" alt="float.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/float.jpg" alt="float.jpg"></p>
 <p><strong>Float 浮动基本特征：</strong></p>
 <ol>
 <li>float 的元素在同一文档流</li>
 </ol>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/float1.jpg" alt="float1.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/float1.jpg" alt="float1.jpg"></p>
 <ol>
 <li>float 元素半脱离文档流</li>
 </ol>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/float2.jpg" alt="float2.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/float2.jpg" alt="float2.jpg"></p>
 <p>对元素，脱离文档流；对内容，在文档流。</p>
 <p><strong>Clear-清除浮动：</strong></p>
 <p>元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用clear 属性。clear 属性规定元素的哪一侧不允许其他浮动元素。</p>
@@ -438,14 +438,14 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <p>采用Flex 布局的元素，称为Flex 容器（flex container），简称”容器”。</p>
 <p>Flex 项目（flex item）:</p>
 <p>Flex 容器的所有子元素自动成为容器成员，称为Flex 项目（flex item），简称”项目”。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex.jpg" alt="flex.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex.jpg" alt="flex.jpg"></p>
 <p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
 <p>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</p>
 <p>创建flex container 容器：</p>
 <p>Display:flex</p>
 <p>Flex items（flex 项目）</p>
 <p>在文档流中的子元素是弹性子元素</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex1.jpg" alt="flex1.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex1.jpg" alt="flex1.jpg"></p>
 <p><strong>弹性布局特性：</strong></p>
 <p>与方向有关：</p>
 <ul>
@@ -471,7 +471,7 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <p><strong>Flex-direction:</strong></p>
 <p>决定主轴的方向（即项目的排列方向）</p>
 <p>Flex-direction:row|row-reverse|column|column-reverse</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex2.jpg" alt="flex2.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex2.jpg" alt="flex2.jpg"></p>
 <p>它可能有4 个值。</p>
 <ul>
 <li>row（默认值）：主轴为水平方向，起点在左端。</li>
@@ -482,23 +482,23 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <p>Flex-wrap:</p>
 <p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap 属性定义，如果一条轴线排不下，如何换行。</p>
 <p>Flex-wrap:nowrap|wrap|wrap-reverse</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex3.jpg" alt="flex3.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex3.jpg" alt="flex3.jpg"></p>
 <p>它可能取三个值。</p>
 <p>（1）nowrap（默认）：不换行。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex4.jpg" alt="flex4.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex4.jpg" alt="flex4.jpg"></p>
 <p>（2）wrap：换行，第一行在上方。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex5.jpg" alt="flex5.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex5.jpg" alt="flex5.jpg"></p>
 <p>（3）wrap-reverse：换行，第一行在下方。</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex6.jpg" alt="flex6.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex6.jpg" alt="flex6.jpg"></p>
 <p><strong>Flex-flow:</strong></p>
 <p>flex-flow 属性是flex-direction 属性和flex-wrap 属性的简写形式，默认值为row nowrap。</p>
 <p>Flex-flow:：&lt;’ flex-direction ‘&gt; || &lt;’ flex-wrap ‘&gt;</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex7.jpg" alt="flex7.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex7.jpg" alt="flex7.jpg"></p>
 <p><strong>Order:</strong></p>
 <p>order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
 <p>Order:<interger></interger></p>
 <p>Initial:0 (初始值为0)</p>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex8.jpg" alt="flex8.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex8.jpg" alt="flex8.jpg"></p>
 <p><strong>Flex-basis</strong></p>
 <p>flex-basis 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
 <ul>
@@ -512,7 +512,7 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <li>Flex-grow:<number></number></li>
 <li>Initial:0</li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex9.jpg" alt="flex9.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex9.jpg" alt="flex9.jpg"></p>
 <ol>
 <li>默认情况下，flex-grow:0,flex-item 项目不占据额外空间。</li>
 <li>如果只设置一个flex-item 项目的flex-grow 为1，则它将占据剩余空间。</li>
@@ -520,7 +520,16 @@ a,span,em{font-size:16px;}/*div 为a、span、em 元素的父元素*/
 <li>计算方法：flex-basis + flow-grow/sum(flow-grow) * remain</li>
 </ol>
 <p>示例：b,c 将按照1:3 的比率分配剩余空间</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul class=&quot;flex&quot;&gt;&lt;li&gt;a&lt;/li&gt;&lt;li&gt;b&lt;/li&gt;&lt;li&gt;c&lt;/li&gt;&lt;/ul&gt;</span><br><span class="line">CSS Code:</span><br><span class="line">.flex&#123;display:flex;width:600px;margin:0;padding:0;list-style:none;&#125;.flex li:nth-child(1)&#123;width:200px;&#125;.flex li:nth-child(2)&#123;flex-grow:1;width:50px;&#125;.flex li:nth-child(3)&#123;flex-grow:3;width:50px;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul class=&quot;flex&quot;&gt;
+&lt;li&gt;a&lt;/li&gt;
+&lt;li&gt;b&lt;/li&gt;
+&lt;li&gt;c&lt;/li&gt;
+&lt;/ul&gt;</span><br><span class="line">
+CSS Code:</span><br><span class="line">
+.flex&#123;display:flex;width:600px;margin:0;padding:0;list-style:none;&#125;
+.flex li:nth-child(1)&#123;width:200px;&#125;
+.flex li:nth-child(2)&#123;flex-grow:1;width:50px;&#125;
+.flex li:nth-child(3)&#123;flex-grow:3;width:50px;&#125;</span><br></pre></td></tr></table></figure>
 <p>flex-grow 的默认值为0，如果没有显示定义该属性，是不会拥有分配剩余空间权利的。</p>
 <p>本例中b,c 两项都显式的定义了flex-grow，flex 容器的剩余空间分成了4 份，其中b 占1份，c 占3 分，即1:3</p>
 <p>flex 容器的剩余空间长度为：600-200-50-50=300px，所以最终a,b,c 的长度分别为：</p>
@@ -533,7 +542,7 @@ a: 50+(300/4*3)=275px
 <li>Flex-shrink:<number></number></li>
 <li>Initial:1</li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/flex-shrink.jpg" alt="flex-shrink.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/flex-shrink.jpg" alt="flex-shrink.jpg"></p>
 <p>如果所有项目的flex-shrink 属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink 属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。</p>
 <p>计算方法：flex-basis + flow-shrink/sum(flow-shrink) * remain</p>
 <p>示例：a,b,c 将按照1:1:3 的比率来收缩空间</p>
@@ -581,7 +590,7 @@ c 被移除溢出量：(200*3/1000)*200，即约等于120px
 <li>justify-content: flex-start | flex-end | center | space-between | space-around</li>
 <li>定义了项目在主轴(main-axis)上的对齐方式。</li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/Justify-content.jpg" alt="Justify-content.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/Justify-content.jpg" alt="Justify-content.jpg"></p>
 <p>它可能取5 个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
 <ul>
 <li>flex-start（默认值）：左对齐</li>
@@ -595,7 +604,7 @@ c 被移除溢出量：(200*3/1000)*200，即约等于120px
 <li>align-items: flex-start | flex-end | center | baseline | stretch</li>
 <li>定义项目在交叉轴(辅轴，cross-axis)上如何对齐。</li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/align-items.jpg" alt="align-items.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/align-items.jpg" alt="align-items.jpg"></p>
 <p>它可能取5 个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
 <ul>
 <li>flex-start：交叉轴的起点对齐。</li>
@@ -611,14 +620,14 @@ c 被移除溢出量：(200*3/1000)*200，即约等于120px
 <li>align-self: auto | flex-start | flex-end | center | baseline | stretch</li>
 <li>设置单个flex item 在cross-axis 方向上对齐方式。</li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/align-self.jpg" alt="align-self.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/align-self.jpg" alt="align-self.jpg"></p>
 <p><strong>Align-content</strong></p>
 <p>align-content 属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
 <ul>
 <li>align-content: flex-start | flex-end | center | space-between | space-around | stretch</li>
 <li>设置cross-axis 方向上行对齐方式</li>
 </ul>
-<p><img src="/younghf.github.io/younghf.github.io/2017/12/06/CSS布局/align-content.jpg" alt="align-content.jpg"></p>
+<p><img src="/2017/12/06/CSS布局/align-content.jpg" alt="align-content.jpg"></p>
 <p>该属性可能取6 个值。</p>
 <ul>
 <li>flex-start：与交叉轴的起点对齐。</li>
